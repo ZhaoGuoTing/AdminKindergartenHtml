@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>职员档案</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico"> 
+<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+<link href="../../css/plugins/datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+
+</head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                     
+				        <div class="layui-tab layui-tab-brief ibox-title" lay-filter="component-tabs-hash">
+				           <ul class="layui-tab-title">
+					            <li lay-id="11"><a href="EditWorker.html">职员信息详情</a></li>
+					            <li class="layui-this" lay-id="22"><a href="archives.html">职员档案</a></li>
+					            <li lay-id="44"><a href="WorkerAttendList.html">职员考勤</a></li>
+					            <li lay-id="55"><a href="WorkerPerformance.html">查看绩效</a></li>
+					            <li lay-id="55"><a href="WorkerWages.html">查看工资</a></li>
+					            <li lay-id="55"><a href="WorkerComplaint.html">投诉建议</a></li>
+				          </ul>
+					        
+				        </div>
+				      <div class="ibox-content">
+							<div class="container">
+								<div class="row">
+									<table style="width: 100%;">
+										<tr>
+										 <td width="50%">
+										<form class="form-horizontal m-t" id="signupForm">
+											 <div class="form-group">
+				                                <label class="col-sm-3 control-label">姓名：</label>
+				                                <div class="col-sm-4"  >
+				                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s2-10" nullmsg="请填写姓名！" errormsg="姓名格式不对！"  style="width:300px;"   placeholder="姓名"  >
+				                                      
+				                                </div>
+				                            </div>
+											 
+											 <div class="form-group form-p" id="data_1" >
+				                                <label class="col-sm-3 control-label">出生日期：</label>
+				                                <div class="col-sm-4">
+				                                    <div class="input-group date" style="width: 50%; float: left;">
+				                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+				                                        <input type="text" class="form-control" name="datatime" id="datatime"  style="width:200px">
+				                                    </div>
+				                                   
+				                                </div>
+				                            </div>
+				                            
+											 <div class="form-group">
+				                                <label class="col-sm-3 control-label">籍贯：</label>
+				                                <div class="col-sm-4"  >
+				                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s2-9" nullmsg="请填写籍贯！" errormsg="籍贯格式不对！"  style="width:300px;" placeholder="籍贯">
+				                                      
+				                                </div>
+				                            </div>
+											  <div class="form-group">
+					                                <label class="col-sm-3 control-label">民族：</label>
+					                                <div class="col-sm-4 form-table">
+					                                    <select class="input-sm form-control input-s-sm inline" style="width:300px;">
+					                                       <option value="" class="">请选择</option><option value="0" label="汉族">汉族</option><option value="1" label="蒙古族">蒙古族</option><option value="2" label="回族">回族</option><option value="3" label="藏族">藏族</option><option value="4" label="维吾尔族">维吾尔族</option><option value="5" label="苗族">苗族</option><option value="6" label="彝族">彝族</option><option value="7" label="壮族">壮族</option><option value="8" label="布依族">布依族</option><option value="9" label="朝鲜族">朝鲜族</option><option value="10" label="满族">满族</option><option value="11" label="侗族">侗族</option><option value="12" label="瑶族">瑶族</option><option value="13" label="白族">白族</option><option value="14" label="土家族">土家族</option><option value="15" label="哈尼族">哈尼族</option><option value="16" label="哈萨克族">哈萨克族</option><option value="17" label="傣族">傣族</option><option value="18" label="黎族">黎族</option><option value="19" label="傈僳族">傈僳族</option><option value="20" label="佤族">佤族</option><option value="21" label="畲族">畲族</option><option value="22" label="高山族">高山族</option><option value="23" label="拉祜族">拉祜族</option><option value="24" label="水族">水族</option><option value="25" label="东乡族">东乡族</option><option value="26" label="纳西族">纳西族</option><option value="27" label="景颇族">景颇族</option><option value="28" label="柯尔克孜族">柯尔克孜族</option><option value="29" label="土族">土族</option><option value="30" label="达斡尔族">达斡尔族</option><option value="31" label="仫佬族">仫佬族</option><option value="32" label="羌族">羌族</option><option value="33" label="布朗族">布朗族</option><option value="34" label="撒拉族">撒拉族</option><option value="35" label="毛难族">毛难族</option><option value="36" label="仡佬族">仡佬族</option><option value="37" label="锡伯族">锡伯族</option><option value="38" label="阿昌族">阿昌族</option><option value="39" label="毛南族">毛南族</option><option value="40" label="普米族">普米族</option><option value="41" label="塔吉克族">塔吉克族</option><option value="42" label="怒族">怒族</option><option value="43" label="乌孜别克族">乌孜别克族</option><option value="44" label="俄罗斯族">俄罗斯族</option><option value="45" label="鄂温克族">鄂温克族</option><option value="46" label="德昂族">德昂族</option><option value="47" label="保安族">保安族</option><option value="48" label="裕固族">裕固族</option><option value="49" label="京族">京族</option><option value="50" label="塔塔尔族">塔塔尔族</option><option value="51" label="独龙族">独龙族</option><option value="52" label="鄂伦春族">鄂伦春族</option><option value="53" label="赫哲族">赫哲族</option><option value="54" label="门巴族">门巴族</option><option value="55" label="珞巴族">珞巴族</option><option value="56" label="基诺族">基诺族</option><option value="57" label="穿青族">穿青族</option><option value="58" label="穿青人族">穿青人族</option><option value="59" label="其他">其他</option><option value="60" label="外国血统中国籍人士">外国血统中国籍人士</option> 
+					                                    </select>
+					                                </div>
+					                            </div>
+					                            <div class="form-group">
+					                                <label class="col-sm-3 control-label">证件类型：</label>
+					                                <div class="col-sm-4 form-table">
+					                                    <select class="input-sm form-control input-s-sm inline" style="width:300px;">
+					                                        <option value="0">请选择证件类型</option>
+					                                        <option value="0">居民身份证</option>
+					                                        <option value="1">香港特区护照/身份证明</option>
+					                                        <option value="2">澳门特区护照/身份证明</option>
+					                                        <option value="3">台湾居民来往大陆通行证</option>
+					                                        <option value="4" >境外永久居住证</option>
+					                                        <option value="5" >护照</option>
+					                                        <option value="6" >其他</option>
+					                                    </select>
+					                                </div>
+					                            </div>
+											
+											   <div class="form-group form-p" id="data_1" >
+				                                <label class="col-sm-3 control-label">入职时间：</label>
+				                                <div class="col-sm-4">
+				                                    <div class="input-group date" style="width: 50%; float: left;">
+				                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+				                                        <input type="text" class="form-control" name="datatime" id="Entrytime"  style="width:200px">
+				                                    </div>
+				                                   
+				                                </div>
+				                            </div>
+											  <div class="form-group">
+					                            <label class="col-sm-3 control-label">婚否：</label>
+					                            <div class="col-sm-4"   style="margin-left: 10px;"   >
+					                                <label class="checkbox-inline i-checks"  style=""><input type="radio" name="Sex" checked="checked" value="0" />是 </label>
+					                                <label class="checkbox-inline i-checks"> <input type="radio" name="Sex" value="1" />否</label>
+													</div>
+					                        </div>
+											 <div class="form-group">
+		                            <label class="col-sm-3 control-label">学历：</label>
+		                            <div class="col-sm-4 form-table">
+	                                    <select class="input-sm form-control input-s-sm inline" style="width:300px;">
+	                                        <option value="0">请选择学历</option>
+	                                        <option value="1">小学</option>
+	                                        <option value="2">高中</option>
+	                                        <option value="3">中专</option>
+	                                        <option value="4">大专</option>
+	                                        <option value="5">本科</option>
+	                                        <option value="6">双学士</option>
+	                                        <option value="7">硕士</option>
+	                                        <option value="8">博士</option>
+	                                        <option value="9">博士后</option>
+	                                    </select>
+                               		 </div>
+                                </div>
+                                <div class="form-group">
+	                                <label class="col-sm-3 control-label">专业：</label>
+	                                <div class="col-sm-4"  >
+	                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+	                                      
+	                                </div>
+                           		 </div>
+                                <div class="form-group">
+	                                <label class="col-sm-3 control-label">毕业学校：</label>
+	                                <div class="col-sm-4"  >
+	                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+	                                      
+	                                </div>
+                           		 </div>
+											
+											
+										</form>
+									  </td>
+									   <td width="50%">
+										<form class="form-horizontal m-t" id="signupForm">
+											 
+											 
+											<div class="form-group">
+												 
+												   <div class="inputimgbox_box_add file_input_box" id="inputimgbox_skil"  style="padding-left: 20%;" >
+					                                    <div class="localImagbox0" id="localImagbox0">
+					                                        <img id="preview0" style="height: 138px; width:120px !important;" src="../../img/photo_icon_8.png" />
+					
+					                                        <br><br> &nbsp; &nbsp;<a href="javascript:void(0);" class="file file_a"  >选择文件 <input datatype="*" nullmsg="验收附件不能为空！" type="file" name="fileimg" id="doc0" onchange="FileChange(this)"> </a>
+					                                    </div>
+					
+					                                </div>
+											</div>
+											 <div class="form-group">
+					                                <label class="col-sm-3 control-label">证件号码：</label>
+					                                <div class="col-sm-4"  >
+					                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+					                                      
+					                                </div>
+					                            </div>
+											 
+											<div class="form-group">
+				                                <label class="col-sm-3 control-label">联系电话：</label>
+				                                <div class="col-sm-4"  >
+				                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+				                                      
+				                                </div>
+				                            </div>
+											    <div class="form-group">
+                                <label class="col-sm-3 control-label">电子邮箱：</label>
+                                <div class="col-sm-4"  >
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+                                      
+                                </div>
+                            </div>
+                            <div class="form-group">
+		                            <label class="col-sm-3 control-label">户口类型：</label>
+		                            <div class="col-sm-4 form-table">
+	                                    <select class="input-sm form-control input-s-sm inline" style="width:300px;">
+	                                        <option value="0">请选择户口类型</option>
+	                                        <option value="1">农业户口</option>
+	                                        <option value="2">非农业户口</option>
+	                                    </select>
+                               		 </div>
+                                </div>
+                                <div class="form-group">
+		                            <label class="col-sm-3 control-label">职称：</label>
+		                            <div class="col-sm-4 form-table">
+	                                    <select class="input-sm form-control input-s-sm inline" style="width:300px;">
+	                                        <option value="0">请选择职称</option>
+	                                        <option value="1">幼教一级</option>
+	                                        <option value="2">幼教二级</option>
+	                                        <option value="3">幼教高级</option>
+	                                        <option value="4">其他职称</option>
+	                                    </select>
+                               		 </div>
+                                </div>
+                                 <div class="form-group">
+		                            <label class="col-sm-3 control-label">编制情况：</label>
+		                            <div class="col-sm-4 form-table">
+	                                    <select class="input-sm form-control input-s-sm inline" style="width:300px;">
+	                                        <option value="0">请选择编制情况</option>
+	                                        <option value="1">在编</option>
+	                                        <option value="2">非在编</option>
+	                                        
+	                                    </select>
+                               		 </div>
+                                </div>
+											 
+											
+										</form>
+										</td>
+										</tr>
+										<tr>
+											<td colspan="2"  height="45">
+												 
+													 <div class="form-group" >
+						                                <label class="col-sm-3 control-label" style="width:12%;">家庭住址：</label>
+						                                <div class="col-sm-4"  >
+						                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s2-10" nullmsg="请填写姓名！" errormsg="姓名格式不对！"  style="width:850px"   placeholder="家庭住址"  >
+						                                      
+						                                </div>
+						                            </div> 
+											
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2" height="45">
+												 
+													 <div class="form-group" >
+						                                <label class="col-sm-3 control-label" style="width:12%;">备注：</label>
+						                                <div class="col-sm-4"  >
+						                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s2-10" nullmsg="请填写姓名！" errormsg="姓名格式不对！"  style="width:850px"   placeholder="家庭住址"  >
+						                                      
+						                                </div>
+						                            </div> 
+											
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2" height="45">
+												 
+													<div class="form-group">
+														<label class="col-sm-3 control-label" style="width:12%;">其他资料：</label>
+														<div class="col-sm-4">
+															
+															<p style="color: orange;"><i class="fa fa-plus"></i><a style="color:orange">添加资料文件</a></p>
+														</div>
+													</div>
+											
+											</td>
+										</tr>
+									</table>
+									 
+									</div>
+								</div>
+							</div>
+
+						
+                       </div>
+            </div>
+        </div>
+    </div>    
+    
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/validate/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script src="../../js/plugins/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="../../js/PageLoading.js"></script>
+<script src="../../js/plugins/datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script> 
+ <script type="text/javascript">
+ function FileChange(btn)
+    { 
+        setImagePreview(btn.id, $(btn).parent().parent().find('img')[0].id, $(btn).parent().parent().attr('class'));
+    }
+    function setImagePreview(x, y, z) {
+        //上传图片函数---不能删除
+        var doc_id = x;
+        var preview_id = y;
+        var localImag_id = z;
+
+        //  alert(typeof(x)+x+"---"+y+"--"+z);
+
+
+        var docObj = document.getElementById(doc_id);
+        var imgObjPreview = document.getElementById(preview_id);
+        if (docObj.files && docObj.files[0]) {
+            //火狐下，直接设img属性
+            imgObjPreview.style.display = 'block';
+            imgObjPreview.style.width = '100px';
+            imgObjPreview.style.height = '100px';
+            //imgObjPreview.src = docObj.files[0].getAsDataURL();
+            docObj.style.top = '109px';
+            //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+            imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+
+        } else {
+
+            //IE下，使用滤镜
+            docObj.select();
+            var imgSrc = document.selection.createRange().text;
+            var localImagId = document.getElementById(localImag_id);
+            //必须设置初始大小
+            localImagId.style.width = "100px";
+            localImagId.style.height = "100px";
+            docObj.style.top = '70px';
+            //图片异常的捕捉，防止用户修改后缀来伪造图片
+            try {
+                localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+
+            } catch (e) {
+                alert("您上传的图片格式不正确，请重新选择!");
+                return false;
+            }
+            imgObjPreview.style.display = 'none';
+            document.selection.empty();
+        }
+        return true;
+    }
+  
+</script>
+ 
+<script type="text/javascript">
+     
+    $(function () {
+          $("#datatime").datetimepicker({
+            format: 'yyyy-mm-dd',
+            weekStart: 1,
+            autoclose: true,
+            startView: 4,
+            minView: "month",
+            autoclose: true,
+            forceParse: false,
+            language: 'zh-CN',
+            todayBtn: false,
+            endDate: "2018-04-26",
+            minuteStep: 10
+        });
+$("#Entrytime").datetimepicker({
+            format: 'yyyy-mm-dd',
+            weekStart: 1,
+            autoclose: true,
+            startView: 4,
+            minView: "month",
+            autoclose: true,
+            forceParse: false,
+            language: 'zh-CN',
+            todayBtn: false,
+            endDate: "2018-04-26",
+            minuteStep: 10
+        });
+        $("#signupForm").Validform({ tiptype: 4 });
+       
+		$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})
+        $("#submits").click(function () {
+            $("#submits").attr("disabled", true); //设置变灰按钮
+            $("#signupForm").submit();
+        })
+    });
+</script>
+
+</body>
+</html>

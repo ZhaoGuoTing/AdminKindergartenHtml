@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新增绩效</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico"> 
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title"><h5>新增绩效</h5></div>
+                    <div class="ibox-content">
+                        <form class="form-horizontal m-t" id="signupForm">
+                        	<div class="form-group">
+                                <label class="col-sm-3 control-label">录入人：</label>
+                                <label style="margin-top: 8px; margin-left: 40px;" >场娱乐</label>
+                            </div>
+
+                        	<div class="form-group">
+                                <label class="col-sm-3 control-label">审核人：</label>
+                                <div class="col-sm-4 form-table">
+                                    <select class="input-sm form-control input-s-sm inline">
+                                        <option value="0">常跃林</option>
+                                        <option value="1">常跃林</option>
+                                        <option value="2">常跃林</option>
+                                        <option value="3">常跃林</option>
+                                        <option value="4">常跃林</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">员工姓名：</label>
+                                <div class="col-sm-4 form-table">
+                                    <select class="input-sm form-control input-s-sm inline">
+                                        <option value="0">常跃林</option>
+                                        <option value="1">常跃林</option>
+                                        <option value="2">常跃林</option>
+                                        <option value="3">常跃林</option>
+                                        <option value="4">常跃林</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">考核岗位：</label>
+                                <div class="col-sm-4 form-table">
+                                    <select class="input-sm form-control input-s-sm inline">
+                                        <option value="0">老师</option>
+                                        <option value="1">园长</option>
+                                       
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">考核项目：</label>
+                                <div class="col-sm-4 form-table">
+                                    <select class="input-sm form-control input-s-sm inline">
+                                        <option value="0">卫生费</option>
+                                        <option value="1">出勤率</option>
+                                       
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">奖励金额：</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">奖励分数：</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">违规次数：</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">处罚分数：</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">处罚金额：</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！">
+                                </div>
+                            </div>
+                            
+                            
+                           
+                            
+                            
+                         
+                          
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <div class="col-sm-4 col-sm-offset-3">
+                                    <button class="btn btn-primary form-btn" type="submit">提交</button>
+                                    <button class="btn btn-white" type="button" onClick="javascript:history.back(-1);">返回</button>
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/validate/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/datepickers.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#signupForm").Validform({tiptype:4});
+	$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})
+	 
+});
+</script>
+</body>
+</html>

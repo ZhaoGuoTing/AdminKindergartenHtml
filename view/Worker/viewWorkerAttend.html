@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>幼儿管理</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+ 
+<link href='../../fullcalendar/fullcalendar.css' rel='stylesheet' />
+<link href='../../fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<style type="text/css">
+
+	body {
+		/*margin-top: 40px;*/
+		text-align: center;
+		font-size: 14px;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		}
+
+	#calendar {
+		width: 900px;
+		margin: 0 auto;
+		}
+	.fc-event-time, .fc-event-title {
+	    color: #fff;
+	}
+	.fc-event-inner {
+	    width: 100%;
+	    height: 100%;
+	    overflow: hidden;
+	    text-align: center;
+	}
+</style>
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="layui-tab layui-tab-brief ibox-title" lay-filter="component-tabs-hash">
+				           <ul class="layui-tab-title">
+					            <li lay-id="11"><a href="EditWorker.html">职员信息详情</a></li>
+					            <li lay-id="22"><a href="archives.html">职员档案</a></li>
+					            <li class="layui-this" lay-id="44"><a href="WorkerAttendList.html">职员考勤</a></li>
+					            <li lay-id="55"><a href="WorkerPerformance.html">查看绩效</a></li>
+					            <li lay-id="55"><a href="WorkerWages.html">查看工资</a></li>
+					            <li lay-id="55"><a href="WorkerComplaint.html">投诉建议</a></li>
+				          </ul>
+					        
+				        </div>
+                       
+                        <div class="ibox-content">
+                           
+                             <div class="table-responsive"  style="padding-top: 10px;">
+                                
+                                <div id='calendar'></div>
+                                
+                            </div>
+                           <div  style="  padding-left: 15%; text-align: left; padding-top: 10px;">
+                            	备注:“√”代表出勤，“〇”代表缺勤，“X”代表病假，“－”代表事假，  
+                            </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>
+ <script type="text/javascript" src="../../layer/layer.js"></script>
+ <script src='../../jquery/jquery-ui-1.10.2.custom.min.js'></script>
+<script src='../../fullcalendar/fullcalendar.min.js'></script>
+ <script>
+
+	$(document).ready(function() {
+	
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: '',
+				center: 'title',
+				right: '     prev ,  next'
+			},
+	 
+			 buttonText:{prev: '上个月', next: '下个月'},
+			 dayNamesShort:['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+			allDaySlot:false,
+			defaultView:'month',
+			firstDay:1,
+			aspectRatio:1.35,
+			height:350,
+			selectable:false,
+			editable: true,
+			  titleFormat:'yyyy年MM月', 
+			  
+			dayClick: function(event, jsEvent, view) {	 alert(jsEvent)},
+			eventClick: function(event,dayDelta,minuteDelta,allDay,revertFunc) {  
+				//alert(dayDelta.toString())
+				//layer.alert(revertFunc)
+						  
+
+			} ,
+			events: [
+				 
+				{
+					title: '√',
+					start: new Date(y, m, 1),
+					end: new Date(y, m, 1)
+				},
+				{
+					title: '√',
+					start: new Date(y, m, 2),
+					end: new Date(y, m, 2)
+				},
+				{
+					title: '√',
+					start: new Date(y, m, 3),
+					end: new Date(y, m, 3)
+				},
+				{
+					title: '√',
+					start: new Date(y, m, 4),
+					end: new Date(y, m, 4)
+				},
+				{
+					title: '√',
+					start: new Date(y, m, 5),
+					end: new Date(y, m, 5)
+				},
+				{
+					title: '√',
+					start: new Date(y, m, 6),
+					end: new Date(y, m, 6)
+				},
+				{
+					title: '√',
+					start: new Date(y, m, 17),
+					end: new Date(y, m, 17)
+				},
+				{
+					title: '√',
+					start: new Date(y, m, 8),
+					end: new Date(y, m, 8)
+				},
+				{
+					id: 999,
+					title: '√',
+					start: new Date(y, m, d-1),
+					end: new Date(y, m, d-2)
+				},
+				 
+				{
+					title: '迟到',
+					start: new Date(y, m, d-10, 09, 30),
+					allDay: false
+				},
+				{
+					title: '迟到',
+					start: new Date(y, m, 16, 09, 10),
+					 
+					allDay: false
+				},
+				 {
+					title: 'X病假',
+					start: new Date(y, m, 26),
+					end: new Date(y, m, 2)
+					 
+				},
+				 
+				{
+					title: '早退',
+					start: new Date(y, m, 28),
+					end: new Date(y, m, 28),
+					url: 'http://google.com/'
+				},
+				{
+					title: '√',
+					start: new Date(y, m, 29),
+					end: new Date(y, m, 29)
+				},
+				{
+					title: '√',
+					start: new Date(y, m, 30),
+					end: new Date(y, m, 30)
+				}
+				
+			]
+		});
+		
+	});
+
+</script>
+
+
+</body>
+</html>

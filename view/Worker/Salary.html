@@ -1,0 +1,382 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>工资管理</title>
+		<link data-style="theme_public" rel="stylesheet" type="text/css" href="../../css/zhiling.css" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+		<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/animate.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/style.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet" />
+		 
+		 <script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../layer/layer.js"></script>
+<style type="text/css">
+	td{text-align:center;}
+	th{text-align:center;}
+</style>
+ <script type="text/javascript">
+ 
+ 	function closebtn(id)
+ 	{
+ 		layer.alert("操作成功")
+ 		 
+ 	}
+ </script>
+	<script type="text/javascript">
+    var _indexBail;
+    var _indexClose;
+    $(function () {
+        $('.btn-xs').on('click', function () {
+        	var id = $(this).attr("id");
+        	var title="绩效管理";
+        	 
+            _indexClose=layer.open({
+                type: 2,
+                title: title,
+                area: ['1050px', '500px'],
+                content: ['AchievementOpen.html?shopId='+id, 'no']
+            });
+        });
+    });
+    function closeLayer(m)
+    {
+    	 
+    	if(m==1)
+    	{
+    		window.location.reload();
+    	}
+    	
+    }
+    
+</script>
+</head>
+<body class="gray-bg">
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+          <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                         
+                         <div class="ibox-title"><h5>工资管理</h5></div>
+                   
+				        <div class="layui-tab layui-tab-brief ibox-title" lay-filter="component-tabs-hash">
+				           		<ul class="layui-tab-title">
+							            <li class="layui-this"  lay-id="11"><a href="Salary.html">工资管理</a></li>
+							            <li lay-id="22"><a href="SalaryList.html">工资列表</a></li>
+							            <li lay-id="33"><a href="SalaryReport.html">工资报表</a></li>
+						          </ul>
+				        
+				        </div>
+				        
+                        <div class="ibox-content" style="padding: 0px 20px 20px;">
+                            
+                            <div class="table-responsive" style="   text-align: center;">
+                            	<table style="width: 98%; text-align: center;">
+                            		<tr>
+                            			<td style="vertical-align: top;  width: 45%;">
+                            				<div class="row">
+				                                 <div class="col-select-item row-item">
+                                	
+				                                    <select class="input-sm form-control input-s-sm inline">
+				                                        <option value="0">按月份查看</option>
+				                                        <option value="1">2018-01</option>
+				                                        <option value="1">2018-02</option>
+				                                        <option value="1">2018-03</option>
+				                                        <option value="1" selected="selected">2018-04</option>
+				                                        <option value="1">2018-05</option>
+				                                        <option value="1">2018-06</option>
+				                                        <option value="1">2018-07</option>
+				                                        <option value="1">2018-08</option>
+				                                        <option value="2">老师</option>
+				 
+				                                    </select>
+				                                </div>
+				                                <div class="col-search-box row-item">
+				                                    <div class="input-group">
+				                                        <input type="text" placeholder="请输入姓名或手机号" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜 索 </button> </span>
+				                                    </div>
+				                                </div>
+				                            </div>
+                            				<div style="width:100%; height: 620px;overflow:auto">
+                            					<table class="table table-bordered table-hover" >
+											    <thead>
+											        <tr>
+											        	<th width="30%">职员姓名 </th>
+											            <th width="25%">角色 </th>
+											             <th width="25%">手机 </th>
+											            <th width="20%">操作</th>
+											        </tr>
+											    </thead>
+											    <tbody>
+											                <tr>
+											                    <td>胡锦涛</td>
+											                    <td> 高级管理部</td>
+											                    <td>13439556016</td>
+											                   <td><span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"  onclick="btn('22')">查看工资</button> </span></td>
+											                </tr>
+											                <tr>
+											                    <td>包子</td>
+											                    <td>财务部</td>
+											                     <td>13439556016</td>
+											                     <td><span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary">查看工资</button> </span></td>
+											                </tr>
+						                  <tr>
+											                    <td>胡锦涛</td>
+											                    <td> 高级管理部</td>
+											                    <td>13439556016</td>
+											                   <td><span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"  onclick="btn('22')">查看工资</button> </span></td>
+											                </tr>
+											                <tr>
+											                    <td>包子</td>
+											                    <td>财务部</td>
+											                     <td>13439556016</td>
+											                     <td><span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary">查看工资</button> </span></td>
+											                </tr>
+						                  <tr>
+											                    <td>胡锦涛</td>
+											                    <td> 高级管理部</td>
+											                    <td>13439556016</td>
+											                   <td><span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"  onclick="btn('22')">查看工资</button> </span></td>
+											                </tr>
+											                <tr>
+											                    <td>包子</td>
+											                    <td>财务部</td>
+											                     <td>13439556016</td>
+											                     <td><span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary">查看工资</button> </span></td>
+											                </tr>
+						                  <tr>
+											                    <td>胡锦涛</td>
+											                    <td> 高级管理部</td>
+											                    <td>13439556016</td>
+											                   <td><span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"  onclick="btn('22')">查看工资</button> </span></td>
+											                </tr>
+											                <tr>
+											                    <td>包子</td>
+											                    <td>财务部</td>
+											                     <td>13439556016</td>
+											                     <td><span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary">查看工资</button> </span></td>
+											                </tr>
+						                  <tr>
+											                    <td>胡锦涛</td>
+											                    <td> 高级管理部</td>
+											                    <td>13439556016</td>
+											                   <td><span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"  onclick="btn('22')">查看工资</button> </span></td>
+											                </tr>
+											                <tr>
+											                    <td>包子</td>
+											                    <td>财务部</td>
+											                     <td>13439556016</td>
+											                     <td><span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary">查看工资</button> </span></td>
+											                </tr>
+						                 
+						                 
+						 									 
+													    </tbody>
+													</table>
+													<div class="group-bottom-box"  style="margin-top: -10px;">
+					                                	<div class="group-left">  </div>
+					                                    <div class="pagewrap">
+					                                    	<div class="pagemunber">共 105484 条</div>
+					                                        <div class="pagebox">
+					                                            <span class="previous">上一页</span>
+					                                            <span class="current" style="border-color: #1ab394; background-color: #1ab394;color: #FFF">1</span>
+					                                            <a href="#">2</a>
+					                                            <a href="#">3</a>
+					                                            <a href="#">4</a>
+					                                            <a href="#">5</a>
+					                                            <a href="#">6</a>
+					                                            <a href="#">7</a>
+					                                            <span>...</span>
+					                                            <a href="#">200</a>
+					                                            <a href="#">下一页</a>
+					                                        </div>
+					                                        
+					                                    </div>
+					                                </div>
+                                
+                            				</div>
+													
+													
+                            			</td>
+                            			<td style="padding-left: 15px; vertical-align: top;width: 28%; height: 620px;  padding-top: 44px;">
+                            				 <table class="table table-bordered table-hover"   id="table1" >
+											   
+											    <tbody>
+											    	<tr>
+											    		<td colspan="2" style="color: #1ab394; font-weight: 600; font-size: 16px;">
+											    			胡锦涛 2018年3月份工资 
+											    		</td>
+											    	</tr>
+											                <tr>
+											                    <td style="text-align: right; width: 100px;">基本工资:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+											                 <tr>
+											                    <td style="text-align: right; width: 100px;">工龄工资:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+						                 
+						 									 <tr>
+											                    <td style="text-align: right; width: 100px;">职务工资:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+											                <tr>
+											                    <td style="text-align: right; width: 100px;">学历补贴:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+						                				 <tr>
+											                    <td style="text-align: right; width: 100px;">满勤:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+														<tr>
+											                    <td style="text-align: right; width: 100px;">幼儿出勤:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+											                <tr>
+											                    <td style="text-align: right; width: 100px;">绩效工资:</td>
+											                    <td style="text-align: left;">500</td>
+		
+											                </tr>
+											                <tr>
+											                    <td style="text-align: right; width: 100px;">岗位津贴:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+											                <tr>
+											                    <td style="text-align: right; width: 100px;">应发工资:</td>
+											                    <td style="text-align: left;">7000</td>
+											                    
+											                </tr>
+											                <tr>
+											                    <td style="text-align: right; width: 100px;">五险一金:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+											                <tr>
+											                    <td style="text-align: right; width: 100px;">实发工资:</td>
+											                    <td style="text-align: left;">6500</td>
+											                    
+											                </tr>
+											                <tr>
+											                    <td style="text-align: center; width: 100px;" colspan="2">
+											                    	
+											                    	<span class="input-group-btn  btn-xs"><button type="button" class="btn btn-sm btn-primary">绩效管理</button> </span>
+											                    	<span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary" onclick="closebtn()">  确 定  </button> </span>
+											                    	 
+											                    </td>
+											                    
+											                    
+											                </tr>
+													    </tbody>
+													</table> 
+													
+                                
+                            			</td>
+                            			<td style="padding-left: 15px; padding-right: 10px; width: 4%;">
+                            				<span class="input-group-btn" id="span1" ><button type="button" class="btn btn-sm btn-primary"><<同步上月</button> </span>
+                            			</td>
+                            			<td style="padding-left: 10px; vertical-align: top; width: 26%; height: 620px; padding-top: 44px;">
+                            				 <table class="table table-bordered table-hover" style="width: 350px; " id="table2" >
+											   
+											    <tbody>
+											    	<tr>
+											    		<td colspan="2" style="color: #1ab394; font-weight: 600; font-size: 16px;">
+											    			胡锦涛 2018年2月份工资 
+											    		</td>
+											    	</tr>
+											                <tr>
+											                    <td style="text-align: right; width: 100px;">基本工资:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+											                 <tr>
+											                    <td style="text-align: right; width: 100px;">工龄工资:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+						                 
+						 									 <tr>
+											                    <td style="text-align: right; width: 100px;">职务工资:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+											                <tr>
+											                    <td style="text-align: right; width: 100px;">学历补贴:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+						                				 <tr>
+											                    <td style="text-align: right; width: 100px;">满勤:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+														<tr>
+											                    <td style="text-align: right; width: 100px;">幼儿出勤:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+											                <tr>
+											                    <td style="text-align: right; width: 100px;">绩效工资:</td>
+											                    <td style="text-align: left;">600</td>
+		
+											                </tr>
+											                <tr>
+											                    <td style="text-align: right; width: 100px;">岗位津贴:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+											                <tr>
+											                    <td style="text-align: right; width: 100px;">应发工资:</td>
+											                    <td style="text-align: left;">7000</td>
+											                    
+											                </tr>
+											                <tr>
+											                    <td style="text-align: right; width: 100px;">五险一金:</td>
+											                    <td style="text-align: left;"><input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:220px;" ></td>
+											                    
+											                </tr>
+											                <tr>
+											                    <td style="text-align: right; width: 100px;">实发工资:</td>
+											                    <td style="text-align: left;">6500</td>
+											                    
+											                </tr>
+													    </tbody>
+													</table>   
+                            			</td>
+                            		</tr>
+                            	</table>
+                                
+							                     
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+    </div>
+</div> 
+
+</body>
+
+ 
+</html>
+
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>幼儿管理</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+ 
+<link href='../../fullcalendar/fullcalendar.css' rel='stylesheet' />
+<link href='../../fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<style type="text/css">
+
+	body {
+		/*margin-top: 40px;*/
+		text-align: center;
+		font-size: 14px;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		}
+
+	#calendar {
+		width: 900px;
+		margin: 0 auto;
+		}
+.fc-event-time, .fc-event-title {
+    color: #fff;
+}
+</style>
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                       <div class="layui-tab layui-tab-brief ibox-title" lay-filter="component-tabs-hash">
+							
+							<ul class="layui-tab-title">
+								<li  lay-id="11" onclick="window.location.href='ClassInformation.html'">班级信息</li>
+								<li  lay-id="22"  onclick="window.location.href='Students.html'">班级学员</li>
+								<li lay-id="33" class="layui-this" onclick="window.location.href='ClassFee.html'">费用管理</li>
+								<li lay-id="33"  onclick="window.location.href='ClassSchedule.html'">班级课程表</li>
+
+							</ul>
+
+						</div>
+                       
+                        <div class="ibox-content">
+                               <div>
+                                <table class="table table-hover" border="1" bordercolor="lightgray" style="text-align: center;">
+                                    <thead>
+                                        <tr>
+                                           <th style="text-align: center;">费用名称</th>
+                                    		<th style="text-align: center;">费用明细</th>
+                                    		<th style="text-align: center;">费用金额</th>
+                                    		<th style="text-align: center;">合计</th>
+                                         	
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    	
+                                        <tr>
+                                          
+                                            <td><strong>学费</strong></td>
+                                            <td></td>
+                                            <td><span style="color: red;">$2000</span></td>
+                                           <td><span style="color: #1AB394;">$2000</span></td>
+                                        </tr>
+                                         <tr>
+                                           
+                                            <td rowspan="4"><strong>教材费</strong></td>
+                                            <td>语文</td>
+                                           
+                                            <td><span style="color: red;">$200</span></td>
+                                          <td rowspan="4"><span style="color: #1AB394;">$800</span></td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>数学</td>
+                                           
+                                            <td><span style="color: red;">$200</span></td>
+                                           <!--<td><i class="fa fa-pencil-square-o"></i><a href="">修改</a></td>-->
+                                        </tr>
+                                         <tr>
+                                        
+                                            <td>英语</td>
+                                           
+                                            <td><span style="color: red;">$200</span></td>
+                                          <!-- <td><i class="fa fa-pencil-square-o"></i><a href="">修改</a></td>-->
+                                           
+                                        </tr>
+                                        <tr>
+                                       
+                                            <td>自然</td>
+                                           
+                                            <td><span style="color: red;">$200</span></td>
+                                          <!-- <td><i class="fa fa-pencil-square-o"></i><a href="">修改</a></td>-->
+                                           
+                                        </tr>
+                                         <tr>
+                                            
+                                            <td rowspan="3"><strong>杂费</strong></td>
+                                            <td>餐费</td>
+                                           
+                                            <td><span style="color: red;">$200</span></td>
+                                          <td rowspan="2"><span style="color: #1AB394;">$400</span></td>
+                                           
+                                        </tr>
+                                        <tr>
+                                           
+                                           
+                                            <td>校车费</td>
+                                           
+                                            <td><span style="color: red;">$200</span></td>
+                                           <!--<td><i class="fa fa-pencil-square-o"></i><a href="">修改</a></td>-->
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                            
+                          
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>
+ 
+ <script src='../../jquery/jquery-ui-1.10.2.custom.min.js'></script>
+<script src='../../fullcalendar/fullcalendar.min.js'></script>
+	<script type="text/javascript ">
+			$(function() {
+					$(".i-checks").iCheck({
+					checkboxClass: "icheckbox_square-green",
+					radioClass: "iradio_square-green",
+				})
+				$("#left").change(function() {
+					var options = $("#left option:selected ");
+				
+					$("#left ").find("option:selected ").remove();
+					$("#right ").append("<option value=''>" + options.text() + "</option>");
+				});
+				$("#right").change(function() {
+					var options = $("#right option:selected ");
+					$("#right ").find("option:selected ").remove();
+				
+					$("#left ").append("<option value=''>" + options.text() + "</option>");
+				});
+			});
+			$(function() {
+				$(".summernote").summernote({
+					lang: "zh-CN"
+				})
+			});
+			var edit = function() {
+				$("#eg").addClass("no-padding");
+				$(".click2edit").summernote({
+					lang: "zh-CN",
+					focus: true
+				})
+			};
+			var save = function() {
+				$("#eg").removeClass("no-padding");
+				var aHTML = $(".click2edit").code();
+				$(".click2edit").destroy()
+			};
+		</script>
+</body>
+</html>

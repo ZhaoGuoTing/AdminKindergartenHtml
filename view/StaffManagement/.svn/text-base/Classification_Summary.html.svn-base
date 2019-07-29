@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>分类汇总明细</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>汇总明细</h5>
+                            
+                        </div>
+                        <div class="ibox-content">
+                           
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th width="3%"><label><input type="checkbox" class="i-checks" name="input[]"></label></th>
+                                            <th width="28%">工资项目名称</th>
+                                            <th width="22%">老师姓名</th>
+                                            <th width="22%">角色</th>
+                                            <th width="10%">金额</th>
+                                            <th width="15%">占比</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td><div class="product_titbox">五险一金</div></td>
+                                            <td>常跃林</td>
+                                            <td>主席</td>
+                                            <td><span style="color:red;">3000</span></td>
+                                            <td>30%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td><div class="product_titbox">五险一金</div></td>
+                                            <td>常跃林</td>
+                                            <td>主席</td>
+                                            <td><span style="color:red;">3000</span></td>
+                                            <td>30%</td>
+                                        </tr>
+                                         <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td><div class="product_titbox">五险一金</div></td>
+                                            <td>常跃林</td>
+                                            <td>主席</td>
+                                            <td><span style="color:red;">3000</span></td>
+                                            <td>30%</td>
+                                        </tr>
+                                         <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td><div class="product_titbox">五险一金</div></td>
+                                            <td>常跃林</td>
+                                            <td>主席</td>
+                                            <td><span style="color:red;">3000</span></td>
+                                            <td>30%</td>
+                                        </tr>
+                                       
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	<div class="group-left"><label class="group-xuan"><input type="checkbox" class="i-checks" name="input[]">全选</label><a class="btn btn-white btn-bitbucket"><i class="fa fa-level-down"></i>批量下架</a><a class="btn btn-white btn-bitbucket"><i class="fa fa-trash"></i>批量删除</a></div>
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">7</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>   
+<script type="text/javascript" src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../../js/plugins/cropper/cropper.min.js"></script>
+<script type="text/javascript" src="../../js/layer/layer.js"></script>
+</body>
+</html>

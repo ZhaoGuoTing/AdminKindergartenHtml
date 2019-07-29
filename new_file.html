@@ -1,0 +1,441 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>O2O中央空调服务平台系统</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+
+    <![endif]-->
+    <!-- <link rel="shortcut icon" href="favicon.ico"> -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/font-awesome.min.css" rel="stylesheet">
+<link href="../css/animate.min.css" rel="stylesheet">
+<link href="../css/style.min.css" rel="stylesheet">
+<link href="../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+
+    <script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="../js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../js/layer/layer.js"></script><link rel="stylesheet" href="http://127.0.0.1:8087/js/layer/skin/layer.css" id="layui_layer_skinlayercss">
+<script src="../js/hplus.min.js"></script>
+<script src="../js/contabs.min.js"></script>
+<script src="../js/plugins/pace/pace.min.js"></script>
+<script src="../js/content.min.js"></script>
+<script src="../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script src="../js/plugins/datapicker/datepickers.js"></script>
+<script src="../js/plugins/validate/Validform_v5.3.2_min.js"></script>
+<script src="../js/plugins/iCheck/icheck.min.js"></script>
+<script src="../js/btnClose.js"></script>
+
+
+<link rel="stylesheet" href="http://127.0.0.1:8087/js/layer/skin/layer.ext.css" id="layui_layer_skinlayerextcss"><link rel="stylesheet" href="http://127.0.0.1:8087/js/layer/skin/moon/style.css" id="layui_layer_skinmoonstylecss"></head>
+<body class="fixed-sidebar full-height-layout gray-bg  pace-done" style="overflow: hidden;"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+    <div id="wrapper">
+        <!--左侧导航开始-->
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="nav-close">
+                <i class="fa fa-times-circle"></i>
+            </div>
+            <div class="slimScrollDiv" style="position: relative; width: auto; height: 100%;"><div class="sidebar-collapse" style="width: auto; height: 100%;">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                
+                                <img alt="image" class="img-circle" style="width:60px;height:60px;" src="/img/logo.png">
+                            </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    
+                                    <span class="text-muted text-xs block">ceshi<b class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="J_menuItem" href="/Admin/UserInfo" data-index="0">个人资料</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/Admin/LoginOut">安全退出</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element"><img src="/img/logo_small.png" width="30"></div>
+                    </li>
+                                        <li class="active">
+                                            <a href="javascript:;"><i class="fa fa-users"></i> <span class="nav-label">CRM系统管理</span><span class="fa arrow"></span></a>
+                                            <ul class="nav nav-second-level collapse in" aria-expanded="true">
+
+                                                        <li><a class="J_menuItem" href="/CustomerMGT/CustomerAdd" data-index="1">新增客户</a></li>
+                                                        <li><a class="J_menuItem" href="/CustomerMGT/CustomerList" data-index="2">客户管理</a></li>
+                                                        <li><a class="J_menuItem" href="/CustomerMGT/ReceivedRemindList" data-index="3">回款提醒</a></li>
+                                                        <li><a class="J_menuItem" href="/CustomerMGT/ContractList" data-index="4">合同管理</a></li>
+                                                        <li><a class="J_menuItem" href="/CustomerMGT/CustomContractRepayList" data-index="5">合同应收款</a></li>
+                                                        <li><a class="J_menuItem" href="/CustomerMGT/CommunicateNotes" data-index="6">跟进沟通记录</a></li>
+                                                        <li><a class="J_menuItem" href="/CustomerMGT/ContractExpireList" data-index="7">合同到期提醒</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><i class="fa fa-briefcase"></i> <span class="nav-label">工程师管理</span><span class="fa arrow"></span></a>
+                                            <ul class="nav nav-second-level collapse">
+
+                                                        <li><a class="J_menuItem" href="/EngineerMGT/EngineerAdd" data-index="8">新增工程师</a></li>
+                                                        <li><a class="J_menuItem" href="/EngineerMGT/EngineerList" data-index="9">工程师列表</a></li>
+                                                        <li><a class="J_menuItem" href="/EngineerMGT/ProjectTeamList" data-index="10">工程项目组</a></li>
+                                                        <li><a class="J_menuItem" href="/EngineerMGT/PositionList" data-index="11">工程师位置</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><i class="fa fa-user"></i> <span class="nav-label">业务中心</span><span class="fa arrow"></span></a>
+                                            <ul class="nav nav-second-level collapse">
+
+                                                        <li><a class="J_menuItem" href="/BusinessMGT/CustomerRepairAdd" data-index="12">录入客户报修</a></li>
+                                                        <li><a class="J_menuItem" href="/BusinessMGT/ContractScheduleList" data-index="13">工程进度反馈</a></li>
+                                                        <li><a class="J_menuItem" href="/BusinessMGT/EquipmentRepairList" data-index="14">报修单</a></li>
+                                                        <li><a class="J_menuItem" href="/BusinessMGT/DiagnosisList" data-index="15">诊断单</a></li>
+                                                        <li><a class="J_menuItem" href="/BusinessMGT/DiagnosisOfferList" data-index="16">报价单</a></li>
+                                                        <li><a class="J_menuItem" href="/BusinessMGT/BuildRecordList" data-index="17">施工单</a></li>
+                                                        <li><a class="J_menuItem" href="/BusinessMGT/CompleteCheckList" data-index="18">验收单</a></li>
+                                                        <li><a class="J_menuItem" href="/BusinessMGT/InspectList" data-index="19">巡检单</a></li>
+                                                        <li><a class="J_menuItem" href="/BusinessMGT/ComplaintList" data-index="20">投诉建议</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><i class="fa fa-suitcase"></i> <span class="nav-label">财务管理</span><span class="fa arrow"></span></a>
+                                            <ul class="nav nav-second-level collapse">
+
+                                                        <li><a class="J_menuItem" href="/FinanceMGT/FinaceContractRepayList" data-index="21">合同应收款管理</a></li>
+                                                        <li><a class="J_menuItem" href="/FinanceMGT/ContractPaymentList" data-index="22">合同已回款</a></li>
+                                                        <li><a class="J_menuItem" href="/FinanceMGT/ContractCostList" data-index="23">合同费用明细</a></li>
+                                                        <li><a class="J_menuItem" href="/FinanceMGT/ReceiptList" data-index="24">发票开出记录</a></li>
+                                                        <li><a class="J_menuItem" href="/FinanceMGT/EngineerPaymentList" data-index="25">工程师薪酬</a></li>
+                                                        <li><a class="J_menuItem" href="/FinanceMGT/SellProfitList" data-index="26">销售提成金额</a></li>
+                                                        <li><a class="J_menuItem" href="/FinanceMGT/CustomProfitList" data-index="27">客服提成金额</a></li>
+                                                        <li><a class="J_menuItem" href="/FinanceMGT/CostCheckList" data-index="28">合同成本核算</a></li>
+                                                        <li><a class="J_menuItem" href="/FinanceMGT/ContractList" data-index="29">合同成本编辑</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><i class="fa fa-desktop"></i> <span class="nav-label">账号管理</span><span class="fa arrow"></span></a>
+                                            <ul class="nav nav-second-level collapse">
+
+                                                        <li><a class="J_menuItem" href="/AuthorizationMGT/DepartmentList" data-index="30">部门列表</a></li>
+                                                        <li><a class="J_menuItem" href="/AuthorizationMGT/AccountList" data-index="31">员工列表</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;"><i class="fa fa-graduation-cap"></i> <span class="nav-label">系统管理</span><span class="fa arrow"></span></a>
+                                            <ul class="nav nav-second-level collapse">
+
+                                                        <li><a class="J_menuItem" href="/SystemSETMGT/EquipmentTypeList" data-index="32">设备类型</a></li>
+                                                        <li><a class="J_menuItem" href="/SystemSETMGT/ContractTypeList" data-index="33">合同类型</a></li>
+                                                        <li><a class="J_menuItem" href="/SystemSETMGT/ServiceList" data-index="34">服务内容</a></li>
+                                                        <li><a class="J_menuItem" href="/SystemSETMGT/MonitorClassList" data-index="35">监控设备分类</a></li>
+
+                                            </ul>
+                                        </li>
+                </ul>
+
+
+            </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 4px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 762px;"></div><div class="slimScrollRail" style="width: 4px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.9; z-index: 90; right: 1px;"></div></div>
+        </nav>
+        <!--左侧导航结束-->
+        <!--右侧部分开始-->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn " href="#"><img src="/img/logo.png" style="width:44px;"></a><img class="logo_txt" src="/img/logo_txt.png"></div>
+                    <ul class="nav navbar-top-links navbar-right" style="margin-top: 10px;">
+                        <li class="dropdown">
+                                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-bell"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-alerts">
+                                    <li>
+                                        <div class="text-center link-block">
+                                            <a class="J_menuItem" href="/Admin/MessageList" data-index="36">
+                                                <strong>所有消息 </strong>
+                                                <i class="fa fa-angle-right"></i>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+
+
+                        </li>
+                        <li class="dropdown hidden-xs">
+                            <a class="right-sidebar-toggle" aria-expanded="false">
+                                <i class="fa fa-tasks"></i> 主题
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="row content-tabs">
+                <button class="roll-nav roll-left J_tabLeft" onclick="javascript:history.back(-1);">
+                    <i class="fa fa-backward"></i>
+                </button>
+                <nav class="page-tabs J_menuTabs">
+                    <div class="page-tabs-content" style="margin-left: 0px;">
+                        <a href="javascript:;" class="J_menuTab" data-id="default.html">首页</a>
+                    <a href="javascript:;" class="active J_menuTab" data-id="/CustomerMGT/CustomerList" target="iframe2">客户管理 <i class="fa fa-times-circle"></i></a></div>
+                </nav>
+                <button class="roll-nav roll-right J_tabRight" onclick="javascript:history.back(1);">
+                    <i class="fa fa-forward"></i>
+                </button>
+                <div class="btn-group roll-nav roll-right">
+                    <button class="dropdown J_tabClose" data-toggle="dropdown">
+                        关闭操作<span class="caret"></span>
+
+                    </button>
+                    <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                        <li class="J_tabShowActive">
+                            <a>定位当前选项卡</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="J_tabCloseAll">
+                            <a>关闭全部选项卡</a>
+                        </li>
+                        <li class="J_tabCloseOther">
+                            <a>关闭其他选项卡</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="/Admin/LoginOut" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
+            </div>
+            <div class="row J_mainContent" id="content-main">
+                <iframe class="J_iframe" id="J_iframe" name="iframe0" width="100%" height="100%" src="/Admin/Default" frameborder="0" data-id="default.html" seamless="" style="display: none;"></iframe>
+            <iframe class="J_iframe" name="iframe2" width="100%" height="100%" src="/CustomerMGT/CustomerList" frameborder="0" data-id="/CustomerMGT/CustomerList" seamless=""></iframe></div>
+            <div class="footer">
+                <div class="pull-left"><span class="color_b">本系统支持IE10以上版本</span></div>
+                <div class="pull-right">技术支持：北京鸿信创嘉科技有限公司</div>
+            </div>
+        </div>
+        <!--右侧部分结束-->
+        <!--右侧边栏开始-->
+        <div id="right-sidebar">
+            <div class="slimScrollDiv" style="position: relative; width: auto; height: 100%;"><div class="sidebar-container" style="width: auto; height: 100%;">
+
+                <ul class="nav nav-tabs navs-3">
+
+                    <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-gear"></i>主题</a></li>
+                    <li class=""><a data-toggle="tab" href="#tab-2">通知</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane active">
+                        <div class="sidebar-title">
+                            <h3> <i class="fa fa-comments-o"></i> 主题设置</h3>
+                            <small><i class="fa fa-tim"></i> 你可以从这里选择和预览主题的布局和样式，这些设置会被保存在本地，下次打开的时候会直接应用这些设置。</small>
+                        </div>
+                        <div class="skin-setttings">
+                            <div class="title">主题设置</div>
+                            <div class="setings-item">
+                                <span>收起左侧菜单</span>
+                                <div class="switch">
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="collapsemenu">
+                                        <label class="onoffswitch-label" for="collapsemenu">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="setings-item">
+                                <span>固定顶部</span>
+
+                                <div class="switch">
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="fixednavbar" class="onoffswitch-checkbox" id="fixednavbar">
+                                        <label class="onoffswitch-label" for="fixednavbar">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="setings-item">
+                                <span>固定宽度</span>
+
+                                <div class="switch">
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="boxedlayout" class="onoffswitch-checkbox" id="boxedlayout">
+                                        <label class="onoffswitch-label" for="boxedlayout">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title">皮肤选择</div>
+                            <div class="setings-item default-skin nb">
+                                <span class="skin-name ">
+                                    <a href="#" class="s-skin-0">
+                                        默认皮肤
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="setings-item blue-skin nb">
+                                <span class="skin-name ">
+                                    <a href="#" class="s-skin-1">
+                                        蓝色主题
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="setings-item yellow-skin nb">
+                                <span class="skin-name ">
+                                    <a href="#" class="s-skin-3">
+                                        黄色/紫色主题
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane">
+
+                        <div class="sidebar-title">
+                            <h3> <i class="fa fa-comments-o"></i> 最新通知</h3>
+                            <small><i class="fa fa-tim"></i> 您当前有10条未读信息</small>
+                        </div>
+
+                        <div>
+
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="/img/a1.jpg">
+
+                                        <div class="m-t-xs">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+
+                                        据天津日报报道：瑞海公司董事长于学伟，副董事长董社轩等10人在13日上午已被控制。
+                                        <br>
+                                        <small class="text-muted">今天 4:21</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="/img/a2.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        HCY48之音乐大魔王会员专属皮肤已上线，快来一键换装拥有他，宣告你对华晨宇的爱吧！
+                                        <br>
+                                        <small class="text-muted">昨天 2:45</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="/img/a3.jpg">
+
+                                        <div class="m-t-xs">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        写的好！与您分享
+                                        <br>
+                                        <small class="text-muted">昨天 1:10</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="/img/a4.jpg">
+                                    </div>
+
+                                    <div class="media-body">
+                                        国外极限小子的炼成！这还是亲生的吗！！
+                                        <br>
+                                        <small class="text-muted">昨天 8:37</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="/img/a8.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        一只流浪狗被收留后，为了减轻主人的负担，坚持自己觅食，甚至......有些东西，可能她比我们更懂。
+                                        <br>
+                                        <small class="text-muted">今天 4:21</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="/img/a7.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        这哥们的新视频又来了，创意杠杠滴，帅炸了！
+                                        <br>
+                                        <small class="text-muted">昨天 2:45</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="/img/a3.jpg">
+
+                                        <div class="m-t-xs">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        最近在补追此剧，特别喜欢这段表白。
+                                        <br>
+                                        <small class="text-muted">昨天 1:10</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="/img/a4.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        我发起了一个投票 【你认为下午大盘会翻红吗？】
+                                        <br>
+                                        <small class="text-muted">星期一 8:37</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 4px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 701px;"></div><div class="slimScrollRail" style="width: 4px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.4; z-index: 90; right: 1px;"></div></div>
+        </div>
+        <!--右侧边栏结束-->
+    </div>
+
+
+</body></html>

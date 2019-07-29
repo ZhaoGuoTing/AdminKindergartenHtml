@@ -1,0 +1,147 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>角色管理</title>
+		<link data-style="theme_public" rel="stylesheet" type="text/css" href="../../css/zhiling.css" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/animate.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/style.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet" />
+		 
+		 <script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../layer/layer.js"></script>
+<style type="text/css">
+	td{text-align:center;}
+</style>
+	<script type="text/javascript">
+    var _indexBail;
+    var _indexClose;
+    $(function () {
+        $('.shan').on('click', function () {
+        	var id = $(this).attr("id");
+        	 
+        	 layer.confirm("确认批量操作？", { btn: ['确定', '取消'] }, function () {
+		       /* var strIds = "";
+		        $("#trAll").find("tr").each(function () {
+		            var _this = $(this).find("td").eq(0).find("input[type='checkbox']");
+		            if ($(_this).is(':checked')) {
+		                strIds += $(this).attr("vid") + ",";
+		            }
+		        });
+		        if (strIds != "" && strIds.length > 0) {
+		             
+		        }
+		        else {
+		            layer.alert("请选择要操作的信息");
+		            return false;
+		        }*/
+		    }, function () { });
+    
+    
+        });
+    });
+    function closeLayer(m)
+    {
+    	 
+    	if(m==1)
+    	{
+    		window.location.reload();
+    	}
+    	
+    }
+    
+    
+</script>
+</head>
+<body class="gray-bg">
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+          <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title" >
+                            <h5>角色管理</h5>
+                            <div class="ibox-tools"><a href="AddRole.html" class="btn btn-primary">添加角色</a></div>
+                        </div>
+                        <div class="ibox-content">
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                       <tr>
+			                            	<th width="25%" style="text-align:left;">角色名称</th>
+			                            	<th width="20%" style="text-align:center;">录入账户</th>
+			                            	<th width="25%" style="text-align:center;">录入时间</th>
+			                            	<th width="30%"  style="text-align:center;">操作</th>
+                            			</tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                	<td style="text-align:left;">总经办</td>
+                                	 <td>admin</td>
+                                    <td>2016-07-21 16:34:00</td>
+                                    <td><div class="group-btn-edit"><a href="AddRole.html" class="btn-xs"  id="10"><i class="fa fa-pencil-square-o"></i>修改</a><a href="javascript:void(0)" class="shan"><i class="fa fa-trash" id="10"></i>删除</a></div></td>
+                                </tr>
+        						<tr>
+                                	<td style="text-align:left;">总经理</td>
+                                	<td>admin</td>
+                                    <td>2016-07-21 16:34:00</td>
+                                    <td><div class="group-btn-edit"><a href="AddRole.html" class="btn-xs" id="10"><i class="fa fa-pencil-square-o"></i>修改</a><a href="javascript:void(0)" class="shan"><i class="fa fa-trash" id="11"></i>删除</a></div></td>
+                                </tr>
+                                <tr>
+                                	<td style="text-align:left;">行政</td>
+                                	<td>admin</td>
+                                    <td>2016-07-21 16:34:00</td>
+                                    <td><div class="group-btn-edit"><a href="AddRole.html" class="btn-xs" id="10"><i class="fa fa-pencil-square-o"></i>修改</a><a href="javascript:void(0)" class="shan"><i class="fa fa-trash"  id="12"></i>删除</a></div></td>
+                                </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	<div class="group-left">  </div>
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current" style="border-color: #1ab394; background-color: #1ab394;color: #FFF">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">7</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+    </div>
+</div> 
+
+</body>
+
+ 
+</html>
+
+ 
+ 
+ 
+ 
+ 
+ 

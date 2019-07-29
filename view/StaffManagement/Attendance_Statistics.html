@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>考勤统计</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico"> 
+<link href="../../css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+<link href="../../css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+<link href="../../css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+<link href="../../js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+<link href="../../css/animate.min.css" rel="stylesheet">
+<link href="../../css/style.min.css?v=4.0.0" rel="stylesheet"><base target="_blank">
+
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content">
+       
+        <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>考勤统计</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                <div class="col-radio row-item">
+                                    <div data-toggle="buttons" class="btn-group">
+                                        <label class="btn btn-sm btn-white active"><input type="radio"  name="options">今天</label>
+                                        <label class="btn btn-sm btn-white"><input type="radio" name="options">近三日</label>
+                                        <label class="btn btn-sm btn-white"><input type="radio" name="options">近一周</label>
+                                        <label class="btn btn-sm btn-white"><input type="radio" name="options">近一月</label>
+                                    </div>
+                                </div>
+                                <div class="col-datepicker row-item daterange-item" id="data_5">
+                            		<label class="font-noraml">开始时间</label>
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" name="start" value="2016-02-11" />
+                                        <span class="input-group-addon">到</span>
+                                        <input type="text" class="input-sm form-control" name="end" value="2016-02-17" />
+                                    </div>
+                                </div>
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="员工名字查询" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th width="8%"><label><input type="checkbox" class="i-checks" name="input[]">全选</label></th>
+                                            <th width="5%">序号</th>
+                                            <th width="15%">教师姓名</th>
+                                            <th width="16%">应到天数</th>
+                                            <th width="12%">正常考勤天数</th>
+                                            <th width="10%">异常考勤天数</th>
+                                            <th width="12%">缺勤天数</th>
+                                            <th width="12%">迟到天数</th>
+                                            <th width="10%">早退天数</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>1</td>
+                                            <td>张新江(13520779882)</td>
+                                            <td>1</td>
+                                            <td><b class="color_red">1</b></td>
+                                            <td><span class="color_red">1</span></td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                             <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>1</td>
+                                            <td>张新江(13520779882)</td>
+                                            <td>1</td>
+                                            <td><b class="color_red">1</b></td>
+                                            <td><span class="color_red">1</span></td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                       
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	<div class="group-left"><label class="group-xuan"><input type="checkbox" class="i-checks" name="input[]">全选</label><a class="btn btn-white btn-bitbucket"><i class="fa fa-download"></i>批量导出</a><a class="btn btn-white btn-bitbucket"><i class="fa fa-trash"></i>批量删除</a></div>
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">7</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+       
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>考勤统计</h5>
+                        <div class="flot-chart" style="padding-top:30px;">
+                            <div class="flot-chart-content" id="flot-line-chart-multi"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <script src="../../js/jquery.min.js?v=2.1.4"></script>
+    <script src="../../js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="../../js/plugins/flot/jquery.flot.js"></script>
+    <script src="../../js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="../../js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="../../js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="../../js/plugins/flot/jquery.flot.pie.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            function e(e, o) {
+                return "&yen;" + e.toFixed(o.tickDecimals)
+            }
+            function o(o) {
+                $.plot($("#flot-line-chart-multi"), [
+                    {
+                        data: t,
+                        label: "靓号订单",
+
+                    }, {
+                        data: i,
+                        label: "商城订单",
+                    }],{
+
+                    series: {
+                        lines: {
+                            show: !0,
+                            barWidth: .4,
+                            fill: !0,
+                            fillColor: {
+                                colors: [{
+                                    opacity: .8
+                                }, {
+                                    opacity: .8
+                                }]
+                            }
+                        }
+                    },
+                    xaxes: [{
+                        mode: null
+                    }],
+
+                    xaxis: {
+                        tickDecimals: 0,
+                        tickSize: 1
+                    },
+
+                    yaxes: [{
+                        min: 0
+                    }, {
+                        alignTicksWithAxis: "right" == o ? 0 : null,
+                        position: o,
+                        tickFormatter: e
+                    }],
+                    legend: {
+                        position: "ne"
+                        //position: "ne" or "nw" or "se" or "sw"
+                    },
+                    colors: ["#1ab394"],
+                    grid: {
+                        color: "#999999",
+                        hoverable: !0,
+                        clickable: !0,
+                        tickColor: "#D4D4D4",
+                        borderWidth: 0,
+                        hoverable: !0
+                    },
+                    tooltip: !0,
+                    tooltipOpts: {
+                        content: "时间:%x, %s: %y ",
+                        xDateFormat: "%y-%0m-%0d",
+                        onHover: function() {}
+                    }
+                })
+            }
+            var t = [
+                        [1, 16800],
+                        [2, 14210],
+                        [3, 18500],
+                        [4, 9800],
+                        [5, 12014],
+                        [6, 29000],
+                        [7, 16540],
+                        [8, 25840],
+                        [9, 12000],
+                        [10, 4200],
+                        [11, 21000],
+                        [12, 16800],
+                        [13, 14210],
+                        [14, 18500],
+                        [15, 9800],
+                        [16, 12014],
+                        [17, 29000],
+                        [18, 16540],
+                        [19, 25840],
+                        [20, 12000],
+                        [21, 4200],
+                        [22, 21000],
+                        [23, 16500],
+                        [24, 14980]
+                    ],
+                    i = [
+                        [1, 1680],
+                        [2, 1421],
+                        [3, 1850],
+                        [4, 19800],
+                        [5, 1201],
+                        [6, 2900],
+                        [7, 1650],
+                        [8, 2580],
+                        [9, 1000],
+                        [10, 400],
+                        [11, 2000],
+                        [12, 1600],
+                        [13, 1410],
+                        [14, 1800],
+                        [15, 980],
+                        [16, 1214],
+                        [17, 2900],
+                        [18, 1640],
+                        [19, 2540],
+                        [20, 1200],
+                        [21, 4200],
+                        [22, 2100],
+                        [23, 1600],
+                        [24, 1480]
+                    ];
+            o("right"),
+                    $("button").click(function() {
+                        o($(this).text())
+                    })
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

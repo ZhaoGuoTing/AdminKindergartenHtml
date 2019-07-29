@@ -1,0 +1,254 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>权限管理</title>
+		<link data-style="theme_public" rel="stylesheet" type="text/css" href="../../css/zhiling.css" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/animate.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/style.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet" />
+		 
+		 <script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../layer/layer.js"></script>
+<style type="text/css">
+	td{text-align:center;}
+</style>
+ <script type="text/javascript">
+    function CheckAllck(chkall, itemname) {
+        var aa = $("input");
+        if (aa == undefined) return;
+        for (var i = 0; i < aa.length; i++) aa[i].checked = chkall.checked;
+    }
+    function CheckAll(chkall, itemname) {
+        var aa = $("." + itemname);
+        if (aa == undefined) return;
+        for (var i = 0; i < aa.length; i++) aa[i].checked = chkall.checked;
+    }
+</script>
+
+</head>
+<body class="gray-bg">
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+         <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>角色权限管理 - 高级管理部</h5>
+                </div>
+                <div class="ibox-content overf">
+                	
+                    <div class="col-sm-9"></div>
+                    
+                    <div class="group-qx-box">
+                        <div class="group-qx-tit">
+                            <div class="quanxian" style="width:300px;">
+                                <b class="qx-titext">权限菜单</b>
+                                <label class="qx-check" style="margin-left:-12px;"><input id="ckb_CheckAll" type="checkbox" value="" onclick="CheckAllck(this, 'ckb_limit');">全选</label>
+                            </div>
+                        </div>
+								<form action="/AuthorizationMGT/PostCompanyJurisdiction" method="post">                            <input type="hidden" id="Departmentid" name="Departmentid" value="1010971614535179829248">
+                                        <dl>
+                                            <dt>
+                                                CRM系统管理 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <label class="group-qx-tit"><input id="ckb_CheckAll" type="checkbox" value="" onclick="CheckAll(this, 'checkbox1' )">全选</label>
+
+                                                    </dt><dd>
+                                                        <div class="qx-tit">客户管理</div><input type="hidden" name="menuid" value="7">
+                                                        <div class="qx-edit">
+
+
+
+                                                                    <label class="qx-check"><input name="add7" type="checkbox" id="add_limit7" value="1" class="checkbox1" checked="checked">添加</label>
+                                                                    <label class="qx-check"><input name="edit7" type="checkbox" id="edit_limit7" value="1" class="checkbox1" checked="checked">修改</label>
+                                                                    <label class="qx-check"><input name="read7" type="checkbox" id="read_limit7" value="1" class="checkbox1" checked="checked">查看</label>
+                                                                    <label class="qx-check"><input name="delete7" type="checkbox" id="delete_limit7" value="1" class="checkbox1" checked="checked">删除</label>
+
+
+                                                        </div>
+                                                    </dd>
+                                                    <dd>
+                                                        <div class="qx-tit">新增客户</div><input type="hidden" name="menuid" value="8">
+                                                        <div class="qx-edit">
+
+
+
+                                                                    <label class="qx-check"><input name="add8" type="checkbox" id="add_limit8" value="1" class="checkbox1" checked="checked">添加</label>
+                                                                    <label class="qx-check"><input name="edit8" type="checkbox" id="edit_limit8" value="1" class="checkbox1" checked="checked">修改</label>
+                                                                    <label class="qx-check"><input name="read8" type="checkbox" id="read_limit8" value="1" class="checkbox1" checked="checked">查看</label>
+                                                                    <label class="qx-check"><input name="delete8" type="checkbox" id="delete_limit8" value="1" class="checkbox1" checked="checked">删除</label>
+
+
+                                                        </div>
+                                                    </dd>
+                                                    <dd>
+                                                        <div class="qx-tit">回款提醒</div><input type="hidden" name="menuid" value="9">
+                                                        <div class="qx-edit">
+
+
+
+                                                                    <label class="qx-check"><input name="add9" type="checkbox" id="add_limit9" value="1" class="checkbox1" checked="checked">添加</label>
+                                                                    <label class="qx-check"><input name="edit9" type="checkbox" id="edit_limit9" value="1" class="checkbox1" checked="checked">修改</label>
+                                                                    <label class="qx-check"><input name="read9" type="checkbox" id="read_limit9" value="1" class="checkbox1" checked="checked">查看</label>
+                                                                    <label class="qx-check"><input name="delete9" type="checkbox" id="delete_limit9" value="1" class="checkbox1" checked="checked">删除</label>
+
+
+                                                        </div>
+                                                    </dd>
+                                                    <dd>
+                                                        <div class="qx-tit">合同管理</div><input type="hidden" name="menuid" value="10">
+                                                        <div class="qx-edit">
+
+
+
+                                                                    <label class="qx-check"><input name="add10" type="checkbox" id="add_limit10" value="1" class="checkbox1" checked="checked">添加</label>
+                                                                    <label class="qx-check"><input name="edit10" type="checkbox" id="edit_limit10" value="1" class="checkbox1" checked="checked">修改</label>
+                                                                    <label class="qx-check"><input name="read10" type="checkbox" id="read_limit10" value="1" class="checkbox1" checked="checked">查看</label>
+                                                                    <label class="qx-check"><input name="delete10" type="checkbox" id="delete_limit10" value="1" class="checkbox1" checked="checked">删除</label>
+
+
+                                                        </div>
+                                                    </dd>
+                                                    <dd>
+                                                        <div class="qx-tit">跟进沟通记录</div><input type="hidden" name="menuid" value="11">
+                                                        <div class="qx-edit">
+
+
+
+                                                                    <label class="qx-check"><input name="add11" type="checkbox" id="add_limit11" value="1" class="checkbox1" checked="checked">添加</label>
+                                                                    <label class="qx-check"><input name="edit11" type="checkbox" id="edit_limit11" value="1" class="checkbox1" checked="checked">修改</label>
+                                                                    <label class="qx-check"><input name="read11" type="checkbox" id="read_limit11" value="1" class="checkbox1" checked="checked">查看</label>
+                                                                    <label class="qx-check"><input name="delete11" type="checkbox" id="delete_limit11" value="1" class="checkbox1" checked="checked">删除</label>
+
+
+                                                        </div>
+                                                    </dd>
+                                                    <dd>
+                                                        <div class="qx-tit">合同到期提醒</div><input type="hidden" name="menuid" value="12">
+                                                        <div class="qx-edit">
+
+
+
+                                                                    <label class="qx-check"><input name="add12" type="checkbox" id="add_limit12" value="1" class="checkbox1" checked="checked">添加</label>
+                                                                    <label class="qx-check"><input name="edit12" type="checkbox" id="edit_limit12" value="1" class="checkbox1" checked="checked">修改</label>
+                                                                    <label class="qx-check"><input name="read12" type="checkbox" id="read_limit12" value="1" class="checkbox1" checked="checked">查看</label>
+                                                                    <label class="qx-check"><input name="delete12" type="checkbox" id="delete_limit12" value="1" class="checkbox1" checked="checked">删除</label>
+
+
+                                                        </div>
+                                                    </dd>
+                                                    <dd>
+                                                        <div class="qx-tit">合同应收款</div><input type="hidden" name="menuid" value="13">
+                                                        <div class="qx-edit">
+
+
+
+                                                                    <label class="qx-check"><input name="add13" type="checkbox" id="add_limit13" value="1" class="checkbox1" checked="checked">添加</label>
+                                                                    <label class="qx-check"><input name="edit13" type="checkbox" id="edit_limit13" value="1" class="checkbox1" checked="checked">修改</label>
+                                                                    <label class="qx-check"><input name="read13" type="checkbox" id="read_limit13" value="1" class="checkbox1" checked="checked">查看</label>
+                                                                    <label class="qx-check"><input name="delete13" type="checkbox" id="delete_limit13" value="1" class="checkbox1" checked="checked">删除</label>
+
+
+                                                        </div>
+                                                    </dd>
+                                            </dl>
+                                        <dl>
+                                            <dt>
+                                                工程师管理 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <label class="group-qx-tit"><input id="ckb_CheckAll" type="checkbox" value="" onclick="CheckAll(this, 'checkbox2' )">全选</label>
+
+                                                    </dt><dd>
+                                                        <div class="qx-tit">工程师列表</div><input type="hidden" name="menuid" value="14">
+                                                        <div class="qx-edit">
+
+
+
+                                                                    <label class="qx-check"><input name="add14" type="checkbox" id="add_limit14" value="1" class="checkbox2" checked="checked">添加</label>
+                                                                    <label class="qx-check"><input name="edit14" type="checkbox" id="edit_limit14" value="1" class="checkbox2" checked="checked">修改</label>
+                                                                    <label class="qx-check"><input name="read14" type="checkbox" id="read_limit14" value="1" class="checkbox2" checked="checked">查看</label>
+                                                                    <label class="qx-check"><input name="delete14" type="checkbox" id="delete_limit14" value="1" class="checkbox2" checked="checked">删除</label>
+
+
+                                                        </div>
+                                                    </dd>
+                                                    <dd>
+                                                        <div class="qx-tit">新增工程师</div><input type="hidden" name="menuid" value="15">
+                                                        <div class="qx-edit">
+
+
+
+                                                                    <label class="qx-check"><input name="add15" type="checkbox" id="add_limit15" value="1" class="checkbox2" checked="checked">添加</label>
+                                                                    <label class="qx-check"><input name="edit15" type="checkbox" id="edit_limit15" value="1" class="checkbox2" checked="checked">修改</label>
+                                                                    <label class="qx-check"><input name="read15" type="checkbox" id="read_limit15" value="1" class="checkbox2" checked="checked">查看</label>
+                                                                    <label class="qx-check"><input name="delete15" type="checkbox" id="delete_limit15" value="1" class="checkbox2" checked="checked">删除</label>
+
+
+                                                        </div>
+                                                    </dd>
+                                                    <dd>
+                                                        <div class="qx-tit">工程项目组</div><input type="hidden" name="menuid" value="16">
+                                                        <div class="qx-edit">
+
+
+
+                                                                    <label class="qx-check"><input name="add16" type="checkbox" id="add_limit16" value="1" class="checkbox2" checked="checked">添加</label>
+                                                                    <label class="qx-check"><input name="edit16" type="checkbox" id="edit_limit16" value="1" class="checkbox2" checked="checked">修改</label>
+                                                                    <label class="qx-check"><input name="read16" type="checkbox" id="read_limit16" value="1" class="checkbox2" checked="checked">查看</label>
+                                                                    <label class="qx-check"><input name="delete16" type="checkbox" id="delete_limit16" value="1" class="checkbox2" checked="checked">删除</label>
+
+
+                                                        </div>
+                                                    </dd>
+                                                    <dd>
+                                                        <div class="qx-tit">工程师位置</div><input type="hidden" name="menuid" value="17">
+                                                        <div class="qx-edit">
+
+
+
+                                                                    <label class="qx-check"><input name="add17" type="checkbox" id="add_limit17" value="1" class="checkbox2" checked="checked">添加</label>
+                                                                    <label class="qx-check"><input name="edit17" type="checkbox" id="edit_limit17" value="1" class="checkbox2" checked="checked">修改</label>
+                                                                    <label class="qx-check"><input name="read17" type="checkbox" id="read_limit17" value="1" class="checkbox2" checked="checked">查看</label>
+                                                                    <label class="qx-check"><input name="delete17" type="checkbox" id="delete_limit17" value="1" class="checkbox2" checked="checked">删除</label>
+
+
+                                                        </div>
+                                                    </dd>
+                                            </dl>
+                                      
+                                      
+                                        
+                                                                <div style="clear:both;"></div>
+                                                                                    <div class="form-group" style="float: left; margin:30px 0px 0px 20px">
+
+                                                                                        <button class="btn btn-primary form-btn" type="submit" id="btnSave">提交</button>
+                                                                                        <button class="btn btn-white form-btn" type="button" onclick="javascript:history.back(-1);">返回</button>
+
+                                                                                    </div>
+</form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+</body>
+
+ 
+</html>
+
+ 
+ 
+ 
+ 
+ 
+ 

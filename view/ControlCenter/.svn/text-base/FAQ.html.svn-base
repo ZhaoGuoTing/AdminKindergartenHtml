@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拍号保证金结算</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>常见问题</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                <div class="col-datepicker row-item daterange-item" id="data_5">
+                            		<label class="font-noraml">时间</label>
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" name="start" value="2016-02-11" />
+                                        <span class="input-group-addon">到</span>
+                                        <input type="text" class="input-sm form-control" name="end" value="2016-02-17" />
+                                    </div>
+                                </div>
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="关键字" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover" style="width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th width="70%">标题</th>
+                                            <th width="30%">创建时间</th>
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="cursor: hand;height: 70px;" onclick="isHidden('div1')">
+                                            <td >
+                                            	Q1:登录的帐号和密码是多少?
+                                            </td>
+                                            <td>2017-6-30 15:00</td>
+                                           
+                                        </tr>
+                                        <tr id="div1" style="height: 80px;display: none;">
+                                            <td style="text-align: left;">A：登录账号就是您的手机号码，初始密码为系统短信发送的6位随机密码，这里登录的账号密码和您使用知了APP的完全相同，如果您在知了APP中修改过密码，请您使用修改后的密码登录平台。</td>
+                                            
+                                            
+                                        </tr>
+                                        <tr style="cursor: hand;height: 70px;" onclick="isHidden('div2')">
+                                            <td >
+                                            	Q2:登录提示没有权限登录怎么办?
+                                            </td>
+                                            <td>2017-6-30 15:00</td>
+                                           
+                                        </tr>
+                                        <tr id="div2" style="height: 80px;display: none;">
+                                            <td style="text-align: left;">
+                                                A：您的账号需要管理员进行授权，您可以联系您所在园所的管理员老师，如您不清楚学校管理员老师是哪一位，您可以联系知了客服。</td>
+                                          
+                                            
+                                        </tr> <tr style="cursor: hand;height: 70px;" onclick="isHidden('div3')">
+                                            <td >
+                                            	Q3:登录系统后看不到我想查看的页面
+                                            </td>
+                                            <td>2017-6-30 15:00</td>
+                                           
+                                        </tr>
+                                        <tr id="div3" style="height: 80px;display: none;">
+                                            <td>
+                                               A：请您联系系统管理员确认您的权限是否正确，因为权限限制可能导致您无法查看某些特定内容；</td>
+                                          
+                                            
+                                        </tr>
+                                         <tr style="cursor: hand;height: 70px;" onclick="isHidden('div4')">
+                                            <td >
+                                            	Q4:打开页面是空白的，无法显示页面怎么办?
+                                            </td>
+                                            <td>2017-6-30 15:00</td>
+                                           
+                                        </tr>
+                                        <tr id="div4" style="height: 80px;display: none;">
+                                            <td style="text-align: left;">
+                                                                                                                             Ａ：建议您使用谷歌浏览器，360安全浏览器，搜狗浏览器，如果您使用的是这些浏览器但页面仍然为空白，请您检查浏览器是否是最新版本，以及您使用电脑的网络是否正常连接。
+                                            </td>
+                                          
+                                            
+                                        </tr>
+                                         <tr style="cursor: hand;height: 70px;" onclick="isHidden('div5')">
+                                            <td >
+                                            	Q5:如何添加幼儿?
+                                            </td>
+                                            <td>2017-6-30 15:00</td>
+                                           
+                                        </tr>
+                                        <tr id="div5" style="height: 80px;display: none;">
+                                            <td style="text-align: left;">
+                                               A：您好，在幼儿管理页面，进行幼儿的手动添加和批量导入：<br> 1.手动添加：左上角点击【入园登记】，填写幼儿信息后点击【保存】（注意， 部分的信息是必填的，此信息后续可以再次修改）
+                                               <br>
+                                               2.批量导入：找到页面上方的下载模板按钮（分简易版和学籍网版），完善幼儿信息表格后，找到模板对应的导入按钮（同样分两版），选择文件后即可上传。</td>
+                                        </tr>
+                                         <tr style="cursor: hand;height: 70px;" onclick="isHidden('div6')">
+                                            <td >
+                                            	Q6:如何为幼儿调整所在班级?
+                                            </td>
+                                           
+                                           <td>2017-6-30 15:00</td>
+                                        </tr>
+                                        <tr id="div6" style="height: 80px;display: none;">
+                                            <td>
+                                               A：您好，找到需要调整所在班级的幼儿，鼠标选中后拖动到调整后的班级松开鼠标，调班即可成功。</td>
+                                          
+                                            
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>   
+<script type="text/javascript" src="../../js/layer/layer.js"></script>
+<script type="text/javascript">
+	 function isHidden(oDiv){
+      var vDiv = document.getElementById(oDiv);
+      vDiv.style.display = (vDiv.style.display == 'none')?'block':'none';
+    }
+</script>
+</body>
+</html>

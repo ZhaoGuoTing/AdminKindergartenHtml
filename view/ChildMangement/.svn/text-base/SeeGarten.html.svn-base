@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>幼儿管理</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>看园新生</h5>
+                            
+                        </div>
+                       
+                        <div class="ibox-content">
+                            <div class="row" >
+                                
+                              
+                                <div class="col-datepicker row-item daterange-item" id="data_5">
+                            		<label class="font-noraml">开始时间</label>
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" name="start" value="2016-02-11" />
+                                        <span class="input-group-addon">到</span>
+                                        <input type="text" class="input-sm form-control" name="end" value="2016-02-17" />
+                                    </div>
+                                </div>
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="输入姓名或手机号查询" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                    </div>
+                                </div>
+                                 <div style="float: right;margin-top: 17px;margin-right: 15px;">
+                                	 <button type="button" class="btn btn-sm btn-primary"> 导出</button>
+                                	 <button type="button" class="btn btn-sm btn-default"> 打印</button>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                           
+                                            <th width="9%">看园日期</th>
+                                            <th width="9%">幼儿姓名</th>
+                                            <th width="9%">性别</th>
+                                             <th width="9%">出生日期</th>
+                                             <th width="9%">家长姓名</th>
+                                             <th width="9%">亲属关系</th>
+                                             <th width="9%">联系方式</th>
+                                             <th width="9%">渠道来源</th>
+                                            <th width="9%">是否跟进</th>
+                                           
+                                            <th width="19%">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2018-03-26</td>
+                                           
+                                            <td>王小红</td>
+                                             <td>女</td>
+                                              <td>2014-04-23</td>
+                                               <td>王网旺</td>
+                                               <td>父亲</td>
+                                               <td>13894163193</td>
+                                             <td>朋友推荐</td>
+                                            <td>叶子</td>
+                                            <td><div class="group-btn-edit"><a href="LookSeeGarten.html"><i class="fa fa-pencil-square-o"></i>查看</a><a href="FollowRecord.html"><i class="fa fa-pencil-square-o"></i>跟进记录</a></div></td>
+                                        </tr>
+                                          <tr>
+                                            <td>2018-03-26</td>
+                                           
+                                            <td>王小红</td>
+                                             <td>女</td>
+                                              <td>2014-04-23</td>
+                                               <td>王网旺</td>
+                                               <td>父亲</td>
+                                               <td>13894163193</td>
+                                             <td>朋友推荐</td>
+                                            <td>叶子</td>
+                                            <td><div class="group-btn-edit"><a href="basicInformation.html"><i class="fa fa-pencil-square-o"></i>查看</a><a href="FollowRecord.html"><i class="fa fa-pencil-square-o"></i>跟进记录</a></div></td>
+                                        </tr>
+                                         <tr>
+                                            <td>2018-03-26</td>
+                                           
+                                            <td>王小红</td>
+                                             <td>女</td>
+                                              <td>2014-04-23</td>
+                                               <td>王网旺</td>
+                                               <td>父亲</td>
+                                               <td>13894163193</td>
+                                             <td>朋友推荐</td>
+                                            <td>叶子</td>
+                                            <td><div class="group-btn-edit"><a href="basicInformation.html"><i class="fa fa-pencil-square-o"></i>查看</a><a href="FollowRecord.html"><i class="fa fa-pencil-square-o"></i>跟进记录</a></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018-03-26</td>
+                                           
+                                            <td>王小红</td>
+                                             <td>女</td>
+                                              <td>2014-04-23</td>
+                                               <td>王网旺</td>
+                                               <td>父亲</td>
+                                               <td>13894163193</td>
+                                             <td>朋友推荐</td>
+                                            <td>叶子</td>
+                                            <td><div class="group-btn-edit"><a href="basicInformation.html"><i class="fa fa-pencil-square-o"></i>查看</a><a href="FollowRecord.html"><i class="fa fa-pencil-square-o"></i>跟进记录</a></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current" style="background-color: #1AB394">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>   
+<script type="text/javascript" src="../../js/layer/layer.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>幼儿考勤</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>幼儿考勤</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                <div class="col-radio row-item">
+                                    <div data-toggle="buttons" class="btn-group">
+                                        
+                                        <label class="btn btn-sm btn-white"><input type="radio" id="option2" name="options">查看统计</label>
+                                    </div>
+                                </div>
+                                <div class="col-select-item row-item">
+                                	<select class="input-sm form-control input-s-sm inline">
+                                        <option value="0">状态</option>
+                                        <option value="0">迟到</option>
+                                        <option value="0">早退</option>
+                                        <option value="0">请假</option>
+                                      
+                                    </select>
+                                </div>
+                                <div class="col-datepicker row-item daterange-item" id="data_5">
+                            		<label class="font-noraml">开店时间</label>
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" name="start" value="2016-02-11" />
+                                        <span class="input-group-addon">到</span>
+                                        <input type="text" class="input-sm form-control" name="end" value="2016-02-17" />
+                                    </div>
+                                </div>
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="姓名查询" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th width="7%"><label><input type="checkbox" class="i-checks" name="input[]">全选</label></th>
+                                            <th width="13%">编号</th>
+                                            <th width="10%">姓名</th>
+                                            <th width="11%">日期</th>
+                                            <th width="10%">到校时间</th>
+                                            <th width="16%">状态</th>
+                                            <th width="9%">原因</th>
+                                            <th width="13%">备注</th>
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <th width="13%">编号</th>
+                                            <th width="10%">姓名</th>
+                                            <th width="11%">日期</th>
+                                            <th width="10%">到校时间</th>
+                                            <th width="16%">状态</th>
+                                            <th width="9%">原因</th>
+                                            <th width="13%">备注</th>
+                                            
+                                        </tr>
+                                         <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <th width="13%">编号</th>
+                                            <th width="10%">姓名</th>
+                                            <th width="11%">日期</th>
+                                            <th width="10%">到校时间</th>
+                                            <th width="16%">状态</th>
+                                            <th width="9%">原因</th>
+                                            <th width="13%">备注</th>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                           <th width="13%">编号</th>
+                                            <th width="10%">姓名</th>
+                                            <th width="11%">日期</th>
+                                            <th width="10%">到校时间</th>
+                                            <th width="16%">状态</th>
+                                            <th width="9%">原因</th>
+                                            <th width="13%">备注</th>
+                                           
+                                        </tr>
+                                       
+                                        
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	<div class="group-left"><label class="group-xuan"><input type="checkbox" class="i-checks" name="input[]">全选</label><a class="btn btn-white btn-bitbucket"><i class="fa fa-download"></i>批量导出</a></div>
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>   
+<script type="text/javascript" src="../../js/layer/layer.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.store-moban-btn').on('click', function(){
+    layer.open({
+        type: 2,
+        title: '选择模板',
+        area : ['750px' , '380px'],
+        content: ['会员-靓号店铺管理-模板.html', 'no']
+    });
+	});
+	
+	$('.store-ad-btn').on('click', function(){
+    layer.open({
+        type: 2,
+        title: '广告管理',
+        area : ['90%' , '90%'],
+        content: ['会员-靓号店铺管理-广告.html']
+    });
+	});
+	
+	$('.store-haoma-btn').on('click', function(){
+    layer.open({
+        type: 2,
+        title: '号码管理',
+        area : ['90%' , '90%'],
+        content: ['会员-靓号店铺管理-号码.html']
+    });
+	});
+	
+});
+</script>
+</body>
+</html>

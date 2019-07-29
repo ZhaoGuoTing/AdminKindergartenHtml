@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>班级管理</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>幼儿班级</h5>
+                            <div class="ibox-tools"><a href="Add_Class_1.html" class="btn btn-primary btn-xs">添加班级</a></div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                
+                               
+                                 <div class="col-datepicker row-item daterange-item" id="data_5">
+                            		<label class="font-noraml">开班时间</label>
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" name="start" value="2016-02-11" />
+                                        <span class="input-group-addon">到</span>
+                                        <input type="text" class="input-sm form-control" name="end" value="2016-02-17" />
+                                    </div>
+                                </div>
+
+                                 <div class="col-select-item row-item">
+                                	<select class="input-sm form-control input-s-sm inline">
+                                        <option value="0">适用人群</option>
+                                        <option value="1">大班</option>
+                                        <option value="2">中班</option>   
+                                        <option value="2">小班</option>
+                                        
+                                    </select>
+                                </div>
+
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="请输入班级名" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover" style="text-align: center;">
+                                    <thead>
+                                        <tr >
+                                            <th width="3%" style="text-align: center;"><label><input type="checkbox" class="i-checks" name="input[]"></label></th>
+                                            <th width="5%" style="text-align: center;"> 序号</th>
+                                            <th width="11%" style="text-align: center;">班级名称</th>
+                                            <th width="11%" style="text-align: center;">班级人数</th>
+                                            <th width="11%" style="text-align: center;">教材费</th>
+                                            <th width="11%" style="text-align: center;">学费</th>
+                                            <th width="11%" style="text-align: center;">杂费</th>
+                                            <th width="11%" style="text-align: center;">主班老师</th>
+                                             <th width="11%" style="text-align: center;">配班老师</th>
+                                           
+                                       
+                                             <th width="15%" style="text-align: center;">操作</th>
+                                       
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>1</td>
+                                            <td>学前1班</td>
+                                            
+                                            <td>26</td>
+                                            <td style="color: red;">￥2000</td>
+                                             <td style="color: red;">￥1500</td>
+                                              <td style="color: red;">￥1500</td>
+                                            <td>叶子</td>
+                                            <td>后羿</td>
+                                           
+                                    		<td>
+                                    			 <div class="dropdown profile-element group-btn-edit">
+						                            <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0);"><i class="fa fa-cog"></i>操作</a>
+						                            <ul class="dropdown-menu fadeInRight m-t-xs">
+						                                <li><a href="ClassInformation.html" class="intention-btn">班级信息</a></li>
+						                                 
+						                                <li><a href="Students.html" class="intention-btn">班级学员</a></li>
+						                                <li><a href="ClassFee.html" class="intention-btn">费用管理</a></li>
+						                  	            <li><a href="ClassSchedule.html" class="intention-btn">班级课程表</a></li>   
+						                  	               
+						                            </ul>
+						                        </div>
+                                    		</td>
+                                        </tr>
+                                         <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>2</td>
+                                            <td>学前1班</td>
+                                            
+                                            <td>26</td>
+                                            <td style="color: red;">￥2000</td>
+                                             <td style="color: red;">￥1500</td>
+                                              <td style="color: red;">￥1500</td>
+                                            <td>叶子</td>
+                                            <td>后羿</td>
+                                           
+                                    		<td>
+                                    			 <div class="dropdown profile-element group-btn-edit">
+						                            <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0);"><i class="fa fa-cog"></i>操作</a>
+						                            <ul class="dropdown-menu fadeInRight m-t-xs">
+						                                <li><a href="ClassInformation.html" class="intention-btn">班级信息</a></li>
+						                                 
+						                                <li><a href="Students.html" class="intention-btn">班级学员</a></li>
+						                                <li><a href="ClassFee.html" class="intention-btn">费用管理</a></li>
+						                  	            <li><a href="ClassSchedule.html" class="intention-btn">班级课程表</a></li>   
+						                  	               
+						                            </ul>
+						                        </div>
+                                    		</td>
+                                        </tr>       
+                                         <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>3</td>
+                                            <td>学前1班</td>
+                                            
+                                            <td>26</td>
+                                            <td style="color: red;">￥2000</td>
+                                             <td style="color: red;">￥1500</td>
+                                              <td style="color: red;">￥1500</td>
+                                            <td>叶子</td>
+                                            <td>后羿</td>
+                                          
+                                    		<td>
+                                    			 <div class="dropdown profile-element group-btn-edit">
+						                            <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0);"><i class="fa fa-cog"></i>操作</a>
+						                            <ul class="dropdown-menu fadeInRight m-t-xs">
+						                                <li><a href="ClassInformation.html" class="intention-btn">班级信息</a></li>
+						                                 
+						                                <li><a href="Students.html" class="intention-btn">班级学员</a></li>
+						                                <li><a href="ClassFee.html" class="intention-btn">费用管理</a></li>
+						                  	            <li><a href="ClassSchedule.html" class="intention-btn">班级课程表</a></li>   
+						                  	               
+						                            </ul>
+						                        </div>
+                                    		</td>
+                                        </tr>       
+                                         <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>4</td>
+                                            <td>学前1班</td>
+                                            
+                                            <td>26</td>
+                                            <td style="color: red;">￥2000</td>
+                                             <td style="color: red;">￥1500</td>
+                                              <td style="color: red;">￥1500</td>
+                                            <td>叶子</td>
+                                            <td>后羿</td>
+                                           
+                                    		<td>
+                                    			 <div class="dropdown profile-element group-btn-edit">
+						                            <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0);"><i class="fa fa-cog"></i>操作</a>
+						                           <ul class="dropdown-menu fadeInRight m-t-xs">
+						                                <li><a href="ClassInformation.html" class="intention-btn">班级信息</a></li>
+						                                 
+						                                <li><a href="Students.html" class="intention-btn">班级学员</a></li>
+						                                <li><a href="ClassFee.html" class="intention-btn">费用管理</a></li>
+						                  	            <li><a href="ClassSchedule.html" class="intention-btn">班级课程表</a></li>   
+						                  	               
+						                            </ul>
+						                        </div>
+                                    		</td>
+                                        </tr>       
+                                         <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>5</td>
+                                            <td>学前1班</td>
+                                            
+                                            <td>26</td>
+                                            <td style="color: red;">￥2000</td>
+                                             <td style="color: red;">￥1500</td>
+                                              <td style="color: red;">￥1500</td>
+                                            <td>叶子</td>
+                                            <td>后羿</td>
+                                           
+                                    		<td>
+                                    			 <div class="dropdown profile-element group-btn-edit">
+						                            <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:void(0);"><i class="fa fa-cog"></i>操作</a>
+						                            <ul class="dropdown-menu fadeInRight m-t-xs">
+						                                <li><a href="ClassInformation.html" class="intention-btn">班级信息</a></li>
+						                                 
+						                                <li><a href="Students.html" class="intention-btn">班级学员</a></li>
+						                                <li><a href="ClassFee.html" class="intention-btn">费用管理</a></li>
+						                  	            <li><a href="ClassSchedule.html" class="intention-btn">班级课程表</a></li>   
+						                  	               
+						                            </ul>
+						                        </div>
+                                    		</td>
+                                        </tr>       
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	<div class="group-left"><label class="group-xuan"><input type="checkbox" class="i-checks" name="input[]">全选</label><a class="btn btn-white btn-bitbucket"><i class="fa fa-download"></i>批量导出</a></div>
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/datepickers.js"></script>
+<script type="text/javascript" src="../../js/layer/layer.js"></script>
+
+
+
+
+<script type="text/javascript">
+$(function(){
+	$('#btn_Cures').on('click', function(){
+        layer.open({
+            type: 2,
+            title: '班级课程总览',
+            area : ['700px' , '90%'],
+            content: ['Look_Course.html']
+        })
+	});
+	$('#btn_Person').on('click', function(){
+        layer.open({
+            type: 2,
+            title: '班级人员总览（21人）',
+            area : ['700px' , '90%'],
+            content: ['Personnel_Statistics.html']
+        })
+	});
+});
+</script>
+</body>
+</html>

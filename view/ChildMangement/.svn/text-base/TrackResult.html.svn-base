@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>添加账号</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico"> 
+<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+<style>
+ 
+
+</style>
+</head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                   
+                  
+				       <div class="ibox-title">
+							<h5>记录追踪结果</h5>
+						</div>
+				     
+                    <div class="ibox-content" >
+                        <form class="form-horizontal m-t" id="signupForm" style="margin-left: 25%;">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">正在记录：</label>
+                                <div class="col-sm-4"  >
+                                    <input type="text" name="" id="" value="王小明  学前1班  2018-4-23" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;"   >
+                                      
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">联系方式：</label>
+                                <div class="col-sm-4"  >
+                                    <input type="text" name="" id="" value="男(爸爸)  13894162345" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+                                      
+                                </div>
+                            </div>
+                            <!--<div class="form-group">
+                                <label class="col-sm-3 control-label">姓名：</label>
+                                <div class="col-sm-4"  >
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+                                      
+                                </div>
+                            </div>
+                        	 <div class="form-group">
+                                <label class="col-sm-3 control-label">手机号：</label>
+                                <div class="col-sm-4"  >
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+                                      
+                                </div>
+                            </div>
+                        	 <div class="form-group">
+                                <label class="col-sm-3 control-label">邮箱：</label>
+                                <div class="col-sm-4"  >
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+                                      
+                                </div>
+                            </div>
+                            
+                              <div class="form-group">
+		                            <label class="col-sm-3 control-label">性别：</label>
+		                            <div class="col-sm-4"   style="margin-left: 10px;"   >
+		                                <label class="checkbox-inline i-checks"  style=""><input type="radio" name="Sex" checked="checked" value="0" />男 </label>
+		                                <label class="checkbox-inline i-checks"> <input type="radio" name="Sex" value="1" />女</label>
+										</div>
+		                        </div>-->
+		                       <div class="form-group">
+	                                <label class="col-sm-3 control-label">主要症状：</label>
+	                                
+	                                <div class="col-sm-4"  >
+	                                         <p> <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 发热</label> 
+									           <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 咳嗽</label> 
+									           <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 出疹 </label> </p>
+	                                     	 <P>  <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 腹泻 </label> 
+									           <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 呕吐 </label> 
+									           <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 黄疸 </label> </P>
+									          <P> <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 红眼 </label> 
+									           <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" />腮腺肿大 </label> 
+									           <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 其他 </label> </P>
+	                                </div>
+	                                
+                            	</div>
+                            	<div class="form-group">
+                                <label class="col-sm-3 control-label">就医医院：</label>
+                                <div class="col-sm-4"  >
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+                                      
+                                </div>
+                            </div>
+                           <!-- <div class="form-group">
+	                                <label class="col-sm-3 control-label">考勤卡号：</label>
+	                                <div class="col-sm-4"  >
+	                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+	                                      
+	                                </div>
+                            	</div>-->
+                             <div class="form-group">
+                                <label class="col-sm-3 control-label">诊断结果：</label>
+                                <div class="col-sm-4 form-table">
+                                    <select class="input-sm form-control input-s-sm inline" style="width:300px;">
+                                        <option value="0">请选择</option>
+                                        <option value="1">呼吸道疾病</option>
+                                        <option value="2">皮肤疾病</option>
+                                        <option value="2">肠道疾病</option>
+                                        <option value="2">口腔疾病</option>
+                                    </select> <!--<input type="text" value="诊断结果详情" class="form-control m-b-x"   style="width:200px;" >-->
+                                </div>
+                            </div>
+                             <div class="form-group">
+		                            <label class="col-sm-3 control-label">是否传染病：</label>
+		                            <div class="col-sm-4"   style="margin-left: 10px;"   >
+		                                <label class="checkbox-inline i-checks"  style=""><input type="radio" name="Sex"  value="0" />是</label>
+		                                <label class="checkbox-inline i-checks"> <input type="radio" name="Sex" value="1" />否</label>
+										</div>
+		                        </div>
+                              <div class="form-group">
+		                            <label class="col-sm-3 control-label">居家/住院：</label>
+		                            <div class="col-sm-4"   style="margin-left: 10px;"   >
+		                                <label class="checkbox-inline i-checks"  style=""><input type="radio" name="Sex"  value="0" />居家</label>
+		                                <label class="checkbox-inline i-checks"> <input type="radio" name="Sex" value="1" />住院</label>
+										</div>
+		                        </div>
+		                         <div class="form-group">
+		                            <label class="col-sm-3 control-label">目前状态：</label>
+		                            <div class="col-sm-4"   style="margin-left: 10px;"   >
+		                            	 <label class="checkbox-inline i-checks"  style=""><input type="radio" name="Sex"  value="0" />稳定</label>
+		                                <label class="checkbox-inline i-checks"  style=""><input type="radio" name="Sex"  value="1" />加重</label>
+		                                <label class="checkbox-inline i-checks"> <input type="radio" name="Sex" value="2" />减轻</label>
+		                                 <label class="checkbox-inline i-checks"> <input type="radio" name="Sex" value="3" />痊愈</label>
+										</div>
+		                        </div>
+		                         <div class="form-group form-p" id="data_1">
+                                <label class="col-sm-3 control-label">预计返校日期：</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group date" style="width: 50%; float: left;">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <input type="text" class="form-control" value="预计返校时间" style="width: 270px;">
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label class="col-sm-3 control-label">备注：</label>
+                                <div class="col-sm-4"  >
+                                    <textarea style="width: 310px;height: 100px;border: 1px solid lightgray;">请输入备注(控制在200字)</textarea>
+                                      
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <div class="col-sm-4 col-sm-offset-3">
+                                    <button class="btn btn-primary form-btn" type="submit">保存</button>
+                                    <button class="btn btn-white" type="button" onClick="javascript:history.back(-1);">返回</button>
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/validate/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/datepickers.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#signupForm").Validform({tiptype:4});
+	$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})
+	 
+	 
+	 //primary
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    //判断是否全选
+    function isAllChecked(){
+      $(".all-checkbox").each(function() {
+        var $self = $(this)   ,
+            all   = $(this).find(":checkbox").not("[name='sales_group_id'],:disabled") ,
+            allChecked = $(this).find(":checked").not("[name='all-checked']") ,
+            thisAllCheckBtn = $(this).find(".all-checked [name='all-checked']");
+
+        thisAllCheckBtn.on("click",function(){
+          if($(this).get(0).checked){
+            $(this).prev("span.ui-checkbox").addClass('active');
+            $self.find(".levelDIV").find('input:checkbox').not(":disabled").prop('checked' ,true)
+            .closest('p.check-box').find('span.ui-checkbox').addClass('active');
+
+          }else{
+            $(this).prev("span.ui-checkbox").removeClass('active');
+            $self.find(".levelDIV").find('input:checkbox').not(":disabled").prop('checked' ,false)
+            .closest('p.check-box').find('span.ui-checkbox').removeClass('active');
+          }
+        });
+        if(all.length === allChecked.length){
+          thisAllCheckBtn.prop('checked' ,true).prev("span.ui-checkbox").addClass('active');
+        }else{
+          thisAllCheckBtn.prop('checked' ,false).prev("span.ui-checkbox").removeClass('active');
+        }
+      });
+
+    };
+    isAllChecked();
+   　
+// ----------------------------------------------------------------
+   　
+
+   　
+
+});
+
+　
+</script>
+</body>
+</html>

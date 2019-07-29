@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>添加班级</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="shortcut icon" href="favicon.ico">
+		<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+		<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+		<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+		<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+	</head>
+
+	<body class="gray-bg">
+		<div class="wrapper wrapper-content animated fadeInRight">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="ibox float-e-margins">
+						 <div class="ibox-title">
+						 	<h5>班级添加</h5>
+						 </div>
+
+						
+						<div class="ibox-content">
+							<form class="form-horizontal m-t" id="signupForm" >
+								
+								
+								<div class="form-group" style="margin-left: 20%;">
+									<label class="col-sm-3 control-label">学期：</label>
+									<div class="col-sm-4 form-table">
+										<select class="input-sm form-control input-s-sm inline">
+											<option value="0">2008年上学期</option>
+											<option value="1">2008年下学期</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group" style="margin-left: 20%;">
+									<label class="col-sm-3 control-label">班级名称：</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control m-b-x" style="width: 100%;">
+									</div>
+								</div>
+								
+								<div class="form-group" style="margin-left: 20%;">
+									<label class="col-sm-3 control-label">预计人数：</label>
+									<div class="col-sm-4">
+										<input type="text" class="form-control m-b-x" style="width: 100%;">
+									</div>
+								</div>
+								<div class="hr-line-dashed"></div>
+								<div class="form-group" style="margin-left: 20%;">
+									<label class="col-sm-3 control-label">主班老师：</label>
+									<div class="col-sm-4 form-table">
+										<select class="input-sm form-control input-s-sm inline">
+											<option value="0">叶子</option>
+											<option value="1">小猪</option>
+											<option value="1">张三</option>
+											<option value="1">李四</option>
+										</select>
+									</div>
+								</div>
+                             
+                             <div class="form-group" style="margin-left: 20%;">
+									<label class="col-sm-3 control-label">配班老师：</label>
+									<div class="col-sm-4 form-table " style="width: 350px;">
+										<select size="13" class="input-sm form-control input-s-sm inline" style="height: 100px; width: 48%;"  id="l">
+											<option value=" ">亚瑟</option>
+											<option value=" ">小猪</option>
+											<option value=" ">玉米</option>
+											<option value=" ">阳光</option>
+											<option value=" ">小花</option>
+											<option value=" ">小草</option>
+										</select>
+										<select size="13" class="input-sm form-control input-s-sm inline " style="height: 100px;width: 49%;" id="r">
+
+										</select>
+									</div>
+								</div>
+								 <div class="form-group" style="margin-left: 20%;">
+									<label class="col-sm-3 control-label">班级课程：</label>
+									<div class="col-sm-4 form-table " style="width: 350px;">
+										<select size="13" class="input-sm form-control input-s-sm inline" style="height: 100px; width: 48%;"  id="l">
+											<option value=" ">语文</option>
+											<option value=" ">数学</option>
+											<option value=" ">英语</option>
+											<option value=" ">美术</option>
+											<option value=" ">音乐</option>
+											<option value=" ">自然</option>
+										</select>
+										<select size="13" class="input-sm form-control input-s-sm inline " style="height: 100px;width: 49%;" id="r">
+
+										</select>
+									</div>
+								</div>
+								<div class="hr-line-dashed"></div>
+								<div class="form-group form-p" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">学费：</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group m-x"><span class="input-group-addon">&yen;</span>
+                                        <input type="text" class="form-control" value="学费金额" datatype="s2-18" nullmsg="请填写课程费用"><span class="input-group-addon last-addon">.00</span>
+                                    </div>
+                                </div>
+                            </div>
+								<div class="form-group" style="margin-left: 20%;">
+		                            <label class="col-sm-3 control-label">收费方式：</label>
+		                            <div class="col-sm-4"   style="margin-left: 10px;"   >
+		                                <label class="checkbox-inline i-checks" ><input type="radio" name="Sex"  value="1" />月付 </label>
+		                                <label class="checkbox-inline i-checks"> <input type="radio" name="Sex"  value="0" />季付</label>
+		                                <label class="checkbox-inline i-checks"> <input type="radio" name="Sex"  value="0" />年付</label>
+										</div>
+		                        </div>
+							
+								
+                                   <div class="form-group form-p" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">教材费：</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group m-x"><span class="input-group-addon">&yen;</span>
+                                        <input type="text" class="form-control" value="学费金额" datatype="s2-18" nullmsg="请填写课程费用"><span class="input-group-addon last-addon">.00</span>
+                                    </div>
+                                </div>
+                            </div>
+								 	
+	
+                               <!--<div class="form-group" style="margin-left: 20%;">
+	                                <label class="col-sm-3 control-label">费用管理：</label>
+	                                
+	                                <div class="col-sm-4 "  >
+	                                         <p> <label class="checkbox-inline i-checks"><input type="checkbox" checked="checked" name="radio1" value="" /> 教材费</label> </p>
+									          <p> <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 伙食费</label> </p>
+									          <p> <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 校车费 </p>
+	                                     	 <P>  <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 服装费</label> </p>
+									          <p> <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 床位费</label> </p>
+									          <p> <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 卡费 </label> </P>
+									         
+	                                </div>
+								</div>-->
+								
+								<div class="form-group" style="margin-left: 20%;">
+									<label class="col-sm-3 control-label">杂费：</label>
+									<div class="col-sm-4 form-table " style="width: 350px;">
+										<select size="13" class="input-sm form-control input-s-sm inline" style="height: 100px; width: 48%;"  id="left">
+											<option value=" ">校车费</option>
+											<option value=" ">餐费</option>
+											<option value=" ">卡费</option>
+											<option value=" ">床位费</option>
+											<option value=" ">校服费</option>
+										</select>
+										<select size="13" class="input-sm form-control input-s-sm inline " style="height: 100px;width: 49%;" id="right">
+
+										</select>
+									</div>
+								</div>
+                                <div class="form-group form-p" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">合计费用：</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group m-x"><span class="input-group-addon">&yen;</span>
+                                        <input type="text" class="form-control" value="合计金额" datatype="s2-18" nullmsg="请填写课程费用"><span class="input-group-addon last-addon">.00</span>
+                                    </div>
+                                </div>
+                            </div>
+								<div class="hr-line-dashed "></div>
+								<div class="form-group " style="margin-left: 20%;">
+									<div class="col-sm-4 col-sm-offset-3 ">
+										<a href=" " class="btn btn-primary form-btn " type="submit ">提交</a>
+										<button class="btn btn-white " type="button " onClick="javascript:history.back(-1); ">返回</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript " src="../../js/jquery.min.js "></script>
+		<script type="text/javascript " src="../../js/bootstrap.min.js "></script>
+		<script type="text/javascript " src="../../js/content.min.js "></script>
+		<script type="text/javascript " src="../../js/plugins/validate/Validform_v5.3.2_min.js "></script>
+		<script type="text/javascript " src="../../js/plugins/iCheck/icheck.min.js "></script>
+		<script type="text/javascript " src="../../js/plugins/datapicker/bootstrap-datepicker.js "></script>
+		<script type="text/javascript " src="../../js/plugins/datapicker/datepickers.js "></script>
+
+		<script type="text/javascript ">
+			$(function() {
+					$(".i-checks").iCheck({
+					checkboxClass: "icheckbox_square-green",
+					radioClass: "iradio_square-green",
+				})
+				$("#left").change(function() {
+					var options = $("#left option:selected ");
+				
+					$("#left ").find("option:selected ").remove();
+					$("#right ").append("<option value=''>" + options.text() + "</option>");
+				});
+				$("#right").change(function() {
+					var options = $("#right option:selected ");
+					$("#right ").find("option:selected ").remove();
+				
+					$("#left ").append("<option value=''>" + options.text() + "</option>");
+				});
+			});
+			$(function() {
+				$(".summernote").summernote({
+					lang: "zh-CN"
+				})
+			});
+			var edit = function() {
+				$("#eg").addClass("no-padding");
+				$(".click2edit").summernote({
+					lang: "zh-CN",
+					focus: true
+				})
+			};
+			var save = function() {
+				$("#eg").removeClass("no-padding");
+				var aHTML = $(".click2edit").code();
+				$(".click2edit").destroy()
+			};
+		</script>
+	</body>
+
+</html>

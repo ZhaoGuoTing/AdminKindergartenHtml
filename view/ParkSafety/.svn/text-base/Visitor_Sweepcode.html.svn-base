@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p style="text-align: center;"><img src="../../img/QR2.png"></p>
+		<div>
+			<p>温馨提示:</p>
+			<p>1.园所在知了平台下载一个“二维码”,放置在门卫室。</p>
+			<p>2.访客入园时，只需要用微信“扫一扫二维码”，输入访客信息，就完成了访客登记。</p>
+			<p>3.访客离园时，再扫一扫二维码，确认离园，就完成了本次访客。</p>
+		</div>
+		<hr style="color: lightgray;">
+		<div style="float: right;">
+			<button style="height: 35px;">保存图片</button>
+			<button style="border: none;background: #1AB394;height: 35px;">打印二维码</button>
+		</div>
+	</body>
+</html>

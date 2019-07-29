@@ -1,0 +1,147 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>账户管理</title>
+		<link data-style="theme_public" rel="stylesheet" type="text/css" href="../../css/zhiling.css" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/animate.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/style.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet" />
+		 
+		 <script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../layer/layer.js"></script>
+<style type="text/css">
+	td{text-align:center;}
+</style>
+	 
+</head>
+<body class="gray-bg">
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+          <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title"  style="height: 30px;">
+                            <h5>账户管理</h5>
+                            
+                            <div class="ibox-tools" ><a href="AddAccount.html" class="btn btn-primary" style="  vertical-align:middle ;   font-size: 14px;height: 30px; "> 添加账户 </a></div>
+                       
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                 
+                                <div class="col-select-item row-item">
+                                    <select class="input-sm form-control input-s-sm inline">
+                                        <option value="0">角色类型</option>
+                                        <option value="1">高级管理员</option>
+                                        <option value="2">老师</option>
+ 
+                                    </select>
+                                </div>
+                                <div class="col-datepicker row-item daterange-item" id="data_5">
+                            		<label class="font-noraml">录入时间</label>
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" name="start" value="2016-02-11" />
+                                        <span class="input-group-addon">到</span>
+                                        <input type="text" class="input-sm form-control" name="end" value="2016-02-17" />
+                                    </div>
+                                </div>
+                                
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="请输入关键词" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜 索 </button> </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th width="2%"  ></th>
+                                            <th width="8%" style="text-align: left;">账户名称</th>
+                                            <th width="8%" style="text-align:center;">姓名</th>
+                                            <th width="8%" style="text-align:center;">手机号</th>
+                                            <th width="8%" style="text-align:center;">性别</th>
+                                            <th width="8%" style="text-align:center;">角色</th>
+                                            
+                                            
+                                            <th width="15%" style="text-align:center;">录入时间</th>
+                                            <th width="15%" style="text-align:center;">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align:center;"><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td style="text-align: left;">huguang</td>
+                                            <td style="text-align:center;">姚明</th>
+                                            <td style="text-align:center;">13552379880</td>
+                                           
+                                           <td>男</td>
+                                            <td>总园长</td>
+                                            
+                                             <td>2016-04-01 14:26:58</td>
+                                            <td><div class="group-btn-edit"><a href="AddAccount.html" class="btn-xs"><i class="fa fa-pencil-square-o"></i>修改</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;"><input type="checkbox" class="i-checks" name="input[]"></td>
+                                           <td style="text-align: left;">hongxin</td>
+                                           <td style="text-align:center;">阿联</th>
+                                            <td>13439556016</td>
+                                              <td>女</td>
+                                          
+                                            <td>老师</td>
+                                           
+                                              <td>2016-04-01 14:26:58</td>
+                                            <td><div class="group-btn-edit"><a href="AddAccount.html" class="btn-xs"><i class="fa fa-pencil-square-o"></i>修改</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	<div class="group-left"><label class="group-xuan"><input type="checkbox" class="i-checks" name="input[]">全选</label><a class="btn btn-white btn-bitbucket" style="border-color: #1ab394; background-color: #1ab394;color: #FFF"><i class="fa fa-download"></i>批量导出账户</a></div>
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current" style="border-color: #1ab394; background-color: #1ab394;color: #FFF">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">7</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+    </div>
+</div> 
+
+</body>
+
+ 
+</html>
+
+ 
+ 
+ 
+ 
+ 
+ 

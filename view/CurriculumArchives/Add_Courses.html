@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>添加课程</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico"> 
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link href="../../css/plugins/summernote/summernote.css" rel="stylesheet">
+<link href="../../css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    
+                    <div class="ibox-content">
+                        <form class="form-horizontal m-t" id="signupForm" style="width: 1500px;">
+                        	
+                        	  <div class="form-group" >
+                                <label class="col-sm-3 control-label">课程名称：</label>
+                                <div class="col-sm-4">
+                                    <input type="text"  class="form-control m-b-x" style="width: 200px;">
+                                </div>
+                            </div>
+                        	<div class="form-group">
+                                <label class="col-sm-3 control-label">创建人：</label>
+                                <div class="col-sm-4 form-table">张先生</div>
+                            </div>
+                        	<div class="form-group">
+                                <label class="col-sm-3 control-label">能力指标：</label>
+                                <div class="col-sm-4 form-table">张先生</div>
+                            </div>
+                        	
+                            
+                               <div class="form-group form-p"id="data_1">
+                                <label class="col-sm-3 control-label">创建人：</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group date">
+                                	<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                	<input type="text" class="form-control" value="2016-10-11" style="width: 163px;">
+                            		</div>
+
+                                </div>
+                            </div>
+							<div class="form-group" >
+                                <label class="col-sm-3 control-label">状态：</label>
+                                <div class="col-sm-4">
+                                    <input type="text"  class="form-control m-b-x" style="width: 200px;">
+                                </div>
+                            </div>
+                          <div class="form-group">
+                                <label class="col-sm-3 control-label">班级：</label>
+                                <div class="col-sm-4 form-table">
+                                    <select size="13" class="input-sm form-control input-s-sm inline" style="width: 100px; height: 150px; " id="left">
+                                        <option value="">一班</option>
+                                        <option value="">二班</option>
+                                         <option value="">三班</option>
+                                        <option value="">死班</option>
+                                    </select>
+                                         <select size="13" class="input-sm form-control input-s-sm inline" id="right" style="width: 100px; height: 150px;">
+                                       
+                                    </select>
+                                </div>
+                                
+                            </div>
+
+
+
+                            
+                      
+                          
+                           
+                            <div class="form-group" style="width:1000px">
+                                <div class="col-sm-4 col-sm-offset-3">
+                                    <button class="btn btn-primary form-btn" type="submit">提交</button>
+                                    <button class="btn btn-white" type="button" onClick="javascript:history.back(-1);">返回</button>
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/demo/form-validate-demo.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/validate/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/layer/layer.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#signupForm").Validform({tiptype:4});
+	$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})
+	
+	$('#daihao-btn').on('click', function(){
+    layer.open({
+        type: 2,
+        title: '教职工',
+        area : ['700px' , '70%'],
+        content: ['Teacher_Information.html']
+    });
+	});
+	$("#left").change(function(){
+		var options=$("#left option:selected");
+		
+		$("#right").append("<option value=''>"+options.text()+"</option>");
+	});
+	$("#right").change(function(){
+		var options=$("#left option:selected");
+		
+		$("#right").find("option:selected").remove();
+	});
+	
+});
+</script>
+</body>
+</html>

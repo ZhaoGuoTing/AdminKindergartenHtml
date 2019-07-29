@@ -1,0 +1,973 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>考勤管理</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        
+                        <div class="layui-tab layui-tab-brief ibox-title" lay-filter="component-tabs-hash">
+                        	  
+							<ul class="layui-tab-title">
+								<li lay-id="11"  onclick="window.location.href='ChildAttendence.html'">考勤</li>
+								<li  lay-id="22" onclick="window.location.href='ChildAttendence_chart.html'">出勤率分析</li>
+								<li lay-id="33" class="layui-this" onclick="window.location.href='SickTrack.html'">病假追踪</li>
+
+							</ul>
+
+						</div>
+
+                        <!--<div class="kaoqing">
+                        	<button type="button" style="background-color: lightseagreen;border: none;" class="kaoqingtongji" onclick="javascrtpt:window.location.href='Attendance_Statistics.html'" ><span style="color: white;">查看统计</span> </button>
+                        	<button type="button" style="background-color: lightseagreen;border: none;" class="kaoqingsheji" onclick="javascrtpt:window.location.href='Attendance_Setting.html'" > <span style="color: white;">考勤设置</span></button>
+                        </div>-->
+                       
+                        <div class="ibox-content">
+                            <div class="row" >
+                                <!--<div class="col-radio row-item">
+                                    <div data-toggle="buttons" class="btn-group">
+                                        <label class="btn btn-sm btn-white active"><input type="radio" id="option1" name="options">全部</label>
+                                        <label class="btn btn-sm btn-white"><input type="radio" id="option2" name="options"></label>
+                                        <label class="btn btn-sm btn-white"><input type="radio" id="option2" name="options">早退</label>
+                                    </div>
+                                </div>-->
+                              
+                                <!--<div class="col-datepicker row-item daterange-item" id="data_5">
+                            		<label class="font-noraml">开始时间</label>
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" name="start" value="2016-02-11" />
+                                        <span class="input-group-addon">到</span>
+                                        <input type="text" class="input-sm form-control" name="end" value="2016-02-17" />
+                                    </div>
+                                </div>-->
+                                <div class="col-select-item row-item">
+                                	<select class="input-sm form-control">
+                                        <option value="0">学前1班</option>
+                                        <option value="1">学前2班</option>
+                                        <option value="1">幼小衔接</option>
+                                        <option value="1">中班</option>
+                                        <option value="1">混成</option>
+                                    </select>
+                                </div>
+                                <!--<div class="col-search-box row-item">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="幼儿姓名" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                    </div>
+                                </div>-->
+                                 <div class="col-select-item row-item">
+                                	<select class="input-sm form-control">
+                                        <option value="0">目前状况</option>
+                                        <option value="1">全部状态</option>
+                                        <option value="1">稳定</option>
+                                        <option value="1">加重</option>
+                                        <option value="1">减轻</option>
+                                    </select><button type="button" class="btn btn-sm btn-primary"> 查询</button> 
+                                </div>
+                                 <div style="float: right;margin-top: 17px;margin-right: 15px;">
+                                	 <button type="button" class="btn btn-sm btn-primary"> 导出</button>
+                                	 <button type="button" class="btn btn-sm btn-default"> 打印</button>
+                                </div>
+                            </div>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th width="7%"><label><input type="checkbox" class="i-checks" name="input[]">全选</label></th>
+                                            
+                                            <th width="7%">姓名</th>
+                                            <th width="7%">性别</th>
+                                            <th width="9%">日期</th>
+                                            <th width="7%">主要症状</th>
+                                            <th width="7%">就医医院</th>
+                                            <th width="7%">诊断结果(病名)</th>
+                                            
+                                            <th width="7%">是否传染病</th>
+                                            <th width="7%">住院/居家</th>
+                                            <th width="7%">目前状况</th>
+                                            <th width="7%">预计返园日</th>
+                                            <th width="9%">备注</th>
+                                            <th width="12%">操作</th>
+                                           <!-- <th width="13%">操作</th>-->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                           
+                                            <td>王小明</td>
+                                            <td>女</td>
+                                            <td>2018-4-23</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                           <td><div class="group-btn-edit"><a href="TrackResult.html"><i class="fa fa-pencil-square-o"></i>编辑</a></div></td>
+                                        </tr>
+                                         <tr>
+                                             <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                           
+                                           <td>王小明</td>
+                                            <td>女</td>
+                                            <td>2018-4-23</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                           <td><div class="group-btn-edit"><a href="TrackResult.html"><i class="fa fa-pencil-square-o"></i>编辑</a></div></td>
+                                        </tr>
+                                        <tr>
+                                             <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                           
+                                           <td>王小明</td>
+                                            <td>女</td>
+                                            <td>2018-4-23</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                           <td><div class="group-btn-edit"><a href="TrackResult.html"><i class="fa fa-pencil-square-o"></i>编辑</a></div></td>
+                                        </tr>
+                                         <tr>
+                                             <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                           
+                                           <td>王小明</td>
+                                            <td>女</td>
+                                            <td>2018-4-23</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                           <td><div class="group-btn-edit"><a href="TrackResult.html"><i class="fa fa-pencil-square-o"></i>编辑</a></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	<div class="group-left"><label class="group-xuan"><input type="checkbox" class="i-checks" name="input[]">全选</label><a class="btn btn-white btn-bitbucket"><i class="fa fa-download"></i>批量导出</a></div>
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Contentbox">
+				<!--在职老师开始-->
+				<div id="con_four_1" class="mairu-jijin nopadding" style="display: none;">
+					<div class="data_wrap" style=" width: 1020px; padding: 10px; overflow: hidden;">
+						<div class="animsition">
+							<div style="background: white; width: 1020px; overflow: hidden;">
+
+								<div id="main" style="height:350px; width: 700px; float: left; display: none;"></div>
+								<div id="main2" style="height:350px; width: 320px; float: left; display: none;"></div>
+								<div id="main4" style="height:350px; width: 1020px; float: left; border-top: 1px solid lightgray;"></div>
+								<div>
+									<div class="col-sm-4" style="display: none;">
+										<div class="ibox float-e-margins">
+											<div class="ibox-title">
+												<h5>今日出勤情况</h5>
+											</div>
+											<table style="width: 980px;" style="display: none;">
+
+													<tr>
+														<th class="text-center">日期</th>
+														<th class="text-center">应到</th>
+														<th class="text-center">实到</th>
+														<th class="text-center">缺勤</th>
+														<th class="text-center">事假</th>
+														<th class="text-center">病假</th>
+														<th class="text-center">出勤率</th>
+														<th class="text-center">缺勤率</th>
+														<th class="text-center">事假率</th>
+														<th class="text-center">病假率</th>
+													</tr>
+													<tr>
+														<td class="text-center">2018-2-2</td>
+														<td class="text-center">99</td>
+														<td class="text-center">96</td>
+														<td class="text-center">1</td>
+														<td class="text-center">1</td>
+														<td class="text-center">1</td>
+														<td class="text-center">99%</td>
+														<td class="text-center">96%</td>
+														<td class="text-center">1%</td>
+														<td class="text-center">1%</td>
+														</td>
+
+													</tr>
+													<tr>
+														<td class="text-center">2018-2-2</td>
+														<td class="text-center">99</td>
+														<td class="text-center">96</td>
+														<td class="text-center">1</td>
+														<td class="text-center">1</td>
+														<td class="text-center">1</td>
+														<td class="text-center">99%</td>
+														<td class="text-center">96%</td>
+														<td class="text-center">1%</td>
+														<td class="text-center">1%</td>
+
+													</tr>
+													<tr>
+														<td class="text-center">2018-2-2</td>
+														<td class="text-center">99</td>
+														<td class="text-center">96</td>
+														<td class="text-center">1</td>
+														<td class="text-center">1</td>
+														<td class="text-center">1</td>
+														<td class="text-center">99%</td>
+														<td class="text-center">96%</td>
+														<td class="text-center">1%</td>
+														<td class="text-center">1%</td>
+
+													</tr>
+												</table>
+										</div>
+
+									</div>
+								<br><br><br><br>
+								<div id="main3" style="height:350px; width: 1020px; clear: both; border: 1px solid lightgray;"></div>
+								<div style="display: none;">
+									<table style="width: 980px;">
+
+													<tr>
+														<th class="text-center">班级</th>
+														<th class="text-center">应到</th>
+														<th class="text-center">实到</th>
+														<th class="text-center">缺勤</th>
+														<th class="text-center">事假</th>
+														<th class="text-center">病假</th>
+														<th class="text-center">出勤率</th>
+														<th class="text-center">缺勤率</th>
+														<th class="text-center">事假率</th>
+														<th class="text-center">病假率</th>
+													</tr>
+													<tr>
+														<td class="text-center">一班</td>
+														<td class="text-center">99</td>
+														<td class="text-center">96</td>
+														<td class="text-center">1</td>
+														<td class="text-center">1</td>
+														<td class="text-center">1</td>
+														<td class="text-center">99%</td>
+														<td class="text-center">96%</td>
+														<td class="text-center">1%</td>
+														<td class="text-center">1%</td>
+														</td>
+
+													</tr>
+													<tr>
+														<td class="text-center">一班</td>
+														<td class="text-center">99</td>
+														<td class="text-center">96</td>
+														<td class="text-center">1</td>
+														<td class="text-center">1</td>
+														<td class="text-center">1</td>
+														<td class="text-center">99%</td>
+														<td class="text-center">96%</td>
+														<td class="text-center">1%</td>
+														<td class="text-center">1%</td>
+
+													</tr>
+													<tr>
+														<td class="text-center">一班</td>
+														<td class="text-center">99</td>
+														<td class="text-center">96</td>
+														<td class="text-center">1</td>
+														<td class="text-center">1</td>
+														<td class="text-center">1</td>
+														<td class="text-center">99%</td>
+														<td class="text-center">96%</td>
+														<td class="text-center">1%</td>
+														<td class="text-center">1%</td>
+
+													</tr>
+												</table>
+									
+								</div>
+								<br>
+								<div id="main5" style="height:350px; width: 320px; float: left;border: 1px solid lightgray; display: none;"></div>
+							</div>
+						</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+                
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>
+
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="http://www.jq22.com/jquery/jquery-ui-1.11.0.js"></script>
+<script src="../../js/ZHGL/select-widget-min.js"></script>
+<script src="../../js/ZHGL/jquery.animsition.min.js"></script>
+<script src="https://cdn.bootcss.com/echarts/3.5.3/echarts.min.js"></script>
+<script src="../../js/ZHGL/macarons .js"></script>
+<script src="../../js/ZHGL/common.js"></script>
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {
+					//初始化切换
+					$(".animsition").animsition({
+
+						inClass: 'fade-in-right',
+						outClass: 'fade-out',
+						inDuration: 1500,
+						outDuration: 800,
+						linkElement: '.animsition-link',
+						// e.g. linkElement   :   'a:not([target="_blank"]):not([href^=#])'
+						loading: true,
+						loadingParentElement: 'body', //animsition wrapper element
+						loadingClass: 'animsition-loading',
+						unSupportCss: ['animation-duration',
+							'-webkit-animation-duration',
+							'-o-animation-duration'
+						],
+						//"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+						//The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+
+						overlay: false,
+
+						overlayClass: 'animsition-overlay-slide',
+						overlayParentElement: 'body'
+					});
+
+					// 基于准备好的dom，初始化echarts实例
+					var myChart = echarts.init(document.getElementById('main'), 'macarons');
+					var myChart2 = echarts.init(document.getElementById('main2'), 'macarons');
+					var myChart3 = echarts.init(document.getElementById('main3'), 'macarons');
+					var myChart4 = echarts.init(document.getElementById('main4'), 'macarons');
+					var myChart5 = echarts.init(document.getElementById('main5'), 'macarons');
+					// 指定图表的配置项和数据
+					var date = ['2016/11/1', '2016/11/2', '2016/11/3', '2016/11/4', '2016/11/5', '2016/11/6', '2016/11/7', '2016/11/8', '2016/11/9', '2016/11/10',
+						'2016/11/11', '2016/11/12', '2016/11/13', '2016/11/14', '2016/11/15', '2016/11/16', '2016/11/17', '2016/11/18', '2016/11/19', '2016/11/20', '2016/11/21', '2016/11/22', '2016/11/23', '2016/11/24', '2016/11/25', '2016/11/26', '2016/11/27', '2016/11/28', '2016/11/29', '2016/11/30'
+					];
+
+					function my_data() {
+						var data = [];
+						for(var i = 0; i < 30; i++) {
+							data.push(Math.round(Math.random() * (500 - 100) + 100));
+						};
+						return data;
+					}
+					var option = {
+						tooltip: {
+							trigger: 'axis',
+							/*formatter: function(data){
+				        	//console.log(data)
+				        	 myChart.setOption({
+						        title : {
+							        text: '会员数量' + data.value,
+							    }
+						    });
+							
+						   return data.name + '</br>' + '新增数：' + data.value + '</br>';
+						}*/
+
+						},
+						title: {
+							text: '会员数量：1000',
+							/*subtext: '昨日新增：',
+				        subtextStyle: {
+							fontSize:14,
+							color : '#ff4a84'
+						}*/
+						},
+
+						toolbox: {
+							show: true,
+							feature: {
+								mark: {
+									show: true
+								},
+								dataView: {
+									show: true,
+									readOnly: true
+								},
+								magicType: {
+									show: true,
+									type: ['line', 'bar']
+								},
+								restore: {
+									show: true
+								},
+								saveAsImage: {}
+							}
+						},
+						calculable: true,
+						xAxis: {
+							type: 'category',
+							boundaryGap: false,
+							data: date
+						},
+						yAxis: {
+							type: 'value',
+							boundaryGap: [0, '100%']
+						},
+						dataZoom: [{
+							type: 'inside',
+							start: 84,
+							end: 100
+						}, {
+							start: 84,
+							end: 100,
+							handleSize: '80%',
+							handleStyle: {
+								color: '#fff',
+								shadowBlur: 3,
+								shadowColor: 'rgba(0, 0, 0, 0.6)',
+								shadowOffsetX: 2,
+								shadowOffsetY: 2
+							}
+						}],
+						series: [{
+							name: '新增数',
+							type: 'line',
+							smooth: true,
+							itemStyle: {
+								normal: {
+									color: 'rgb(255, 70, 131)'
+								}
+							},
+							areaStyle: {
+								normal: {
+									color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+										offset: 0,
+										color: 'rgb(255, 158, 68)'
+									}, {
+										offset: 1,
+										color: 'rgb(255, 70, 131)'
+									}])
+								}
+							},
+							data: my_data()
+						}]
+					};
+
+					var option2 = {
+						tooltip: {
+							trigger: 'item',
+							formatter: function(data) {
+								//console.log(data)
+								myChart.setOption({
+									title: {
+										text: '会员数量' + data.value,
+									}
+								});
+								return data.name + '</br>' + '人数：' + data.value + '</br>占比：' + data.percent + '%' + '</br>';
+							}
+						},
+						toolbox: {
+							show: true,
+							feature: {
+								mark: {
+									show: true
+								},
+								dataView: {
+									show: true,
+									readOnly: false
+								},
+								restore: {
+									show: true
+								},
+								saveAsImage: {
+									show: true
+								}
+							}
+						},
+						legend: {
+							orient: 'horizontal', // 'vertical'
+							icon: 'pie',
+							// orient: 'vertical',
+							x: 'right',
+							y: 'bottom',
+							selectedMode: true,
+							data: ['准会员', '普通会员', '高级会员', 'VIP会员', '超级VIP会员']
+						},
+						series: [{
+							name: '各级别会员人数',
+							center: ['50%', '50%'],
+							type: 'pie',
+							radius: ['50%', '65%'],
+							avoidLabelOverlap: false,
+							label: {
+								normal: {
+									show: false,
+									position: 'center',
+								},
+								emphasis: {
+									show: true,
+									textStyle: {
+										fontSize: '20',
+										fontWeight: 'bold'
+									}
+								}
+							},
+							labelLine: {
+								normal: {
+									show: false
+								}
+							},
+							data: [{
+									value: 335,
+									name: '准会员'
+								},
+								{
+									value: 310,
+									name: '普通会员'
+								},
+								{
+									value: 234,
+									name: '高级会员'
+								},
+								{
+									value: 135,
+									name: 'VIP会员'
+								},
+								{
+									value: 1548,
+									name: '超级VIP会员'
+								}
+							]
+						}]
+					};
+					var option3 = {
+						title: {
+							
+							text: '所选时间段内班级出勤对比(单位:人次)',
+				        textStyle: {
+							fontSize:14,
+							color : 'black'
+						}
+						},
+						tooltip: {
+							trigger: 'axis',
+							/* axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+							    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+							}*/
+						},
+						legend: {
+							data: ['出勤率', '缺勤率', '事假率', '病假率']
+						},
+						toolbox: {
+							show: true,
+							feature: {
+								mark: {
+									show: true
+								},
+								dataView: {
+									show: true,
+									readOnly: false
+								},
+								magicType: {
+									show: true,
+									type: ['line', 'bar', 'stack', 'tiled']
+								},
+								restore: {
+									show: true
+								},
+								saveAsImage: {
+									show: true
+								}
+							}
+						},
+						calculable: true,
+						xAxis: [{
+							type: 'category',
+							boundaryGap: true,
+							data: date
+						}],
+						yAxis: [{
+							type: 'value'
+						}],
+						grid: {
+							left: '3%',
+							right: '4%',
+							containLabel: true
+						},
+						dataZoom: [{
+							type: 'inside',
+							start: 74,
+							end: 100,
+						}, {
+							start: 74,
+							end: 100,
+							handleSize: '80%',
+							handleStyle: {
+								color: '#fff',
+								shadowBlur: 3,
+								shadowColor: 'rgba(0, 0, 0, 0.6)',
+								shadowOffsetX: 2,
+								shadowOffsetY: 2
+							}
+						}],
+						series: [{
+								name: '出勤率',
+								type: 'bar',
+								stack: '总量',
+								barMaxWidth: 30,
+								//itemStyle: {normal: {areaStyle: {type: 'default'}}},
+								data: my_data()
+							},
+							{
+								name: '缺勤率',
+								type: 'bar',
+								stack: '总量',
+								//itemStyle: {normal: {areaStyle: {type: 'default'}}},
+								data: my_data()
+							},
+							{
+								name: '事假率',
+								type: 'bar',
+								stack: '总量',
+								//itemStyle: {normal: {areaStyle: {type: 'default'}}},
+								data: my_data()
+							},
+							{
+								name: '病假率',
+								type: 'bar',
+								stack: '总量',
+								//itemStyle: {normal: {areaStyle: {type: 'default'}}},
+								data: my_data()
+							}
+						]
+					};
+					var option4 = {
+						tooltip: {
+							trigger: 'axis',
+						},
+						title: {
+//							text: '全园出勤统计（单位:人）',
+							text: '全园出勤统计（单位:人）',
+				        textStyle: {
+							fontSize:14,
+							color : 'black'
+						}
+						},
+
+						toolbox: {
+							show: true,
+							feature: {
+								mark: {
+									show: true
+								},
+								dataView: {
+									show: true,
+									readOnly: false
+								},
+								magicType: {
+									show: true,
+									type: ['line', 'bar', 'stack', 'tiled']
+								},
+								restore: {
+									show: true
+								},
+								saveAsImage: {
+									show: true
+								}
+							}
+						},
+						legend: {
+							data: ['出勤率', '缺勤率', '事假率', '病假率']
+						},
+						calculable: true,
+						xAxis: {
+							type: 'category',
+							boundaryGap: false,
+							data: date
+						},
+						yAxis: {
+							type: 'value',
+							boundaryGap: [0, '100%']
+						},
+						dataZoom: [{
+							type: 'inside',
+							start: 84,
+							end: 100
+						}, {
+							start: 84,
+							end: 100,
+							handleSize: '80%',
+							handleStyle: {
+								color: '#fff',
+								shadowBlur: 3,
+								shadowColor: 'rgba(0, 0, 0, 0.6)',
+								shadowOffsetX: 2,
+								shadowOffsetY: 2
+							}
+						}],
+						series: [{
+								name: '出勤率',
+								type: 'line',
+								smooth: false,
+								stack: '总量',
+								itemStyle: {
+									normal: {
+										areaStyle: {
+											type: 'default'
+										}
+									}
+								},
+								data: my_data()
+							},
+							{
+								name: '缺勤率',
+								type: 'line',
+								stack: '总量',
+								smooth: true,
+								itemStyle: {
+									normal: {
+										areaStyle: {
+											type: 'default'
+										}
+									}
+								},
+								data: my_data()
+							},
+							{
+								name: '事假率',
+								type: 'line',
+								stack: '总量',
+								smooth: true,
+								itemStyle: {
+									normal: {
+										areaStyle: {
+											type: 'default'
+										}
+									}
+								},
+								data: my_data()
+							},
+							{
+								name: '病假率',
+								type: 'line',
+								stack: '总量',
+								smooth: true,
+								itemStyle: {
+									normal: {
+										areaStyle: {
+											type: 'default'
+										}
+									}
+								},
+								data: my_data()
+							}
+						]
+					};
+
+					var option5 = {
+						tooltip: {
+							trigger: 'item',
+							formatter: function(data) {
+								//console.log(data)
+								myChart.setOption({
+									title: {
+										text: '会员数量' + data.value,
+									}
+								});
+								return data.name + '</br>' + '人数：' + data.value + '</br>占比：' + data.percent + '%' + '</br>';
+							}
+						},
+						toolbox: {
+							show: true,
+							feature: {
+								mark: {
+									show: true
+								},
+								dataView: {
+									show: true,
+									readOnly: false
+								},
+								restore: {
+									show: true
+								},
+								saveAsImage: {
+									show: true
+								}
+							}
+						},
+						legend: {
+							orient: 'horizontal', // 'vertical'
+							icon: 'pie',
+							// orient: 'vertical',
+							x: 'right',
+							y: 'bottom',
+							selectedMode: true,
+							data: ['新会员', '老会员', '潜客']
+						},
+						series: [{
+							name: '各级别会员人数',
+							center: ['50%', '50%'],
+							type: 'pie',
+							radius: ['50%', '65%'],
+							avoidLabelOverlap: false,
+							label: {
+								normal: {
+									show: false,
+									position: 'center'
+								},
+								emphasis: {
+									show: true,
+									textStyle: {
+										fontSize: '20',
+										fontWeight: 'bold'
+									}
+								}
+							},
+							labelLine: {
+								normal: {
+									show: false
+								}
+							},
+							data: [{
+									value: 335,
+									name: '新会员'
+								},
+								{
+									value: 310,
+									name: '老会员'
+								},
+								{
+									value: 210,
+									name: '潜客'
+								}
+							]
+						}]
+					};
+
+					// 使用刚指定的配置项和数据显示图表。
+					myChart.setOption(option);
+					myChart2.setOption(option2);
+					myChart3.setOption(option3);
+					myChart4.setOption(option4);
+					myChart5.setOption(option5);
+
+					myChart.on('mousemove', function(params) { // 控制台打印数据的名称 
+						$('#my_date_set1').html(params.name);
+						myChart2.clear();
+						option2.series[0].data = [{
+								value: 900,
+								name: '准会员'
+							},
+							{
+								value: 150,
+								name: '普通会员'
+							},
+							{
+								value: 150,
+								name: '高级会员'
+							},
+							{
+								value: 150,
+								name: 'VIP会员'
+							},
+							{
+								value: 150,
+								name: '超级VIP会员'
+							}
+						];
+						myChart2.setOption(option2, true);
+						/*myChart2.setOption({
+				        series: [
+					        {
+					            data:[
+					                {value:100, name:'准会员'},
+					                {value:310, name:'普通会员'},
+					                {value:234, name:'高级会员'},
+					                {value:135, name:'VIP会员'},
+					                {value:params.value, name:'超级VIP会员'}
+					            ]
+					        }
+					    ]
+				    });*/
+					});
+					myChart4.on('mousemove', function(params) { // 控制台打印数据的名称 
+						$('#my_date_set2').html(params.name)
+						myChart5.setOption({
+							series: [{
+								data: [{
+										value: params.value,
+										name: '新会员'
+									},
+									{
+										value: 310,
+										name: '老会员'
+									},
+									{
+										value: 210,
+										name: '潜客'
+									}
+								]
+							}]
+						});
+					});
+
+				});
+</script>
+<script type="text/javascript">
+		$(function() {
+			$("#signupForm").Validform({
+				tiptype: 4
+			});
+			$(".i-checks").iCheck({
+				checkboxClass: "icheckbox_square-green",
+				radioClass: "iradio_square-green",
+			})
+
+		});
+	</script>
+</html>

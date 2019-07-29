@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>设置工资项</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>工资项</h5>
+                            <div class="ibox-tools"><a href="Add_Payroll.html" class="btn btn-primary btn-xs">新增项目</a></div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                
+                                <div class="col-select-item row-item">
+                        			
+                                	<select class="input-sm form-control input-s-sm inline">
+                                        <option value="0">固定</option>
+                                        <option value="1">是</option>
+                                        <option value="2">否</option>
+                                    </select>
+                                </div>
+                                <div class="col-select-item row-item">
+                        			
+                                	<select class="input-sm form-control input-s-sm inline">
+                                        <option value="0">自动计算</option>
+                                        <option value="1">是</option>
+                                        <option value="2">否</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="请输入工资项目" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align: center;" width="7%"><label><input type="checkbox" class="i-checks" name="input[]">全选</label></th>
+                                            <th style="text-align: center;" width="5%">序号</th>
+                                            <th  style="text-align: center;" width="15%">工资项目名称</th>
+                                            <th style="text-align: center;" width="10%">编号</th>
+                                            <th style="text-align: center;" width="5%">固定</th>
+                                            <th style="text-align: center;" width="10%">自动计算</th>
+                                            <th style="text-align: center;" width="15%">计算公式</th>                   
+                                            <th style="text-align: center;" width="25%">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;"><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td  style="text-align: center;"><div class="munber-tit">1</div></td>
+                                            <td style="text-align: center;"> 卫生费</td>
+                                            <td style="text-align: center;">122</td>
+                                            <td style="text-align: center;">是</td>
+                                            <td style="text-align: center;">否</td>
+                                            <td style="text-align: center;">2+1</td>
+                                            
+                                            <td><div class="group-btn-edit"><a href="Add_Payroll.html"><i class="fa fa-pencil-square-o"></i>修改</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>
+                                       <tr>
+                                            <td style="text-align: center;"><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td  style="text-align: center;"><div class="munber-tit">1</div></td>
+                                            <td style="text-align: center;"> 卫生费</td>
+                                            <td style="text-align: center;">122</td>
+                                            <td style="text-align: center;">是</td>
+                                            <td style="text-align: center;">否</td>
+                                            <td style="text-align: center;">2+1</td>
+                                            
+                                            <td><div class="group-btn-edit"><a href="Add_Payroll.html"><i class="fa fa-pencil-square-o"></i>修改</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>
+                                      <tr>
+                                            <td style="text-align: center;"><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td  style="text-align: center;"><div class="munber-tit">1</div></td>
+                                            <td style="text-align: center;"> 卫生费</td>
+                                            <td style="text-align: center;">122</td>
+                                            <td style="text-align: center;">是</td>
+                                            <td style="text-align: center;">否</td>
+                                            <td style="text-align: center;">2+1</td>
+                                            
+                                            <td><div class="group-btn-edit"><a href="添加贷号.html"><i class="fa fa-pencil-square-o"></i>修改</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;"><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td  style="text-align: center;"><div class="munber-tit">1</div></td>
+                                            <td style="text-align: center;"> 卫生费</td>
+                                            <td style="text-align: center;">122</td>
+                                            <td style="text-align: center;">是</td>
+                                            <td style="text-align: center;">否</td>
+                                            <td style="text-align: center;">2+1</td>
+                                            
+                                            <td><div class="group-btn-edit"><a href="添加贷号.html"><i class="fa fa-pencil-square-o"></i>修改</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>
+                                      <tr>
+                                            <td style="text-align: center;"><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td  style="text-align: center;"><div class="munber-tit">1</div></td>
+                                            <td style="text-align: center;"> 卫生费</td>
+                                            <td style="text-align: center;">122</td>
+                                            <td style="text-align: center;">是</td>
+                                            <td style="text-align: center;">否</td>
+                                            <td style="text-align: center;">2+1</td>
+                                            
+                                            <td><div class="group-btn-edit"><a href="添加贷号.html"><i class="fa fa-pencil-square-o"></i>修改</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	<div class="group-left"><label class="group-xuan"><input type="checkbox" class="i-checks" name="input[]">全选</label><a class="btn btn-white btn-bitbucket"><i class="fa fa-download"></i>批量导出</a><a class="btn btn-white btn-bitbucket"><i class="fa fa-trash"></i>批量删除</a></div>
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>   
+<script type="text/javascript" src="../../js/layer/layer.js"></script>
+</body>
+</html>

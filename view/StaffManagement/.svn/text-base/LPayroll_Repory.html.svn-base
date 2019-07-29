@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>查看工资报表</title>
+		<link data-style="theme_public" rel="stylesheet" type="text/css" href="../../css/zhiling.css" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/animate.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/style.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet" />
+		<script type="text/javascript" src="../../js/ZHGL/tab.js"></script>
+	</head>
+
+	<body class="gray-bg">
+		<script src="/demos/googlegg.js"></script>
+		<div class="wrapper wrapper-content animated fadeInRight" >
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>工资查询</h5>
+                        </div>
+                         
+                        <div class="ibox-content">
+			<div class="Contentbox">
+				<!--在职老师开始-->
+				<div id="con_four_1" class="mairu-jijin nopadding" style="display: block;">
+					<div class="wrapper wrapper-content animated fadeInRight">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="ibox float-e-margins">
+									
+                       
+                        <div class="ibox-content">
+                            <div class="row" >
+                                <div class="col-radio row-item">
+                                    <div data-toggle="buttons" class="btn-group">
+                                       
+                                        <label class="btn btn-sm btn-white"><input type="radio" id="option2" name="options">导出</label>
+                                    	<label class="btn btn-sm btn-white" style="width: 100px;"><input type="radio" id="option2" name="options">发送工资单</label>
+									</div>
+                                </div>
+                              
+                                <div class="col-datepicker row-item daterange-item" id="data_5">
+                            		<label class="font-noraml">开始时间</label>
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" name="start" value="2016-02-11" />
+                                        <span class="input-group-addon">到</span>
+                                        <input type="text" class="input-sm form-control" name="end" value="2016-02-17" />
+                                    </div>
+                                </div>
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="请输入姓名" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                    </div>
+                                </div>
+                            </div>
+										
+										</div>
+										<div class="table-responsive">
+
+											<table class="table table-hover" >
+
+												<thead>
+
+													<tr>
+
+														<th width="3%"><label><input type="checkbox" class="i-checks" name="input[]" /></label></th>
+														<th width="5%" style="text-align: center;">编号</th>
+
+														<th width="12%" style="text-align: center;">姓名</th>
+														<th width="8%" style="text-align: center;">月份</th>
+														<th width="10%" style="text-align: center;">基本工资</th>
+														<th width="10%" style="text-align: center;">工龄工资</th>
+														<th width="10%" style="text-align: center;">职务工资</th>
+														<th width="10%" style="text-align: center;">学历补贴</th>
+														<th width="10%" style="text-align:  center;">满出勤</th>
+														<th width="10%" style="text-align: center;">绩效</th>
+														<th>总计</th>
+													</tr>
+												</thead>
+												<tbody>
+
+													<tr>
+														<td><input type="checkbox" class="i-checks" name="input[]" /></td>
+														<td style="text-align: center;"> 1</td>
+														<td style="text-align: center;">常跃林</td>
+														<td style="text-align: center;">1月</td>
+														
+															<td style="text-align: center;">
+																<label>200</label>
+															</td>
+															<td style="text-align: center;"> 
+																<label>200</label>
+															</td>
+															<td style="text-align: center;">
+																<label>200</label>
+															</td>
+															<td style="text-align: center;"> 
+																<label>200</label>
+															</td>
+															<td style="text-align: center;">
+																<label>200</label>
+															</td >
+															<td style="text-align: center;">
+																<label>200</label>
+															</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" class="i-checks" name="input[]" /></td>
+														<td style="text-align: center;"> 1</td>
+														<td style="text-align: center;">常跃林</td>
+														<td style="text-align: center;">1月</td>
+														
+															<td style="text-align: center;">
+																<label>200</label>
+															</td>
+															<td style="text-align: center;"> 
+																<label>200</label>
+															</td>
+															<td style="text-align: center;">
+																<label>200</label>
+															</td>
+															<td style="text-align: center;"> 
+																<label>200</label>
+															</td>
+															<td style="text-align: center;">
+																<label>200</label>
+															</td >
+															<td style="text-align: center;">
+																<label>200</label>
+															</td>
+													</tr>
+													<tr>
+														<td><input type="checkbox" class="i-checks" name="input[]" /></td>
+														<td style="text-align: center;"> 1</td>
+														<td style="text-align: center;">常跃林</td>
+														<td style="text-align: center;">1月</td>
+														
+															<td style="text-align: center;">
+																<label>200</label>
+															</td>
+															<td style="text-align: center;"> 
+																<label>200</label>
+															</td>
+															<td style="text-align: center;">
+																<label>200</label>
+															</td>
+															<td style="text-align: center;"> 
+																<label>200</label>
+															</td>
+															<td style="text-align: center;">
+																<label>200</label>
+															</td >
+															<td style="text-align: center;">
+																<label>200</label>
+															</td>
+														
+													</tr>
+													
+												</tbody>
+											</table>
+											<div class="group-bottom-box">
+												<div class="group-left">
+													<label class="group-xuan"><input type="checkbox" class="i-checks" name="input[]" />全选</label>
+													<a class="btn btn-white btn-bitbucket"><i class="fa fa-download"></i>批量导出</a>
+													<a class="btn btn-white btn-bitbucket"><i class="fa fa-trash"></i>批量删除</a>
+												</div>
+												<div class="pagewrap">
+													<div class="pagemunber">
+														共 105484 条
+													</div>
+													<div class="pagebox">
+														<span class="previous">上一页</span>
+														<span class="current">1</span>
+														<a href="#">2</a>
+														<a href="#">3</a>
+														<a href="#">4</a>
+														<a href="#">5</a>
+														<span>...</span>
+														<a href="#">200</a>
+														<a href="#">下一页</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<!--在职老师结束-->
+				<!--离职老师开始-->
+			
+			</div>
+		</div>
+			<div class="wrapper wrapper-content animated fadeInRight" >
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>分类汇总</h5>
+                        </div>
+                         
+                        <div class="ibox-content">
+				<div id="con_four_2" class="maichu-jijin nopadding" style="display: block;">
+					<div class="wrapper wrapper-content animated fadeInRight">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="ibox float-e-margins">
+									
+									
+										<div class="table-responsive">
+
+											<table class="table table-hover">
+
+												<thead>
+
+													<tr>
+														<th>工资项目</th>
+														<th>金额</th>
+														<th>占比</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+												<tbody>
+
+													<tr>
+														<td>五险一金</td>
+														<td>9000</td>
+														<td>20%</td>
+														<td><div class="group-btn-edit"><a href="Classification_Summary.html"><i class="fa fa-pencil-square-o"></i>查看</a></div></td>
+														
+														
+													</tr>
+													<tr>
+														
+													</tr>
+													<tr>
+														
+													</tr>
+													<tr>
+														
+													</tr>
+													<tr>
+														
+													</tr>
+												</td>
+											</table>
+											<div class="group-bottom-box">
+												<div class="group-left">
+													<label class="group-xuan"><input type="checkbox" class="i-checks" name="input[]" />全选</label>
+													<a class="btn btn-white btn-bitbucket"><i class="fa fa-download"></i>批量导出</a>
+													<a class="btn btn-white btn-bitbucket"><i class="fa fa-trash"></i>批量删除</a>
+												</div>
+												<div class="pagewrap">
+													<div class="pagemunber">
+														共 105484 条
+													</div>
+													<div class="pagebox">
+														<span class="previous">上一页</span>
+														<span class="current">1</span>
+														<a href="#">2</a>
+														<a href="#">3</a>
+														<a href="#">4</a>
+														<a href="#">5</a>
+														<span>...</span>
+														<a href="#">200</a>
+														<a href="#">下一页</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+				<!--离职老师结束-->
+	</body>
+
+</html>

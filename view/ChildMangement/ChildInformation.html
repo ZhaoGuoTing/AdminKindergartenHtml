@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>幼儿管理</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>幼儿信息</h5>
+                            
+                        </div>
+                       
+                        <div class="ibox-content">
+                            <div class="row" >
+                                <div class="col-radio row-item">
+                                    <div data-toggle="buttons" class="btn-group">
+                                        <label class="btn btn-sm btn-white active"><input type="radio" id="option1" name="options">全部</label>
+                                        <label class="btn btn-sm btn-white"><input type="radio" id="option2" name="options">大班</label>
+                                        <label class="btn btn-sm btn-white"><input type="radio" id="option3" name="options">中班</label>
+                                        <label class="btn btn-sm btn-white"><input type="radio" id="option4" name="options">小班</label>
+                                    </div>
+                                </div>
+                              
+                                <div class="col-datepicker row-item daterange-item" id="data_5">
+                            		<label class="font-noraml">开始时间</label>
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" name="start" value="2016-02-11" />
+                                        <span class="input-group-addon">到</span>
+                                        <input type="text" class="input-sm form-control" name="end" value="2016-02-17" />
+                                    </div>
+                                </div>
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="请输入姓名" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th width="7%"><label><input type="checkbox" class="i-checks" name="input[]">全选</label></th>
+                                            <th width="10%">序号</th>
+                                            <th width="10%">姓名</th>
+                                            <th width="10%">性别</th>
+                                            <th width="10%">年龄</th>
+                                            <th width="10%">班级</th>
+                                            <th width="10%">入学日期</th>
+                                            <th width="10%">原因</th>
+                                            <th width="10%">备注</th>
+                                            <th width="13%">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>1</td>
+                                            <td>王小红</td>
+                                            <td>女</td>
+                                            <td>4</td>
+                                            <td>小班</td>
+                                            <td>2018-03-26</td>
+                                            <td></td>
+                                            <td></td>
+                                            
+                                            <td><div class="group-btn-edit"><a href="添加贷号.html"><i class="fa fa-pencil-square-o"></i>修改</a></div></td>
+                                        </tr>
+                                         <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>2</td>
+                                            <td>李小华</td>
+                                            <td>男</td>
+                                            <td>6</td>
+                                            <td>中班</td>
+                                            <td>2018-03-26</td>
+                                            <td></td>
+                                            <td></td>
+                                            
+                                            <td><div class="group-btn-edit"><a href="添加贷号.html"><i class="fa fa-pencil-square-o"></i>修改</a></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>3</td>
+                                            <td>小明</td>
+                                            <td>男</td>
+                                            <td>8</td>
+                                            <td>大班</td>
+                                            <td>2018-03-26</td>
+                                            <td></td>
+                                            <td></td>
+                                            
+                                            <td><div class="group-btn-edit"><a href="添加贷号.html"><i class="fa fa-pencil-square-o"></i>修改</a></div></td>
+                                        </tr>
+                                         <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>4</td>
+                                            <td>小丽</td>
+                                            <td>女</td>
+                                            <td>5</td>
+                                            <td>小班</td>
+                                            <td>2018-03-26</td>
+                                            <td></td>
+                                            <td></td>
+                                            
+                                            <td><div class="group-btn-edit"><a href="添加贷号.html"><i class="fa fa-pencil-square-o"></i>修改</a></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	<div class="group-left"><label class="group-xuan"><input type="checkbox" class="i-checks" name="input[]">全选</label><a class="btn btn-white btn-bitbucket"><i class="fa fa-download"></i>批量导出</a><a class="btn btn-white btn-bitbucket"><i class="fa fa-trash"></i>批量删除</a></div>
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>   
+<script type="text/javascript" src="../../js/layer/layer.js"></script>
+</body>
+</html>

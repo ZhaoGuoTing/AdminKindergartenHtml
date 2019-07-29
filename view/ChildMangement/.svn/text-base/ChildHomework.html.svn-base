@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>幼儿作业情况</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight" >
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>幼儿作业</h5>
+                        </div>
+                         
+                        <div class="ibox-content">
+                        	<br>
+                            <div class="row">
+                                <div class="col-datepicker row-item daterange-item" id="data_5">
+                            		<label class="font-noraml">时间</label>
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" name="start" value="2016-02-11" />
+                                        <span class="input-group-addon">到</span>
+                                        <input type="text" class="input-sm form-control" name="end" value="2016-02-17" />
+                                    </div>
+                                </div>
+                                <div style="float: right;">
+                                	 <button type="button" class="btn btn-sm btn-primary"> 导出</button>
+                                	 <button type="button" class="btn btn-sm btn-default"> 打印</button>
+                                </div>
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                       <!-- <input type="text" placeholder="请输入关键词" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>-->
+                                       <select class="input-sm form-control" style="width: auto;">
+                                       	   <option>状态</option>
+                                       	   <option>已离园</option>
+                                       	   <option>未离园</option>
+                                       </select>
+                                       &nbsp; &nbsp; &nbsp;
+                                       <button type="button" class="btn btn-sm btn-primary" style="width: 80px;"> 查询</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div style="width: 70%;height: 200px;border: 1px solid lightgray;margin: 0 auto;">
+                            	<h4>作业完成情况</h4>
+                            	<h5>未完成作业共有<span>16</span>人</h5>
+                            	<br>
+                            	<a href="" style="background-color: lightgray;border-radius: 5px;width: 40px;height: 20px;" class="homework">大班21/18</a>
+                            	<a href="" style="background-color: lightgray;border-radius: 5px;width: 40px;height: 20px;" class="homework">中班15/14</a>
+                            	<a href="" style="background-color: lightgray;border-radius: 5px;width: 40px;height: 20px;" class="homework">小班23/20</a>
+                            	<a href="" style="background-color: lightgray;border-radius: 5px;width: 40px;height: 20px;" class="homework">托班17/14</a>
+                            </div>
+                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/datepickers.js"></script>
+    <script type="text/javascript" src="../../js/layer/layer.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#button1').on('click', function(){
+                layer.open({
+                    type: 2,
+                    title: '新增访客信息',
+                    area : ['650px' , '500px'],
+                    content:'AddVisitor.html'
+                });
+            });
+        });
+        $(function(){
+            $('#button2').on('click', function(){
+                layer.open({
+                    type: 2,
+                    title: '知了连锁幼儿园新城园-访客二维码',
+                    area : ['650px' , '523px'],
+                    content:'Visitor_Sweepcode.html'
+                });
+            });
+        });
+         $(function(){
+            $('#button3').on('click', function(){
+                layer.open({
+                    type: 2,
+                    title: '编辑访客信息',
+                    area : ['650px' , '500px'],
+                    content:'EditVisitor1.html'
+                });
+            });
+        });
+         $(function(){
+            $('#button4').on('click', function(){
+                layer.open({
+                    type: 2,
+                    title: '编辑访客信息',
+                    area : ['650px' , '500px'],
+                    content:'EditVisitor2.html'
+                });
+            });
+        });
+         $(function(){
+            $('#button5').on('click', function(){
+                layer.open({
+                    type: 2,
+                    title: '编辑访客信息',
+                    area : ['650px' , '500px'],
+                    content:'EditVisitor3.html'
+                });
+            });
+        });
+        $(function(){
+            $('.homework').on('click', function(){
+                layer.open({
+                    type: 2,
+                    title: '未完成作业幼儿',
+                    area : ['650px' , '500px'],
+                    content:'EditVisitor3.html'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

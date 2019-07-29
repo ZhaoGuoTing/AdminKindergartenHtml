@@ -1,0 +1,202 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>工资列表</title>
+		<link data-style="theme_public" rel="stylesheet" type="text/css" href="../../css/zhiling.css" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+		<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/animate.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/style.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet" />
+		 
+		 <script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../layer/layer.js"></script>
+		<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<style type="text/css">
+	td{text-align:center;}
+		.layui-tab li a:visited { color: #1ab394; /*连接访问的颜色变化*/}
+  	.layui-tab li a:active  { color: #1ab394; /*连接访问的颜色变化*/}
+  	.layui-tab li a:link   { color: #1ab394; /*连接访问的颜色变化*/}
+</style>
+	 <script type="text/javascript">
+ 	 
+ 	$(function () {
+    	
+       
+       $(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})
+        
+        //获取checkbox按钮组
+	 
+	   
+        $("#allcheckbox").click(function(){
+		    var allpro = document.getElementsByName("checkbox");
+				 alert(allpro.length)
+		});
+    });
+    
+    
+ </script>
+ 
+ 
+ <script type="text/javascript">
+	
+	 
+	 //全选方法
+	 function change() {
+	    //获取全选按钮
+			  var allcheckbox = document.getElementById("allcheckbox");
+			  alert(allcheckbox.length)
+	 
+	 }
+	 
+</script>
+</head>
+<body class="gray-bg">
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+          <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                           <div class="ibox-title"><h5>工资列表</h5></div>
+                   
+				        <div class="layui-tab layui-tab-brief ibox-title" lay-filter="component-tabs-hash">
+				           <ul class="layui-tab-title">
+							            <li  lay-id="11"><a href="Salary.html">工资管理</a></li>
+							            <li  class="layui-this" lay-id="22"><a href="SalaryList.html">工资列表</a></li>
+							            <li lay-id="33"><a href="SalaryReport.html">工资报表</a></li>
+						          </ul>
+				        
+				        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                
+                               <div class="col-select-item row-item">
+                                	
+                                    <select class="input-sm form-control input-s-sm inline">
+                                        <option value="0">按月份查看</option>
+                                        <option value="1">2018-01</option>
+                                        <option value="1">2018-02</option>
+                                        <option value="1">2018-03</option>
+                                        <option value="1">2018-04</option>
+                                        <option value="1">2018-05</option>
+                                        <option value="1">2018-06</option>
+                                        <option value="1">2018-07</option>
+                                        <option value="1">2018-08</option>
+                                        <option value="2">老师</option>
+ 
+                                    </select>
+                                </div>
+                                
+                                
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                          <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜 索 </button> </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th width="3%" style="text-align: left;"><label class="checkbox-inline i-checks""><input type="checkbox" id="allcheckbox" name="allcheckbox" value="all"/></label></th>
+                                            <th width="8%" style="text-align: center;">姓名</th>
+                                            <th width="8%" style="text-align:center;">角色</th>
+                                            <th width="6%" style="text-align:center;">基本工资</th>
+                                            <th width="6%" style="text-align:center;">工龄工资</th>
+                                            <th width="6%" style="text-align:center;">职务工资</th>
+                                            <th width="6%" style="text-align:center;">学历补贴</th>
+                                            <th width="6%" style="text-align:center;">满勤</th>
+                                            <th width="6%" style="text-align:center;">幼儿出勤</th>
+                                            <th width="6%" style="text-align:center;">绩效工资</th>
+                                            <th width="6%" style="text-align:center;">岗位津贴</th>
+                                            <th width="6%" style="text-align:center;">应发工资</th>
+                                            <th width="6%" style="text-align:center;">五险一金</th>
+                                            <th width="6%" style="text-align:center;">实发工资</th>
+                                            <th width="6%" style="text-align:center;">伙食费</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            
+                                            <td style="text-align: left;"><label class="checkbox-inline i-checks"><input type="checkbox" name="checkbox" value=""   /></label></td>
+                                            <td style="text-align:center;">胡锦涛</td>
+                                            <td>总园长</td>
+                                            <td>5000</td>
+                                            <td>4</td>
+                                            <td>￥200</td>
+                                            <td>100</td>
+                                             <td>50</td>
+                                             <td>4500</td>
+                                            <td>300</td>
+                                            <td>200</td>
+                                            <td>100</td>
+                                            <td>50</td>
+                                            <td>100</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td style="text-align: left;"><label class="checkbox-inline i-checks"><input type="checkbox" name="checkbox" value=""  /></label></td>
+                                            <td>邓小平</td>
+                                            <td>教师</td>
+                                            <td>4500</td>
+                                            <td>300</td>
+                                            <td>200</td>
+                                            <td>100</td>
+                                            <td>50</td>
+                                            <td>4500</td>
+                                            <td>300</td>
+                                            <td>200</td>
+                                            <td>100</td>
+                                            <td>50</td>
+                                            <td>100</td>
+                                            <td>50</td>
+                                        </tr>
+                                         
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	<div class="group-left"><a class="btn btn-white btn-bitbucket" style="border-color: #1ab394; background-color: #1ab394;color: #FFF"><i class="fa fa-download"></i>打印工资表</a></div>
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current" style="border-color: #1ab394; background-color: #1ab394;color: #FFF">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">7</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+    </div>
+</div> 
+
+</body>
+
+ 
+</html>
+
+ 
+ 
+ 

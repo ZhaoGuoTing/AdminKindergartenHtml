@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>查看工资</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico"> 
+<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+<style>
+   td{text-align: center;}
+</style>
+</head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                       <div class="layui-tab layui-tab-brief ibox-title" lay-filter="component-tabs-hash">
+				           <ul class="layui-tab-title">
+					            <li lay-id="11"><a href="EditWorker.html">职员信息详情</a></li>
+					            <li lay-id="22"><a href="archives.html">职员档案</a></li>
+					            <li lay-id="44"><a href="WorkerAttendList.html">职员考勤</a></li>
+					            <li lay-id="55"><a href="WorkerPerformance.html">查看绩效</a></li>
+					            <li class="layui-this" lay-id="55"><a href="WorkerWages.html">查看工资</a></li>
+					            <li lay-id="55"><a href="WorkerComplaint.html">投诉建议</a></li>
+				          </ul>
+					        
+				        </div>
+				      
+                     <div class="ibox-content">
+                            <div class="row">
+                                 
+            
+                                <div class="col-select-item row-item">
+                                	
+                                    <select class="input-sm form-control input-s-sm inline">
+                                        <option value="0">按月份查看</option>
+                                        <option value="1">2018-01</option>
+                                        <option value="1">2018-02</option>
+                                        <option value="1">2018-03</option>
+                                        <option value="1">2018-04</option>
+                                        <option value="1">2018-05</option>
+                                        <option value="1">2018-06</option>
+                                        <option value="1">2018-07</option>
+                                        <option value="1">2018-08</option>
+                                        <option value="2">老师</option>
+ 
+                                    </select>
+                                </div>
+                                
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                         <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜 索 </button> </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            
+                                            <th width="7%" style="text-align: left;">日期</th>
+                                           
+                                            <th width="8%" style="text-align:center;">职员姓名</th>
+                                            <th width="8%" style="text-align:center;">基本工资</th>
+                                            
+                                            <th width="6%" style="text-align:center;">工龄工资</th>
+                                            <th width="6%" style="text-align:center;">职务工资</th>
+                                            <th width="6%" style="text-align:center;">学历补贴</th>
+                                            <th width="6%" style="text-align:center;">满勤</th>
+                                            <th width="6%" style="text-align:center;">幼儿出勤</th>
+                                            <th width="6%" style="text-align:center;">绩效工资</th>
+                                            <th width="6%" style="text-align:center;">岗位津贴</th>
+                                            <th width="6%" style="text-align:center;">应发工资</th>
+                                            <th width="6%" style="text-align:center;">五险一金</th>
+                                            <th width="6%" style="text-align:center;">实发工资</th>
+                                            <th width="8%" style="text-align:center;">操作员</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                             
+                                            <td style="text-align: left;">2018-04-13</td>
+                                           
+                                            <td style="text-align:center;">胡锦涛</td>
+                                           
+                                           
+                                            <td>1</td>
+                                            <td>3</td>
+                                             <td>0</td>
+                                            <td>0</td>
+                                             <td>0</td>
+                                            <td>0</td>
+                                             <td>0</td>
+                                            <td>0</td>
+                                             <td>5000</th>
+                                             <td>5000</th>
+                                             <td>5000</th>
+                                             <td>admin</th>
+                                        </tr>
+                                        <tr>
+                                            
+                                           <td style="text-align: left;">2018-04-13</td>
+                                          
+                                            <td>包子</td>
+                                             
+                                          
+                                            <td>2</td>
+                                            <td>7</td>
+                                              <td>3</td>
+                                            <td>0</td>
+                                             <td>0</td>
+                                            <td>0</td>
+                                             <td>0</td>
+                                            <td>0</td>
+                                             <td>5000</th>
+                                             <td>5000</th>
+                                             <td>5000</th>
+                                             <td>admin</th>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	<div class="group-left"> </div>
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current" style="border-color: #1ab394; background-color: #1ab394;color: #FFF">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">7</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+    
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>    
+    
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/validate/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/datepickers.js"></script>
+ 
+
+</body>
+</html>

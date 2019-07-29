@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>幼儿管理</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+ 
+<link href='../../fullcalendar/fullcalendar.css' rel='stylesheet' />
+<link href='../../fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+
+
+<style type="text/css">
+
+	body {
+		/*margin-top: 40px;*/
+		text-align: center;
+		font-size: 14px;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		}
+
+	#calendar {
+		width: 900px;
+		margin: 0 auto;
+		}
+.fc-event-time, .fc-event-title {
+    color: #fff;
+}
+</style>
+<style>
+
+	body {
+		
+		text-align: center;
+		font-size: 14px;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		}
+		
+	#wrap {
+		width: 1100px;
+		margin: 0 auto;
+		}
+		
+	#external-events {
+		float: left;
+		width: 150px;
+		padding: 0 10px;
+		border: 1px solid #ccc;
+		background: #eee;
+		text-align: left;
+		}
+		
+	#external-events h4 {
+		font-size: 16px;
+		margin-top: 0;
+		padding-top: 1em;
+		}
+		
+	.external-event { /* try to mimick the look of a real event */
+		margin: 10px 0;
+		padding: 2px 4px;
+		background: #3366CC;
+		color: #fff;
+		font-size: .85em;
+		cursor: pointer;
+		}
+		
+	#external-events p {
+		margin: 1.5em 0;
+		font-size: 11px;
+		color: #666;
+		}
+		
+	#external-events p input {
+		margin: 0;
+		vertical-align: middle;
+		}
+
+	#calendar {
+		float: right;
+		width: 900px;
+		}
+.external-event {
+    margin: 10px 0;
+    padding: 2px 4px;
+    background: #1ab394;
+    color: #fff;
+    font-size: .85em;
+    cursor: pointer;
+}
+</style>
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                       <div class="layui-tab layui-tab-brief ibox-title" lay-filter="component-tabs-hash">
+							
+							<ul class="layui-tab-title">
+								<li  lay-id="11" onclick="window.location.href='ClassInformation.html'">班级信息</li>
+								<li  lay-id="22"  onclick="window.location.href='Students.html'">班级学员</li>
+								<li lay-id="33" onclick="window.location.href='ClassFee.html'">费用管理</li>
+								<li lay-id="33" class="layui-this" onclick="window.location.href='ClassSchedule.html'">班级课程表</li>
+
+							</ul>
+
+						</div>
+                       
+                        <div class="ibox-content">
+                           <div class="table-responsive"  style="padding-top: 10px;">
+                                
+                               <div id='wrap'>
+
+									<div id='external-events'>
+											<h4>课程</h4>
+											<div class='external-event'>语文</div>
+											<div class='external-event'>数学</div>
+											<div class='external-event'>书法</div>
+											<div class='external-event'>音乐</div>
+											<div class='external-event'>手工</div>
+											<p>
+											<input type='checkbox' id='drop-remove' /> <label for='drop-remove'>拖拽后删除</label>
+											</p>
+									</div>
+									
+									<div id='calendar'></div>
+									
+									<div style='clear:both'></div>
+								</div>
+                                
+                            </div>
+                            </div>
+                            
+                          
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>
+ 
+ <script src='../../jquery/jquery-ui-1.10.2.custom.min.js'></script>
+<script src='../../fullcalendar/fullcalendar.min.js'></script>
+ 
+	
+ <script>
+
+	$(document).ready(function() {
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+	
+		/* initialize the external events
+		-----------------------------------------------------------------*/
+	
+		$('#external-events div.external-event').each(function() {
+		
+			// create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+			// it doesn't need to have a start or end
+			var eventObject = {
+				title: $.trim($(this).text()) // use the element's text as the event title
+			};
+			
+			// store the Event Object in the DOM element so we can get to it later
+			$(this).data('eventObject', eventObject);
+			
+			// make the event draggable using jQuery UI
+			$(this).draggable({
+				zIndex: 999,
+				revert: true,      // will cause the event to go back to its
+				revertDuration: 0  //  original position after the drag
+			});
+			
+		});
+	
+	
+		/* initialize the calendar
+		-----------------------------------------------------------------*/
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: '',
+				center: 'title',
+				right: '     prev ,  next'
+			},
+			 buttonText:{prev: '上周', next: '下周'},
+			 dayNamesShort:['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+			allDaySlot:false,
+			defaultView:'agendaWeek',
+			firstDay:1,
+			titleFormat:'yyyy-MM-dd',
+			dayNamesShort:['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+			allDaySlot:false,
+			axisFormat: 'H(:mm)tt',
+			firstHour:9,
+			minTime:8,
+			maxTime:18,
+			defaultEventMinutes:5,
+			slotMinutes:5,
+			editable: true,
+			droppable: true, // this allows things to be dropped onto the calendar !!!
+			drop: function(date, allDay) { // this function is called when something is dropped
+			
+				// retrieve the dropped element's stored Event Object
+				var originalEventObject = $(this).data('eventObject');
+				
+				// we need to copy it, so that multiple events don't have a reference to the same object
+				var copiedEventObject = $.extend({}, originalEventObject);
+				
+				// assign it the date that was reported
+				copiedEventObject.start = date;
+				copiedEventObject.allDay = allDay;
+				
+				// render the event on the calendar
+				// the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+				$('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+				
+				// is the "remove after drop" checkbox checked?
+				if ($('#drop-remove').is(':checked')) {
+					// if so, remove the element from the "Draggable Events" list
+					$(this).remove();
+				}
+				
+			},
+			events: [
+				{
+					title: 'All Day Event',
+					start: new Date(y, m, 1)
+				},
+				{
+					title: 'Long Event',
+					start: new Date(y, m, d-5),
+					end: new Date(y, m, d-2)
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: new Date(y, m, d-3, 16, 0),
+					allDay: false
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: new Date(y, m, d+4, 16, 0),
+					allDay: false
+				},
+				{
+					title: 'Meeting',
+					start: new Date(y, m, d, 10, 30),
+					allDay: false
+				},
+				{
+					title: 'Lunch',
+					start: new Date(y, m, d-3, 9, 0),
+					end: new Date(y, m, d-3, 11, 0),
+					allDay: false
+				},
+				{
+					title: 'Birthday Party',
+					start: new Date(y, m, d+1, 9, 0),
+					end: new Date(y, m, d+1, 12, 30),
+					allDay: false
+				},
+				{
+					title: 'Click for Google',
+					start: new Date(y, m, 28),
+					end: new Date(y, m, 29),
+					url: 'http://google.com/'
+				}
+			]
+			
+			 
+		});
+		
+		
+	});
+
+</script>
+
+</body>
+</html>

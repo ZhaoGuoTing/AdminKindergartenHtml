@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>考勤设置</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				background: #eee;
+			}
+			
+			.wrap {
+				width: 100%;
+			}
+			
+			.container {
+				width: 80%;
+				height: 600px;
+				margin: 60px auto;
+			}
+		</style>
+		<script src="http://api.map.baidu.com/api?v=2.0&ak=A1LU7iHS0avqQwPLAxbhKn0UYSQCuRVH"></script>
+		<script src="../../js/jquery.min.js"></script>
+		<script src="../../js/ZHGL/jquery.mapPieMenu.min.js"></script>
+		<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+		<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+		<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+	</head>
+
+	<body class="gray-bg">
+		<div class="wrapper wrapper-content animated fadeInRight" >
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>考勤设置</h5>
+                        </div>
+                         
+                        <div class="ibox-content">
+			<div style="float: right; margin-right: 200px; margin-top: 50px;">
+				<div>
+				<div class="col-search-box row-item">
+						<div class="input-group">
+							<input type="text" placeholder="请输入关键词" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+							
+						</div>
+					</div>
+				</div>
+				<div style="margin-top: 100px;">
+					园区当前的位置为：<span style="color: #003377;">娜娜那速度</span>
+				</div>
+					
+				
+			</div>
+			<div>
+				
+				<div ">
+					<div class="wrap"; ">
+
+					<div id="container3 " class="container " style="width: 500px; height: 500px; margin-left: 100px;"></div>
+				</div>
+				</div>
+					
+			</div>
+		</div>
+		</div>
+
+		<script type="text/javascript ">
+			var centerPoint = {
+				lng: 116.405562,
+				lat: 39.907851
+			};
+
+			var icon = {
+				url: "../../img/panorama.png ",
+				width: 32,
+				height: 44
+			};
+
+			var points = [{
+					lng: 116.415372,
+					lat: 39.917619
+				},
+				{
+					lng: 116.395681,
+					lat: 39.898635
+				},
+				{
+					lng: 116.38253,
+					lat: 39.908709
+				},
+				{
+					lng: 116.429709,
+					lat: 39.910176
+				},
+				{
+					lng: 116.414509,
+					lat: 39.902676,
+					isOpen: true
+				},
+				{
+					lng: 116.392842,
+					lat: 39.919141
+				}
+			];
+
+			var menus = [{
+					id: 1,
+					icon: "img/1.png ",
+					title: "目标 ",
+					href: "http://www.baidu.com ",
+					target: "_blank ",
+					cb: callback
+				},
+				{
+					id: 2,
+
+					title: "购物车 ",
+					cb: callback
+				},
+				{
+					id: 3,
+
+					title: "主页 ",
+					cb: callback
+				},
+				{
+					id: 4,
+
+					title: "VIP ",
+					cb: callback
+				},
+				{
+					id: 5,
+
+					title: "钱包 ",
+					cb: callback
+				},
+				{
+					id: 6,
+
+					title: "安全中心 ",
+					cb: callback
+				}
+			];
+
+			// 回调函数
+			function callback(ele, data) {
+				alert("id： " + data.id + ", lng： " + data.point.lng + ", lat： " + data.point.lat);
+			}
+
+			// 实例化
+
+			new MapPieMenu({
+				id: "container3 ",
+				centerPoint: centerPoint,
+				points: points,
+				menus: menus,
+				type: "semicircle ",
+				radius: 90,
+				width: 32,
+				icon: icon,
+				zoom: true,
+				close: false,
+				Maptype: ["地图 ", "卫星 ", "三维 "],
+				border: "2px dashed blue ",
+			});
+		</script>
+	</body>
+
+</html>

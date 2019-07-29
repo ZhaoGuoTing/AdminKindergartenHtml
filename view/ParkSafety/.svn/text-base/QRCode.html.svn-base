@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拍号保证金结算</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>二维码</h5>
+                        </div>
+                        <div class="ibox-content">
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover" style="width: 100%;">
+                                    <!--<thead>
+                                        <tr>
+                                            <th width="70%">标题</th>
+                                            <th width="30%">创建时间</th>
+                                           
+                                        </tr>
+                                    </thead>-->
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: center;">
+                                            	<p style="font-size: 14pt;">园长及老师请使用微信<span style="color: dodgerblue;">扫一扫下方二维码</span>,实时查看访客数据</p>
+                                            	<p style="font-size: 10pt;">(用于园所人员首次使用,扫码绑定微信小程序——"知了助手")</p>
+                                            	<img src="../../img/QR1.png"><br><br>
+                                            	<p><button class="btn btn-info" >下载</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-info">打印</button></p>
+                                            </td>
+                                            <td style="text-align: center;">
+                                            	<p style="font-size: 14pt;">访客二维码</p>
+                                            	<p style="font-size: 10pt;">(用于来访人员扫码登记)</p>
+                                            	<img src="../../img/QR2.png"><br><br>
+                                            	<p><button class="btn btn-info">下载</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-info">打印</button></p>
+                                            </td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            	<p style="text-align: left;">温馨提示: <br>
+                                            1.园长、保安及其他老师，首次使用时，用微信扫一扫上面的二维码绑定，“知了助手”。 <br>
+                                            2.输入您的知了账号（手机号码），完成绑定后，如果有访客登记完成后，园长和保安可以在微信上面实时收到访客通知。<br>
+                                            3.后续在微信中搜索“知了助手”，即可再次打开，随时查看访客记录。</p>
+                                            </td>
+                                            <td>
+                                            	<p style="text-align: left;">温馨提示: <br>
+                                      
+                                            1.园所在知了平台下载一个"二维码",放置在门卫室。 <br>
+                                            2.访客入园时，只需要用微信“扫一扫二维码”，输入访客信息，就完成了访客登记。<br>
+                                            3.访客离园时，再扫一扫二维码，确认离园，就完成了本次访客。</p>
+                                            </td>
+                                            
+                                        </tr>
+                                       
+                                    </tbody>
+                                </table>
+                        </div>
+                        </div>  
+                        </div>  
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>   
+<script type="text/javascript" src="../../js/layer/layer.js"></script>
+<script type="text/javascript">
+	 function isHidden(oDiv){
+      var vDiv = document.getElementById(oDiv);
+      vDiv.style.display = (vDiv.style.display == 'none')?'block':'none';
+    }
+</script>
+</body>
+</html>

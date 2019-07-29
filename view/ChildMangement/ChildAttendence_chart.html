@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>出勤率分析</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="shortcut icon" href="favicon.ico">
+		<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+		<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+		<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+		<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+	</head>
+
+	<body class="gray-bg">
+		<div class="wrapper wrapper-content animated fadeInRight">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="ibox float-e-margins">
+
+						<div class="layui-tab layui-tab-brief ibox-title" lay-filter="component-tabs-hash">
+
+							<ul class="layui-tab-title">
+								<li lay-id="11" onclick="window.location.href='ChildAttendence.html'">考勤</li>
+								<li lay-id="22" class="layui-this" onclick="window.location.href='ChildAttendence_chart.html'">出勤率分析</li>
+								<li lay-id="33" onclick="window.location.href='SickTrack.html'">病假追踪</li>
+
+							</ul>
+
+						</div>
+						<!--<div class="kaoqing">
+                        	<button type="button" style="background-color: lightseagreen;border: none;" class="kaoqingtongji" onclick="javascrtpt:window.location.href='Attendance_Statistics.html'" ><span style="color: white;">查看统计</span> </button>
+                        	<button type="button" style="background-color: lightseagreen;border: none;" class="kaoqingsheji" onclick="javascrtpt:window.location.href='Attendance_Setting.html'" > <span style="color: white;">考勤设置</span></button>
+                        </div>-->
+
+						<div class="ibox-content">
+							<div class="row">
+
+								<div class="col-datepicker row-item daterange-item" id="data_5">
+									<label class="font-noraml">开始时间</label>
+									<div class="input-daterange input-group" id="datepicker">
+										<input type="text" class="input-sm form-control" name="start" value="2016-02-11" />
+										<span class="input-group-addon">到</span>
+										<input type="text" class="input-sm form-control" name="end" value="2016-02-17" />
+									</div>
+								</div>
+								<div class="col-select-item row-item">
+									<select class="input-sm form-control">
+										<option value="0">输入园区名查询</option>
+										<option value="1">知了连锁幼儿园新城园</option>
+										<option value="2">知了连锁幼儿园雁塔园</option>
+
+									</select>
+								</div>
+								<div class="col-select-item row-item">
+									<select class="input-sm form-control">
+										<option value="0">学前1班</option>
+										<option value="1">学前2班</option>
+										<option value="2">幼小衔接</option>
+										<option value="3">中班</option>
+										<option value="4">混成</option>
+									</select><button type="button" class="btn btn-sm btn-primary"> 查询</button>
+								</div>
+								
+                                <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>订单</h5>
+                        <div class="flot-chart" style="padding-top:30px;">
+                            <div class="flot-chart-content" id="flot-line-chart-multi"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+		<script type="text/javascript" src="../../js/content.min.js"></script>
+		<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+		<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>
+
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script src="http://www.jq22.com/jquery/jquery-ui-1.11.0.js"></script>
+		<script src="../../js/ZHGL/select-widget-min.js"></script>
+		<script src="../../js/ZHGL/jquery.animsition.min.js"></script>
+		<script src="../../js/echarts/echarts.js"></script>
+		 <script src="../../js/plugins/flot/jquery.flot.js"></script>
+    <script src="../../js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="../../js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="../../js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="../../js/plugins/flot/jquery.flot.pie.js"></script>
+	</body>
+	<script type="text/javascript">
+	   $(function() {
+            function e(e, o) {
+                return "&yen;" + e.toFixed(o.tickDecimals)
+            }
+            function o(o) {
+                $.plot($("#flot-line-chart-multi"), [
+                    {
+                        data: t,
+                        label: "靓号订单",
+
+                    }, {
+                        data: i,
+                        label: "商城订单",
+                    }],{
+
+                    series: {
+                        lines: {
+                            show: !0,
+                            barWidth: .4,
+                            fill: !0,
+                            fillColor: {
+                                colors: [{
+                                    opacity: .8
+                                }, {
+                                    opacity: .8
+                                }]
+                            }
+                        }
+                    },
+                    xaxes: [{
+                        mode: null
+                    }],
+
+                    xaxis: {
+                        tickDecimals: 0,
+                        tickSize: 1
+                    },
+
+                    yaxes: [{
+                        min: 0
+                    }, {
+                        alignTicksWithAxis: "right" == o ? 0 : null,
+                        position: o,
+                        tickFormatter: e
+                    }],
+                    legend: {
+                        position: "ne"
+                        //position: "ne" or "nw" or "se" or "sw"
+                    },
+                    colors: ["#1ab394"],
+                    grid: {
+                        color: "#999999",
+                        hoverable: !0,
+                        clickable: !0,
+                        tickColor: "#D4D4D4",
+                        borderWidth: 0,
+                        hoverable: !0
+                    },
+                    tooltip: !0,
+                    tooltipOpts: {
+                        content: "时间:%x, %s: %y ",
+                        xDateFormat: "%y-%0m-%0d",
+                        onHover: function() {}
+                    }
+                })
+            }
+            var t = [
+                        [1, 16800],
+                        [2, 14210],
+                        [3, 18500],
+                        [4, 9800],
+                        [5, 12014],
+                        [6, 29000],
+                        [7, 16540],
+                        [8, 25840],
+                        [9, 12000],
+                        [10, 4200],
+                        [11, 21000],
+                        [12, 16800],
+                        [13, 14210],
+                        [14, 18500],
+                        [15, 9800],
+                        [16, 12014],
+                        [17, 29000],
+                        [18, 16540],
+                        [19, 25840],
+                        [20, 12000],
+                        [21, 4200],
+                        [22, 21000],
+                        [23, 16500],
+                        [24, 14980]
+                    ],
+                    i = [
+                        [1, 1680],
+                        [2, 1421],
+                        [3, 1850],
+                        [4, 19800],
+                        [5, 1201],
+                        [6, 2900],
+                        [7, 1650],
+                        [8, 2580],
+                        [9, 1000],
+                        [10, 400],
+                        [11, 2000],
+                        [12, 1600],
+                        [13, 1410],
+                        [14, 1800],
+                        [15, 980],
+                        [16, 1214],
+                        [17, 2900],
+                        [18, 1640],
+                        [19, 2540],
+                        [20, 1200],
+                        [21, 4200],
+                        [22, 2100],
+                        [23, 1600],
+                        [24, 1480]
+                    ];
+            o("right"),
+                    $("button").click(function() {
+                        o($(this).text())
+                    })
+        });
+		
+	</script>
+
+</html>

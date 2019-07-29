@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>添加账号</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico"> 
+<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+<style>
+ 
+.borderNone {
+	border-right: none;
+}
+.ui-checkbox {
+	background: url("download.png");
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: inline-block;
+}
+.ui-checkbox.hover {
+	background-position-x: -24px;
+	cursor: pointer;
+}
+.ui-checkbox.active-path {
+	background-position-x: -48px;
+	cursor: pointer;
+}
+.ui-checkbox.active {
+	background-position-x: -72px;
+	cursor: pointer;
+}
+.ui-checkbox.disabled, .ui-checkbox.readonly {
+	background-position-x: -120px;
+	cursor: no-drop;
+}
+.div-checkbox {
+	width: 100%;
+	height: 50px;
+	position: relative;
+	border-left: thin solid #ddd;
+	border-right: thin solid #ddd;
+}
+.div-checkbox label input[type=checkbox] {
+	margin-right: 2px;
+	position: relative;
+	top: 2px;
+	left: 0;
+	display: none;
+}
+.all-checked {
+	padding-left: 25px;
+	font-weight: normal;
+	position: relative;
+	cursor: pointer;
+}
+.all-checked input[type=checkbox] {
+	display: none;
+}
+.div-checkbox label {
+	margin: 0px;
+	padding-left: 25px;
+	cursor: pointer;
+	font-weight: normal;
+	position: relative;
+}
+</style>
+</head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                   
+                  
+				        <div class="layui-tab layui-tab-brief ibox-title" lay-filter="component-tabs-hash">
+				          <ul class="layui-tab-title">
+				            <li class="layui-this"lay-id="11"><a href="AddAccount.html">账户信息</a></li>
+				             
+				            <li lay-id="33"><a href="OperationLogList.html">操作日志</a></li>
+				            
+				          </ul>
+				        
+				        </div>
+				     
+                    <div class="ibox-content">
+                        <form class="form-horizontal m-t" id="signupForm">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">账户名：</label>
+                                <div class="col-sm-4"  >
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;"   >
+                                      
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">密码：</label>
+                                <div class="col-sm-4"  >
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+                                      
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">姓名：</label>
+                                <div class="col-sm-4"  >
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+                                      
+                                </div>
+                            </div>
+                        	 <div class="form-group">
+                                <label class="col-sm-3 control-label">手机号：</label>
+                                <div class="col-sm-4"  >
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+                                      
+                                </div>
+                            </div>
+                        	 <div class="form-group">
+                                <label class="col-sm-3 control-label">邮箱：</label>
+                                <div class="col-sm-4"  >
+                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+                                      
+                                </div>
+                            </div>
+                            
+                              <div class="form-group">
+		                            <label class="col-sm-3 control-label">性别：</label>
+		                            <div class="col-sm-4"   style="margin-left: 10px;"   >
+		                                <label class="checkbox-inline i-checks"  style=""><input type="radio" name="Sex" checked="checked" value="0" />男 </label>
+		                                <label class="checkbox-inline i-checks"> <input type="radio" name="Sex" value="1" />女</label>
+										</div>
+		                        </div>
+		                     <!--  <div class="form-group">
+	                                <label class="col-sm-3 control-label">班级：</label>
+	                                
+	                                <div class="col-sm-4"  >
+	                                           <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 小班一班 </label> 
+									           <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 小班二班 </label> 
+									           <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 小班三班 </label> 
+	                                     	   <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 小班一班 </label> 
+									           <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 小班二班 </label> 
+									           <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 小班三班 </label> 
+									           <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 小班一班 </label> 
+									           <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 小班二班 </label> 
+									           <label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" /> 小班三班 </label> 
+	                                </div>
+	                                
+                            	</div>-->
+                           <!-- <div class="form-group">
+	                                <label class="col-sm-3 control-label">考勤卡号：</label>
+	                                <div class="col-sm-4"  >
+	                                    <input type="text" name="" id="" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写手机号！" errormsg="手机号格式不对！"  style="width:300px;" >
+	                                      
+	                                </div>
+                            	</div>-->
+                             <div class="form-group">
+                                <label class="col-sm-3 control-label">角色：</label>
+                                <div class="col-sm-4 form-table">
+                                    <select class="input-sm form-control input-s-sm inline" style="width:300px;">
+                                        <option value="0">请选择角色</option>
+                                        <option value="1">总园长</option>
+                                        <option value="2">老师</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                              
+
+	                       <div class="form-group" id="listper"><label class="col-sm-3 control-label">权限：</label><div class="col-sm-8 form-table"><div class="group-qx-box"><div class="group-qx-tit"><b class="qx-titext">权限菜单</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAllck(this)">全选</label></div><dl><dt><b class="qx-titext">客户管理</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox7')"> 全选</label></dt><dd><div class="qx-tit">客户管理<input type="hidden" name="menuid" value="7"><input type="hidden" name="AdminLimit7" value="1010971614573062782976"><input type="hidden" name="Departid7" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read7" type="checkbox" value="1" checked="checked" class="checkbox7">查看</label><label class="qx-check"><input name="add7" type="checkbox" value="1" checked="checked" class="checkbox7">添加</label><label class="qx-check"><input name="edit7" type="checkbox" value="1" checked="checked" class="checkbox7">编辑</label><label class="qx-check"><input name="delete7" type="checkbox" value="1" checked="checked" class="checkbox7">删除</label></label></div></dd><dt><b class="qx-titext">新增客户</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox8')"> 全选</label></dt><dd><div class="qx-tit">新增客户<input type="hidden" name="menuid" value="8"><input type="hidden" name="AdminLimit8" value="1010971614573322829824"><input type="hidden" name="Departid8" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read8" type="checkbox" value="1" checked="checked" class="checkbox8">查看</label><label class="qx-check"><input name="add8" type="checkbox" value="1" checked="checked" class="checkbox8">添加</label><label class="qx-check"><input name="edit8" type="checkbox" value="1" checked="checked" class="checkbox8">编辑</label><label class="qx-check"><input name="delete8" type="checkbox" value="1" checked="checked" class="checkbox8">删除</label></label></div></dd><dt><b class="qx-titext">回款提醒</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox9')"> 全选</label></dt><dd><div class="qx-tit">回款提醒<input type="hidden" name="menuid" value="9"><input type="hidden" name="AdminLimit9" value="1010971614573519962112"><input type="hidden" name="Departid9" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read9" type="checkbox" value="1" checked="checked" class="checkbox9">查看</label><label class="qx-check"><input name="add9" type="checkbox" value="1" checked="checked" class="checkbox9">添加</label><label class="qx-check"><input name="edit9" type="checkbox" value="1" checked="checked" class="checkbox9">编辑</label><label class="qx-check"><input name="delete9" type="checkbox" value="1" checked="checked" class="checkbox9">删除</label></label></div></dd><dt><b class="qx-titext">合同管理</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox10')"> 全选</label></dt><dd><div class="qx-tit">合同管理<input type="hidden" name="menuid" value="10"><input type="hidden" name="AdminLimit10" value="1010971614573784203264"><input type="hidden" name="Departid10" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read10" type="checkbox" value="1" checked="checked" class="checkbox10">查看</label><label class="qx-check"><input name="add10" type="checkbox" value="1" checked="checked" class="checkbox10">添加</label><label class="qx-check"><input name="edit10" type="checkbox" value="1" checked="checked" class="checkbox10">编辑</label><label class="qx-check"><input name="delete10" type="checkbox" value="1" checked="checked" class="checkbox10">删除</label></label></div></dd><dt><b class="qx-titext">跟进沟通记录</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox11')"> 全选</label></dt><dd><div class="qx-tit">跟进沟通记录<input type="hidden" name="menuid" value="11"><input type="hidden" name="AdminLimit11" value="1010971614573977141248"><input type="hidden" name="Departid11" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read11" type="checkbox" value="1" checked="checked" class="checkbox11">查看</label><label class="qx-check"><input name="add11" type="checkbox" value="1" checked="checked" class="checkbox11">添加</label><label class="qx-check"><input name="edit11" type="checkbox" value="1" checked="checked" class="checkbox11">编辑</label><label class="qx-check"><input name="delete11" type="checkbox" value="1" checked="checked" class="checkbox11">删除</label></label></div></dd><dt><b class="qx-titext">合同到期提醒</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox12')"> 全选</label></dt><dd><div class="qx-tit">合同到期提醒<input type="hidden" name="menuid" value="12"><input type="hidden" name="AdminLimit12" value="1010971614574174273536"><input type="hidden" name="Departid12" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read12" type="checkbox" value="1" checked="checked" class="checkbox12">查看</label><label class="qx-check"><input name="add12" type="checkbox" value="1" checked="checked" class="checkbox12">添加</label><label class="qx-check"><input name="edit12" type="checkbox" value="1" checked="checked" class="checkbox12">编辑</label><label class="qx-check"><input name="delete12" type="checkbox" value="1" checked="checked" class="checkbox12">删除</label></label></div></dd><dt><b class="qx-titext">合同应收款</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox13')"> 全选</label></dt><dd><div class="qx-tit">合同应收款<input type="hidden" name="menuid" value="13"><input type="hidden" name="AdminLimit13" value="1010971614574438514688"><input type="hidden" name="Departid13" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read13" type="checkbox" value="1" checked="checked" class="checkbox13">查看</label><label class="qx-check"><input name="add13" type="checkbox" value="1" checked="checked" class="checkbox13">添加</label><label class="qx-check"><input name="edit13" type="checkbox" value="1" checked="checked" class="checkbox13">编辑</label><label class="qx-check"><input name="delete13" type="checkbox" value="1" checked="checked" class="checkbox13">删除</label></label></div></dd><dt><b class="qx-titext">工程师列表</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox14')"> 全选</label></dt><dd><div class="qx-tit">工程师列表<input type="hidden" name="menuid" value="14"><input type="hidden" name="AdminLimit14" value="1010971614574631452672"><input type="hidden" name="Departid14" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read14" type="checkbox" value="1" checked="checked" class="checkbox14">查看</label><label class="qx-check"><input name="add14" type="checkbox" value="1" checked="checked" class="checkbox14">添加</label><label class="qx-check"><input name="edit14" type="checkbox" value="1" checked="checked" class="checkbox14">编辑</label><label class="qx-check"><input name="delete14" type="checkbox" value="1" checked="checked" class="checkbox14">删除</label></label></div></dd><dt><b class="qx-titext">新增工程师</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox15')"> 全选</label></dt><dd><div class="qx-tit">新增工程师<input type="hidden" name="menuid" value="15"><input type="hidden" name="AdminLimit15" value="1010971614574828584960"><input type="hidden" name="Departid15" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read15" type="checkbox" value="1" checked="checked" class="checkbox15">查看</label><label class="qx-check"><input name="add15" type="checkbox" value="1" checked="checked" class="checkbox15">添加</label><label class="qx-check"><input name="edit15" type="checkbox" value="1" checked="checked" class="checkbox15">编辑</label><label class="qx-check"><input name="delete15" type="checkbox" value="1" checked="checked" class="checkbox15">删除</label></label></div></dd><dt><b class="qx-titext">工程项目组</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox16')"> 全选</label></dt><dd><div class="qx-tit">工程项目组<input type="hidden" name="menuid" value="16"><input type="hidden" name="AdminLimit16" value="1010971614575025717248"><input type="hidden" name="Departid16" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read16" type="checkbox" value="1" checked="checked" class="checkbox16">查看</label><label class="qx-check"><input name="add16" type="checkbox" value="1" checked="checked" class="checkbox16">添加</label><label class="qx-check"><input name="edit16" type="checkbox" value="1" checked="checked" class="checkbox16">编辑</label><label class="qx-check"><input name="delete16" type="checkbox" value="1" checked="checked" class="checkbox16">删除</label></label></div></dd><dt><b class="qx-titext">工程师位置</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox17')"> 全选</label></dt><dd><div class="qx-tit">工程师位置<input type="hidden" name="menuid" value="17"><input type="hidden" name="AdminLimit17" value="1010971614575285764096"><input type="hidden" name="Departid17" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read17" type="checkbox" value="1" checked="checked" class="checkbox17">查看</label><label class="qx-check"><input name="add17" type="checkbox" value="1" checked="checked" class="checkbox17">添加</label><label class="qx-check"><input name="edit17" type="checkbox" value="1" checked="checked" class="checkbox17">编辑</label><label class="qx-check"><input name="delete17" type="checkbox" value="1" checked="checked" class="checkbox17">删除</label></label></div></dd><dt><b class="qx-titext">巡检单</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox18')"> 全选</label></dt><dd><div class="qx-tit">巡检单<input type="hidden" name="menuid" value="18"><input type="hidden" name="AdminLimit18" value="1010971614575482896384"><input type="hidden" name="Departid18" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read18" type="checkbox" value="1" checked="checked" class="checkbox18">查看</label><label class="qx-check"><input name="add18" type="checkbox" value="1" checked="checked" class="checkbox18">添加</label><label class="qx-check"><input name="edit18" type="checkbox" value="1" checked="checked" class="checkbox18">编辑</label><label class="qx-check"><input name="delete18" type="checkbox" value="1" checked="checked" class="checkbox18">删除</label></label></div></dd><dt><b class="qx-titext">报修单</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox19')"> 全选</label></dt><dd><div class="qx-tit">报修单<input type="hidden" name="menuid" value="19"><input type="hidden" name="AdminLimit19" value="1010971614575680028672"><input type="hidden" name="Departid19" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read19" type="checkbox" value="1" checked="checked" class="checkbox19">查看</label><label class="qx-check"><input name="add19" type="checkbox" value="1" checked="checked" class="checkbox19">添加</label><label class="qx-check"><input name="edit19" type="checkbox" value="1" checked="checked" class="checkbox19">编辑</label><label class="qx-check"><input name="delete19" type="checkbox" value="1" checked="checked" class="checkbox19">删除</label></label></div></dd><dt><b class="qx-titext">诊断单</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox20')"> 全选</label></dt><dd><div class="qx-tit">诊断单<input type="hidden" name="menuid" value="20"><input type="hidden" name="AdminLimit20" value="1010971614575940075520"><input type="hidden" name="Departid20" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read20" type="checkbox" value="1" checked="checked" class="checkbox20">查看</label><label class="qx-check"><input name="add20" type="checkbox" value="1" checked="checked" class="checkbox20">添加</label><label class="qx-check"><input name="edit20" type="checkbox" value="1" checked="checked" class="checkbox20">编辑</label><label class="qx-check"><input name="delete20" type="checkbox" value="1" checked="checked" class="checkbox20">删除</label></label></div></dd><dt><b class="qx-titext">报价单</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox21')"> 全选</label></dt><dd><div class="qx-tit">报价单<input type="hidden" name="menuid" value="21"><input type="hidden" name="AdminLimit21" value="1010971614576137207808"><input type="hidden" name="Departid21" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read21" type="checkbox" value="1" checked="checked" class="checkbox21">查看</label><label class="qx-check"><input name="add21" type="checkbox" value="1" checked="checked" class="checkbox21">添加</label><label class="qx-check"><input name="edit21" type="checkbox" value="1" checked="checked" class="checkbox21">编辑</label><label class="qx-check"><input name="delete21" type="checkbox" value="1" checked="checked" class="checkbox21">删除</label></label></div></dd><dt><b class="qx-titext">录入客户报修</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox22')"> 全选</label></dt><dd><div class="qx-tit">录入客户报修<input type="hidden" name="menuid" value="22"><input type="hidden" name="AdminLimit22" value="1010971614576334340096"><input type="hidden" name="Departid22" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read22" type="checkbox" value="1" checked="checked" class="checkbox22">查看</label><label class="qx-check"><input name="add22" type="checkbox" value="1" checked="checked" class="checkbox22">添加</label><label class="qx-check"><input name="edit22" type="checkbox" value="1" checked="checked" class="checkbox22">编辑</label><label class="qx-check"><input name="delete22" type="checkbox" value="1" checked="checked" class="checkbox22">删除</label></label></div></dd><dt><b class="qx-titext">施工单</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox24')"> 全选</label></dt><dd><div class="qx-tit">施工单<input type="hidden" name="menuid" value="24"><input type="hidden" name="AdminLimit24" value="1010971614576594386944"><input type="hidden" name="Departid24" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read24" type="checkbox" value="1" checked="checked" class="checkbox24">查看</label><label class="qx-check"><input name="add24" type="checkbox" value="1" checked="checked" class="checkbox24">添加</label><label class="qx-check"><input name="edit24" type="checkbox" value="1" checked="checked" class="checkbox24">编辑</label><label class="qx-check"><input name="delete24" type="checkbox" value="1" checked="checked" class="checkbox24">删除</label></label></div></dd><dt><b class="qx-titext">验收单</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox25')"> 全选</label></dt><dd><div class="qx-tit">验收单<input type="hidden" name="menuid" value="25"><input type="hidden" name="AdminLimit25" value="1010971614576791519232"><input type="hidden" name="Departid25" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read25" type="checkbox" value="1" checked="checked" class="checkbox25">查看</label><label class="qx-check"><input name="add25" type="checkbox" value="1" checked="checked" class="checkbox25">添加</label><label class="qx-check"><input name="edit25" type="checkbox" value="1" checked="checked" class="checkbox25">编辑</label><label class="qx-check"><input name="delete25" type="checkbox" value="1" checked="checked" class="checkbox25">删除</label></label></div></dd><dt><b class="qx-titext">合同应收款管理</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox26')"> 全选</label></dt><dd><div class="qx-tit">合同应收款管理<input type="hidden" name="menuid" value="26"><input type="hidden" name="AdminLimit26" value="1010971614577445830656"><input type="hidden" name="Departid26" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read26" type="checkbox" value="1" checked="checked" class="checkbox26">查看</label><label class="qx-check"><input name="add26" type="checkbox" value="1" checked="checked" class="checkbox26">添加</label><label class="qx-check"><input name="edit26" type="checkbox" value="1" checked="checked" class="checkbox26">编辑</label><label class="qx-check"><input name="delete26" type="checkbox" value="1" checked="checked" class="checkbox26">删除</label></label></div></dd><dt><b class="qx-titext">合同已回款</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox27')"> 全选</label></dt><dd><div class="qx-tit">合同已回款<input type="hidden" name="menuid" value="27"><input type="hidden" name="AdminLimit27" value="1010971614577710071808"><input type="hidden" name="Departid27" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read27" type="checkbox" value="1" checked="checked" class="checkbox27">查看</label><label class="qx-check"><input name="add27" type="checkbox" value="1" checked="checked" class="checkbox27">添加</label><label class="qx-check"><input name="edit27" type="checkbox" value="1" checked="checked" class="checkbox27">编辑</label><label class="qx-check"><input name="delete27" type="checkbox" value="1" checked="checked" class="checkbox27">删除</label></label></div></dd><dt><b class="qx-titext">工程师薪酬</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox28')"> 全选</label></dt><dd><div class="qx-tit">工程师薪酬<input type="hidden" name="menuid" value="28"><input type="hidden" name="AdminLimit28" value="1010971614577903009792"><input type="hidden" name="Departid28" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read28" type="checkbox" value="1" checked="checked" class="checkbox28">查看</label><label class="qx-check"><input name="add28" type="checkbox" value="1" checked="checked" class="checkbox28">添加</label><label class="qx-check"><input name="edit28" type="checkbox" value="1" checked="checked" class="checkbox28">编辑</label><label class="qx-check"><input name="delete28" type="checkbox" value="1" checked="checked" class="checkbox28">删除</label></label></div></dd><dt><b class="qx-titext">发票开出记录</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox29')"> 全选</label></dt><dd><div class="qx-tit">发票开出记录<input type="hidden" name="menuid" value="29"><input type="hidden" name="AdminLimit29" value="1010971614578100142080"><input type="hidden" name="Departid29" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read29" type="checkbox" value="1" checked="checked" class="checkbox29">查看</label><label class="qx-check"><input name="add29" type="checkbox" value="1" checked="checked" class="checkbox29">添加</label><label class="qx-check"><input name="edit29" type="checkbox" value="1" checked="checked" class="checkbox29">编辑</label><label class="qx-check"><input name="delete29" type="checkbox" value="1" checked="checked" class="checkbox29">删除</label></label></div></dd><dt><b class="qx-titext">销售提成金额</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox30')"> 全选</label></dt><dd><div class="qx-tit">销售提成金额<input type="hidden" name="menuid" value="30"><input type="hidden" name="AdminLimit30" value="1010971614578364383232"><input type="hidden" name="Departid30" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read30" type="checkbox" value="1" checked="checked" class="checkbox30">查看</label><label class="qx-check"><input name="add30" type="checkbox" value="1" checked="checked" class="checkbox30">添加</label><label class="qx-check"><input name="edit30" type="checkbox" value="1" checked="checked" class="checkbox30">编辑</label><label class="qx-check"><input name="delete30" type="checkbox" value="1" checked="checked" class="checkbox30">删除</label></label></div></dd><dt><b class="qx-titext">客服提成金额</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox31')"> 全选</label></dt><dd><div class="qx-tit">客服提成金额<input type="hidden" name="menuid" value="31"><input type="hidden" name="AdminLimit31" value="1010971614578557321216"><input type="hidden" name="Departid31" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read31" type="checkbox" value="1" checked="checked" class="checkbox31">查看</label><label class="qx-check"><input name="add31" type="checkbox" value="1" checked="checked" class="checkbox31">添加</label><label class="qx-check"><input name="edit31" type="checkbox" value="1" checked="checked" class="checkbox31">编辑</label><label class="qx-check"><input name="delete31" type="checkbox" value="1" checked="checked" class="checkbox31">删除</label></label></div></dd><dt><b class="qx-titext">合同费用明细</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox32')"> 全选</label></dt><dd><div class="qx-tit">合同费用明细<input type="hidden" name="menuid" value="32"><input type="hidden" name="AdminLimit32" value="1010971614578754453504"><input type="hidden" name="Departid32" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read32" type="checkbox" value="1" checked="checked" class="checkbox32">查看</label><label class="qx-check"><input name="add32" type="checkbox" value="1" checked="checked" class="checkbox32">添加</label><label class="qx-check"><input name="edit32" type="checkbox" value="1" checked="checked" class="checkbox32">编辑</label><label class="qx-check"><input name="delete32" type="checkbox" value="1" checked="checked" class="checkbox32">删除</label></label></div></dd><dt><b class="qx-titext">合同成本核算</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox33')"> 全选</label></dt><dd><div class="qx-tit">合同成本核算<input type="hidden" name="menuid" value="33"><input type="hidden" name="AdminLimit33" value="1010971614579081609216"><input type="hidden" name="Departid33" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read33" type="checkbox" value="1" checked="checked" class="checkbox33">查看</label><label class="qx-check"><input name="add33" type="checkbox" value="1" checked="checked" class="checkbox33">添加</label><label class="qx-check"><input name="edit33" type="checkbox" value="1" checked="checked" class="checkbox33">编辑</label><label class="qx-check"><input name="delete33" type="checkbox" value="1" checked="checked" class="checkbox33">删除</label></label></div></dd><dt><b class="qx-titext">合同成本编辑</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox34')"> 全选</label></dt><dd><div class="qx-tit">合同成本编辑<input type="hidden" name="menuid" value="34"><input type="hidden" name="AdminLimit34" value="1010971614579278741504"><input type="hidden" name="Departid34" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read34" type="checkbox" value="1" checked="checked" class="checkbox34">查看</label><label class="qx-check"><input name="add34" type="checkbox" value="1" checked="checked" class="checkbox34">添加</label><label class="qx-check"><input name="edit34" type="checkbox" value="1" checked="checked" class="checkbox34">编辑</label><label class="qx-check"><input name="delete34" type="checkbox" value="1" checked="checked" class="checkbox34">删除</label></label></div></dd><dt><b class="qx-titext">公司列表</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox35')"> 全选</label></dt><dd><div class="qx-tit">公司列表<input type="hidden" name="menuid" value="35"><input type="hidden" name="AdminLimit35" value="1010971614579538788352"><input type="hidden" name="Departid35" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read35" type="checkbox" value="1" checked="checked" class="checkbox35">查看</label><label class="qx-check"><input name="add35" type="checkbox" value="1" checked="checked" class="checkbox35">添加</label><label class="qx-check"><input name="edit35" type="checkbox" value="1" checked="checked" class="checkbox35">编辑</label><label class="qx-check"><input name="delete35" type="checkbox" value="1" checked="checked" class="checkbox35">删除</label></label></div></dd><dt><b class="qx-titext">部门列表</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox36')"> 全选</label></dt><dd><div class="qx-tit">部门列表<input type="hidden" name="menuid" value="36"><input type="hidden" name="AdminLimit36" value="1010971614579735920640"><input type="hidden" name="Departid36" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read36" type="checkbox" value="1" checked="checked" class="checkbox36">查看</label><label class="qx-check"><input name="add36" type="checkbox" value="1" checked="checked" class="checkbox36">添加</label><label class="qx-check"><input name="edit36" type="checkbox" value="1" checked="checked" class="checkbox36">编辑</label><label class="qx-check"><input name="delete36" type="checkbox" value="1" checked="checked" class="checkbox36">删除</label></label></div></dd><dt><b class="qx-titext">员工列表</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox37')"> 全选</label></dt><dd><div class="qx-tit">员工列表<input type="hidden" name="menuid" value="37"><input type="hidden" name="AdminLimit37" value="1010971614579933052928"><input type="hidden" name="Departid37" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read37" type="checkbox" value="1" checked="checked" class="checkbox37">查看</label><label class="qx-check"><input name="add37" type="checkbox" value="1" checked="checked" class="checkbox37">添加</label><label class="qx-check"><input name="edit37" type="checkbox" value="1" checked="checked" class="checkbox37">编辑</label><label class="qx-check"><input name="delete37" type="checkbox" value="1" checked="checked" class="checkbox37">删除</label></label></div></dd><dt><b class="qx-titext">设备类型</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox38')"> 全选</label></dt><dd><div class="qx-tit">设备类型<input type="hidden" name="menuid" value="38"><input type="hidden" name="AdminLimit38" value="1010971614580193099776"><input type="hidden" name="Departid38" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read38" type="checkbox" value="1" checked="checked" class="checkbox38">查看</label><label class="qx-check"><input name="add38" type="checkbox" value="1" checked="checked" class="checkbox38">添加</label><label class="qx-check"><input name="edit38" type="checkbox" value="1" checked="checked" class="checkbox38">编辑</label><label class="qx-check"><input name="delete38" type="checkbox" value="1" checked="checked" class="checkbox38">删除</label></label></div></dd><dt><b class="qx-titext">合同类型</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox39')"> 全选</label></dt><dd><div class="qx-tit">合同类型<input type="hidden" name="menuid" value="39"><input type="hidden" name="AdminLimit39" value="1010971614580390232064"><input type="hidden" name="Departid39" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read39" type="checkbox" value="1" checked="checked" class="checkbox39">查看</label><label class="qx-check"><input name="add39" type="checkbox" value="1" checked="checked" class="checkbox39">添加</label><label class="qx-check"><input name="edit39" type="checkbox" value="1" checked="checked" class="checkbox39">编辑</label><label class="qx-check"><input name="delete39" type="checkbox" value="1" checked="checked" class="checkbox39">删除</label></label></div></dd><dt><b class="qx-titext">服务内容</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox40')"> 全选</label></dt><dd><div class="qx-tit">服务内容<input type="hidden" name="menuid" value="40"><input type="hidden" name="AdminLimit40" value="1010971614580587364352"><input type="hidden" name="Departid40" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read40" type="checkbox" value="1" checked="checked" class="checkbox40">查看</label><label class="qx-check"><input name="add40" type="checkbox" value="1" checked="checked" class="checkbox40">添加</label><label class="qx-check"><input name="edit40" type="checkbox" value="1" checked="checked" class="checkbox40">编辑</label><label class="qx-check"><input name="delete40" type="checkbox" value="1" checked="checked" class="checkbox40">删除</label></label></div></dd><dt><b class="qx-titext">投诉建议</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox41')"> 全选</label></dt><dd><div class="qx-tit">投诉建议<input type="hidden" name="menuid" value="41"><input type="hidden" name="AdminLimit41" value="1010971614577055760384"><input type="hidden" name="Departid41" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read41" type="checkbox" value="1" checked="checked" class="checkbox41">查看</label><label class="qx-check"><input name="add41" type="checkbox" value="1" checked="checked" class="checkbox41">添加</label><label class="qx-check"><input name="edit41" type="checkbox" value="1" checked="checked" class="checkbox41">编辑</label><label class="qx-check"><input name="delete41" type="checkbox" value="1" checked="checked" class="checkbox41">删除</label></label></div></dd><dt><b class="qx-titext">工程进度反馈</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox42')"> 全选</label></dt><dd><div class="qx-tit">工程进度反馈<input type="hidden" name="menuid" value="42"><input type="hidden" name="AdminLimit42" value="1010971614577248698368"><input type="hidden" name="Departid42" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read42" type="checkbox" value="1" checked="checked" class="checkbox42">查看</label><label class="qx-check"><input name="add42" type="checkbox" value="1" checked="checked" class="checkbox42">添加</label><label class="qx-check"><input name="edit42" type="checkbox" value="1" checked="checked" class="checkbox42">编辑</label><label class="qx-check"><input name="delete42" type="checkbox" value="1" checked="checked" class="checkbox42">删除</label></label></div></dd><dt><b class="qx-titext">监控设备分类</b><label class="qx-check"><input name="" type="checkbox" value="" onclick="CheckAll(this,'checkbox43')"> 全选</label></dt><dd><div class="qx-tit">监控设备分类<input type="hidden" name="menuid" value="43"><input type="hidden" name="AdminLimit43" value="1010985793543509377024"><input type="hidden" name="Departid43" value="1010971614535179829248"></div><div class="qx-edit"><label class="qx-check"><label class="qx-check"><input name="read43" type="checkbox" value="1" checked="checked" class="checkbox43">查看</label><label class="qx-check"><input name="add43" type="checkbox" value="1" checked="checked" class="checkbox43">添加</label><label class="qx-check"><input name="edit43" type="checkbox" value="1" checked="checked" class="checkbox43">编辑</label><label class="qx-check"><input name="delete43" type="checkbox" value="1" checked="checked" class="checkbox43">删除</label></label></div></dd></dl></div></div></div>
+                             
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <div class="col-sm-4 col-sm-offset-3">
+                                    <button class="btn btn-primary form-btn" type="submit">提交</button>
+                                    <button class="btn btn-white" type="button" onClick="javascript:history.back(-1);">返回</button>
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/validate/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/datepickers.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#signupForm").Validform({tiptype:4});
+	$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})
+	 
+	 
+	 //primary
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    //判断是否全选
+    function isAllChecked(){
+      $(".all-checkbox").each(function() {
+        var $self = $(this)   ,
+            all   = $(this).find(":checkbox").not("[name='sales_group_id'],:disabled") ,
+            allChecked = $(this).find(":checked").not("[name='all-checked']") ,
+            thisAllCheckBtn = $(this).find(".all-checked [name='all-checked']");
+
+        thisAllCheckBtn.on("click",function(){
+          if($(this).get(0).checked){
+            $(this).prev("span.ui-checkbox").addClass('active');
+            $self.find(".levelDIV").find('input:checkbox').not(":disabled").prop('checked' ,true)
+            .closest('p.check-box').find('span.ui-checkbox').addClass('active');
+
+          }else{
+            $(this).prev("span.ui-checkbox").removeClass('active');
+            $self.find(".levelDIV").find('input:checkbox').not(":disabled").prop('checked' ,false)
+            .closest('p.check-box').find('span.ui-checkbox').removeClass('active');
+          }
+        });
+        if(all.length === allChecked.length){
+          thisAllCheckBtn.prop('checked' ,true).prev("span.ui-checkbox").addClass('active');
+        }else{
+          thisAllCheckBtn.prop('checked' ,false).prev("span.ui-checkbox").removeClass('active');
+        }
+      });
+
+    };
+    isAllChecked();
+   　
+// ----------------------------------------------------------------
+   　
+
+   　
+
+});
+
+　
+</script>
+</body>
+</html>

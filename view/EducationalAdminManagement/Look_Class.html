@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>课程计划</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                    	<div class="layui-tab layui-tab-brief ibox-title" lay-filter="component-tabs-hash">
+							
+							<ul class="layui-tab-title">
+								<li lay-id="11" onclick="window.location.href='CurriculumInformation.html'">课程信息</li>
+								<li  lay-id="22" onclick="window.location.href='Look_Teacher.html'">查看老师</li>
+								<li lay-id="33" class="layui-this" onclick="window.location.href='Look_Class.html'">查看班级</li>
+
+							</ul>
+
+						</div>
+                        
+                        <div class="ibox-content">
+                        	
+                           <div class="table-responsive">
+                                <table class="table table-hover" style="text-align: center;">
+                                    <thead >
+                                        <tr>
+                                           
+                                            <th width="20%" style="text-align: center;">序号</th>
+                                            <th width="20%" style="text-align: center;">班级名称</th>
+                                            
+                                            <th width="20%" style="text-align: center;">班级人数</th>
+                                           
+                                         	<th width="20%" style="text-align: center;">主班老师</th>
+                                         	<th width="20%" style="text-align: center;">配班老师</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                          
+                                            <td>1</td>
+                                            <td>学前1班</td>
+                                           
+                                            <td>26</td>
+                                            <td >叶子</td>
+                                           <td>小猪</td>
+                                        </tr>
+                                         <tr>
+                                           
+                                            <td>2</td>
+                                            <td>学前1班</td>
+                                           
+                                            <td>26</td>
+                                            <td >叶子</td>
+                                           <td>小猪</td>
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td>3</td>
+                                            <td>学前1班</td>
+                                           
+                                            <td>26</td>
+                                            <td >叶子</td>
+                                           <td>小猪</td>
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td>4</td>
+                                            <td>学前1班</td>
+                                           
+                                            <td>26</td>
+                                            <td >叶子</td>
+                                           <td>小猪</td>
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>5</td>
+                                            <td>学前1班</td>
+                                           
+                                            <td>26</td>
+                                            <td >叶子</td>
+                                           <td>小猪</td>
+                                        </tr>
+                                         <tr>
+                                            
+                                            <td>6</td>
+                                            <td>学前1班</td>
+                                           
+                                            <td>26</td>
+                                            <td >叶子</td>
+                                           <td>小猪</td>
+                                        </tr>
+                                       <tr>
+                                           
+                                            <td>7</td>
+                                            <td>学前1班</td>
+                                           
+                                            <td>26</td>
+                                            <td >叶子</td>
+                                           <td>小猪</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                            
+                           
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/datepickers.js"></script>
+<script type="text/javascript" src="../../js/layer/layer.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+$(function(){
+
+	$('#btn_Teacher').on('click',function(){
+		 layer.open({
+            type: 2,
+            title: '老师信息',
+            area : ['58%' , '90%'],
+            content: ['Checkout_teacher.html']
+      })
+	});
+	$('#btn_Class').on('click',function(){
+		 layer.open({
+            type: 2,
+            title: '班级信息',
+            area : ['58%' , '90%'],
+            content: ['Substitute_Class.html']
+      })
+	});
+	
+});
+
+</script>
+</body>
+</html>

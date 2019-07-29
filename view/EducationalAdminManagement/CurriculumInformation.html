@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>添加课程</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico"> 
+<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="layui-tab layui-tab-brief ibox-title" lay-filter="component-tabs-hash">
+							
+							<ul class="layui-tab-title">
+								<li class="layui-this" lay-id="11" onclick="window.location.href='CurriculumInformation.html'">课程信息</li>
+								<li  lay-id="22" onclick="window.location.href='Look_Teacher.html'">查看老师</li>
+								<li lay-id="33" onclick="window.location.href='Look_Class.html'">查看班级</li>
+
+							</ul>
+
+						</div>
+                   		
+				      
+                    <div class="ibox-content">
+                    	 	
+                        <form class="form-horizontal m-t" id="signupForm" >
+                       
+                        	
+                        	<div class="form-group" style="margin-left: 5%;">
+                                <label class="col-sm-3 control-label">课程名称：</label>
+                                <div class="col-sm-4">
+                                    <input type="text"  value="Test" class="form-control m-b-x" style="width: 100%;">
+                                </div>
+                            </div>
+                              <div class="form-group form-p" style="margin-left:5%;">
+                                <label class="col-sm-3 control-label">课程费用：</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group m-x"><span class="input-group-addon">&yen;</span>
+                                        <input type="text" class="form-control" value="300" datatype="s2-18" nullmsg="请填写课程费用"><span class="input-group-addon last-addon">.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                          	    <div class="hr-line-dashed"></div>
+                             <div class="form-group" style="margin-left:5%;">
+                                <label class="col-sm-3 control-label">适用人群：</label>
+                                <div class="col-sm-4">
+                                    <input type="text"  value="4~6岁幼儿" class="form-control m-b-x" style="width: 100%;">
+                                </div>
+                            </div>
+                             <div class="form-group" style="margin-left:5%;">
+                                <label class="col-sm-3 control-label">课程封面：</label>
+                                <div class="col-sm-4">
+                                	 <div class="group-ad-pic"><img src="../../img/cube_ad1.jpg"></div>
+                                	 <br>
+                                    <div style="margin:5px 0;"><input name="" type="file"></div>
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 列表页显示图片（300px×300px）</span>
+                                    
+                                </div>
+                            </div>
+                             
+                        	  <div class="form-group" style="margin-left:5%;">
+                                <label class="col-sm-3 control-label">课程大纲：</label>
+                                <div class="col-sm-8">
+                                	<textarea class="form-area" style="width: 90%;" id="dagang" name="dagang">请输入大纲内容</textarea>
+                                </div>
+                           </div>
+                            <div class="form-group" style="margin-left:5%;">
+                                <label class="col-sm-3 control-label">目的意义：</label>
+                                <div class="col-sm-8">
+                                	<textarea class="form-area" style="width: 90%;" id="yiyi" name="yiyi">请输入目的意义</textarea>
+                                </div>
+                            </div>
+                           
+                            
+                            <div class="form-group" style="margin-left:5%;">
+                                <label class="col-sm-3 control-label">能力指标：</label>
+                                <div class="col-sm-8">
+                                	<textarea class="form-area" style="width: 90%;" id="zhibiao" name="zhibiao">输入能力指标</textarea>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                          
+                           	 <div class="form-group" style="margin-left:5%;">
+									<label class="col-sm-3 control-label">任课老师：</label>
+									<div class="col-sm-4 form-table " style="width: 550px;">
+										<select size="13" class="input-sm form-control input-s-sm inline" style="height: 100px; width: 35%;"  id="left">
+											<option value=" ">小小</option>
+											<option value=" ">叶子</option>
+											<option value=" ">红花</option>
+											<option value=" ">绿叶</option>
+											<option value=" ">大自然</option>
+											<option value=" ">土壤</option>
+										</select>
+										<select size="13" class="input-sm form-control input-s-sm inline " style="height: 100px;width: 35%;" id="right">
+
+										</select>
+									</div>
+								</div>
+							<div class="form-group" style="margin-left:5%;">
+									<label class="col-sm-3 control-label">课程班级：</label>
+									<div class="col-sm-4 form-table " style="width: 550px;">
+										<select size="13" class="input-sm form-control input-s-sm inline" style="height: 100px; width: 35%;"  id="l">
+											<option value=" ">学前1班</option>
+											<option value=" ">学前2班</option>
+											<option value=" ">幼小衔接</option>
+											<option value=" ">小班</option>
+											<option value=" ">中班</option>
+											<option value=" ">大班</option>
+											<option value=" ">混成</option>
+										</select>
+										<select size="13" class="input-sm form-control input-s-sm inline " style="height: 100px;width: 35%;" id="r">
+
+										</select>
+									</div>
+								</div>
+                             <div class="hr-line-dashed"></div>
+                             	<div class="form-group" style="margin-left:5%;">
+		                            <label class="col-sm-3 control-label">课程状态：</label>
+		                            <div class="col-sm-4"   style="margin-left: 10px;"   >
+		                                <label class="checkbox-inline i-checks"  style=""><input type="radio" name="Sex" checked="checked" value="1" />启用 </label>
+		                                <label class="checkbox-inline i-checks"> <input type="radio" name="Sex"  value="0" />禁用</label>
+										</div>
+		                        </div>
+                                <div class="form-group" id="data_1" style="margin-left:5%;">
+                                <label class="col-sm-3 control-label">创建时间：</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group date" style="width: 100%; float: left;">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <input type="text" class="form-control" value="2018-4-23">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+       
+       
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group" style="margin-left:15%;">
+                                <div class="col-sm-4 col-sm-offset-3">
+                                    <a href="" class="btn btn-primary form-btn" type="submit" >提交</a>
+                                    <button class="btn btn-white" type="button" onClick="javascript:history.back(-1);">返回</button>
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/validate/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/datepickers.js"></script>
+  <script src="../../Scripts/kindeditor/kindeditor.js"></script>
+  <script src="../../Scripts/kindeditor/plugins/code/prettify.js"></script>
+  <script src="../../Scripts/kindeditor/lang/zh_CN.js"></script>
+<link href="../../Scripts/kindeditor/themes/default/default.css" rel="stylesheet" />
+<script type="text/javascript">
+$(function(){
+	$("#signupForm").Validform({tiptype:4});
+	$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})
+	 $(function() {
+				$("#left").change(function() {
+					var options = $("#left option:selected ");
+				
+					$("#left ").find("option:selected ").remove();
+					$("#right ").append("<option value=''>" + options.text() + "</option>");
+				});
+				$("#right").change(function() {
+					var options = $("#right option:selected ");
+					$("#right ").find("option:selected ").remove();
+				
+					$("#left ").append("<option value=''>" + options.text() + "</option>");
+				});
+			});
+			var editor1;
+    KindEditor.ready(function (K) {
+        editor1 = K.create('#dagang', {
+            cssPath: '../../Scripts/kindeditor/plugins/code/prettify.css',
+            uploadJson: '/common/upload_json.ashx',
+            fileManagerJson: '/common/file_manager_json.ashx',
+            allowFileManager: false,
+            afterBlur: function () {
+                this.sync();
+            }
+        });
+         editor1 = K.create('#yiyi', {
+            cssPath: '../../Scripts/kindeditor/plugins/code/prettify.css',
+            uploadJson: '/common/upload_json.ashx',
+            fileManagerJson: '/common/file_manager_json.ashx',
+            allowFileManager: false,
+            afterBlur: function () {
+                this.sync();
+            }
+        });
+         editor1 = K.create('#zhibiao', {
+            cssPath: '../../Scripts/kindeditor/plugins/code/prettify.css',
+            uploadJson: '/common/upload_json.ashx',
+            fileManagerJson: '/common/file_manager_json.ashx',
+            allowFileManager: false,
+            afterBlur: function () {
+                this.sync();
+            }
+        });
+        prettyPrint();
+    });
+		
+});
+</script>
+</body>
+</html>

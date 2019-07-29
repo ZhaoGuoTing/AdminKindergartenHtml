@@ -1,0 +1,128 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>工资列表</title>
+		<link data-style="theme_public" rel="stylesheet" type="text/css" href="../../css/zhiling.css" />
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+		<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/animate.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/style.min.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet" />
+		<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet" />
+		 
+		 <script type="text/javascript" src="../../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../../layer/layer.js"></script>
+		<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+ 
+<style type="text/css">
+	td{text-align:center;}
+	.layui-tab li a:visited { color: #1ab394; /*连接访问的颜色变化*/}
+  	.layui-tab li a:active  { color: #1ab394; /*连接访问的颜色变化*/}
+  	.layui-tab li a:link   { color: #1ab394; /*连接访问的颜色变化*/}
+</style>
+ 
+</head>
+<body class="gray-bg">
+
+    <div class="wrapper wrapper-content animated fadeInRight"  style="width:1050px; height:500px; overflow:auto; ">
+    <div class="row" >
+          <div class="col-sm-12" >
+                     <div class="ibox-content">
+                            
+                            <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                        	<th width="2%" style="text-align: left;"><label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value=""   checked="checked" /></label></th>
+                                            <th width="8%" style="text-align: left;">检查日期</th>
+                                            <th width="8%" style="text-align: center;">职员姓名</th>
+                                            <th width="8%" style="text-align:center;">考核项目</th>
+                                            <th width="6%" style="text-align:center;">违规次数</th>
+                                            <th width="6%" style="text-align:center;">奖励分数</th>
+                                            <th width="6%" style="text-align:center;">奖励金额</th>
+                                            <th width="6%" style="text-align:center;">处罚分数</th>
+                                            <th width="6%" style="text-align:center;">处罚金额</th>
+                                            <th width="10%" style="text-align:center;">处罚描述</th>
+                                            <th width="10%" style="text-align:center;">备注</th>
+                                            <th width="6%" style="text-align:center;">admin</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="text-align: left;"><label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" checked="checked" /></label></td>
+                                            <td style="text-align: left;">2018-04-12</td>
+                                            <td style="text-align:center;">胡锦涛</td>
+                                            <td>总园长</td>
+                                            <td>50</td>
+                                            <td>4</td>
+                                            <td>￥200</td>
+                                            <td>100</td>
+                                             <td>50</td>
+                                             <td>test</td>
+                                            <td>test</td>
+                                            <td>200</td>
+                                            
+                                        </tr>
+                                             
+                                        <tr>
+                                           <td style="text-align: left;"><label class="checkbox-inline i-checks"><input type="checkbox" name="radio1" value="" checked="checked" /></label></td>
+                                            <td style="text-align: left;">2</td>
+                                            <td>邓小平</td>
+                                            <td>教师</td>
+                                            <td>4</td>
+                                            <td>300</td>
+                                            <td>200</td>
+                                            <td>100</td>
+                                            <td>50</td>
+                                            <td>test</td>
+                                            <td>test</td>
+                                            <td>200</td>
+                                            
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                <div style="width: 100%; text-align: center;">
+                                 <span class="input-group-btn  btn-xs"><button type="button" class="btn btn-sm btn-primary">绩效管理</button> </span>	
+                                </div>
+   
+                        </div>
+                </div>
+    </div>
+</div> 
+
+</body>
+
+ 
+</html>
+ 
+ 
+
+ <script type="text/javascript">
+ 	
+    $(function () {
+    	
+        $("#btnSubmit").on("click", function () {
+               
+              window.parent.closeLayer(1);
+        });
+        $(".btn-primary").on("click", function () {
+              var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+              parent.layer.close(index);
+              
+              
+        });
+        
+        $(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})
+    });
+</script>
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>评价管理</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight" >
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>访客记录</h5>
+                        </div>
+                         
+                        <div class="ibox-content">
+                        	<br>
+                        	<div style="position: relative;left: 13px;">
+                        	<button type="button" class="btn btn-sm btn-primary" style="width: 95px;" id="button1"> 新增访客记录</button>&nbsp;
+                            <button type="button" class="btn btn-sm btn-primary" style="width: 80px;" id="button2"> 扫码访客</button>
+                            </div>
+                            <div class="row">
+                                <div class="col-datepicker row-item daterange-item" id="data_5">
+                            		<label class="font-noraml">时间</label>
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" name="start" value="2016-02-11" />
+                                        <span class="input-group-addon">到</span>
+                                        <input type="text" class="input-sm form-control" name="end" value="2016-02-17" />
+                                    </div>
+                                </div>
+                                <div style="float: right;">
+                                	 <button type="button" class="btn btn-sm btn-primary"> 导出</button>
+                                	 <button type="button" class="btn btn-sm btn-default"> 打印</button>
+                                </div>
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                       <!-- <input type="text" placeholder="请输入关键词" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>-->
+                                       <select class="input-sm form-control" style="width: auto;">
+                                       	   <option>状态</option>
+                                       	   <option>已离园</option>
+                                       	   <option>未离园</option>
+                                       </select>
+                                       &nbsp; &nbsp; &nbsp;
+                                       <button type="button" class="btn btn-sm btn-primary" style="width: 80px;"> 查询</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th width="10%"style="text-align: center;">访客姓名</th>
+                                            <th width="12%" style="text-align: center;">入园时间</th>
+                                            <th width="10%" style="text-align: center;">访客电话</th>
+                                            <th width="15%" style="text-align: center;">访客原由</th>
+                                            <th width="10%" style="text-align: center;">随行人数</th>
+                                            <th width="10%" style="text-align: center;">状态</th>
+                                            <th width="10%" style="text-align: center;">离园时间</th>
+                                            <th width="10%" style="text-align: center;">访问时长</th>
+                                            <th width="15%" style="text-align: center;">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="text-align: center;">
+                                        <tr>
+                                            <td>张老师</td>
+                                            <td>2018-4-2 19：34</td>
+                                            <td>13787173401</td>
+                                            <td>其他</td>
+                                            <td>1人</td>
+                                            <td>已经结束</td>
+                                            <td>2018-04-10 12:00:00</td>
+                                            <td>5小时0分</td>
+                                            <td><div class="group-btn-edit"><a id="button3"><i class="fa fa-pencil-square-o"></i>编辑</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>张大山</td>
+                                            <td>2018-4-2 19：34</td>
+                                            <td>15989071236</td>
+                                            <td>我是家长,有事需要入园沟通</td>
+                                            <td>1人</td>
+                                            <td>已经结束</td>
+                                            <td>2018-04-10 12:00:00</td>
+                                            <td>2小时53分</td>
+                                            <td><div class="group-btn-edit"><a id="button4"><i class="fa fa-pencil-square-o"></i>编辑</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td>琦琦</td>
+                                            <td>2018-4-2 19：34</td>
+                                            <td>15396683255</td>
+                                            <td>我是家长,有事需要入园沟通</td>
+                                            <td>1人</td>
+                                            <td>已经结束</td>
+                                            <td>2018-04-10 12:00:00</td>
+                                            <td>5小时0分</td>
+                                            <td><div class="group-btn-edit"><a id="button5"><i class="fa fa-pencil-square-o"></i>编辑</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>
+                                       
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">7</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/datepickers.js"></script>
+    <script type="text/javascript" src="../../js/layer/layer.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#button1').on('click', function(){
+                layer.open({
+                    type: 2,
+                    title: '新增访客信息',
+                    area : ['650px' , '500px'],
+                    content:'AddVisitor.html'
+                });
+            });
+        });
+        $(function(){
+            $('#button2').on('click', function(){
+                layer.open({
+                    type: 2,
+                    title: '知了连锁幼儿园新城园-访客二维码',
+                    area : ['650px' , '523px'],
+                    content:'Visitor_Sweepcode.html'
+                });
+            });
+        });
+         $(function(){
+            $('#button3').on('click', function(){
+                layer.open({
+                    type: 2,
+                    title: '编辑访客信息',
+                    area : ['650px' , '500px'],
+                    content:'EditVisitor1.html'
+                });
+            });
+        });
+         $(function(){
+            $('#button4').on('click', function(){
+                layer.open({
+                    type: 2,
+                    title: '编辑访客信息',
+                    area : ['650px' , '500px'],
+                    content:'EditVisitor2.html'
+                });
+            });
+        });
+         $(function(){
+            $('#button5').on('click', function(){
+                layer.open({
+                    type: 2,
+                    title: '编辑访客信息',
+                    area : ['650px' , '500px'],
+                    content:'EditVisitor3.html'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

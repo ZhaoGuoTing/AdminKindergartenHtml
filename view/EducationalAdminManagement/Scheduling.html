@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>排班管理</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>排班管理</h5>
+                    
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                
+                               <div class="col-select-item row-item">
+                                	<select class="input-sm form-control input-s-sm inline">
+                                        <option value="0">选择学期</option>
+                                        <option value="1">2018上学期</option>
+                                        <option value="2">2017上学期</option>   
+                                        <option value="2">2017下学期</option>
+                                        
+                                    </select>
+                                </div>
+                                
+
+                                
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="请输入班级人数" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-hover" style="text-align: center;">
+                                    <thead>
+                                        <tr >
+                                            <th width="3%" style="text-align: center;"><label><input type="checkbox" class="i-checks" name="input[]"></label></th>
+                                            <th width="5%" style="text-align: center;"> 序号</th>
+                                            <th width="11%" style="text-align: center;">班级名称</th>
+                                            <th width="11%" style="text-align: center;">预计人数</th>
+                                             <th width="11%" style="text-align: center;">学期</th>
+                                            <th width="11%" style="text-align: center;">主班老师</th>
+                                             <th width="11%" style="text-align: center;">配班老师</th>
+                                            <th width="11%" style="text-align: center;">开班时间</th>
+                                         
+                                            
+                                            <th width="11%" style="text-align: center;">操作</th>
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>1</td>
+                                            <td>幼儿大班</td>
+                                            <td><span style="color: #1AB394;">13/25</span></td>
+                                            <td>2018年上</td>
+                                            <td>叶子</td>
+                                            <td>小猪</td>
+                                            <td >2018-8-8</td>
+                                   
+                                             <td> <a href="Scheduling_1.html" class="canyu-btn">查看</i></a></td>
+                                        </tr>    
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>2</td>
+                                            <td>幼儿中班</td>
+                                            <td><span style="color: #1AB394;">5/13</span></td>
+                                            <td>2018年上</td>
+                                            <td>叶子</td>
+                                            <td>小猪</td>
+                                            <td >2018-8-8</td>
+                                   
+                                             <td> <a href="Scheduling_1.html" class="canyu-btn">查看</a></td>
+                                        </tr>    
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>3</td>
+                                            <td>幼儿大班</td>
+                                            <td><span style="color: #1AB394;">20/26</span></td>
+                                            <td>2018年上</td>
+                                            <td>叶子</td>
+                                            <td>小猪</td>
+                                            <td >2018-8-8</td>
+                                   
+                                             <td> <a href="Scheduling_1.html" class="canyu-btn">查看</i></a></td>
+                                        </tr>    
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>4</td>
+                                            <td>幼儿大班</td>
+                                            <td><span style="color: #1AB394;">13/25</span></td>
+                                            <td>2018年上</td>
+                                            <td>叶子</td>
+                                            <td>小猪</td>
+                                            <td >2018-8-8</td>
+                                   
+                                             <td> <a href="Scheduling_1.html" class="canyu-btn">查看</i></a></td>
+                                        </tr>    
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>5</td>
+                                            <td>幼儿大班</td>
+                                            <td><span style="color: #1AB394;">13/25</span></td>
+                                            <td>2018年上</td>
+                                            <td>叶子</td>
+                                            <td>小猪</td>
+                                            <td >2018-8-8</td>
+                                   
+                                             <td> <a href="Scheduling_1.html" class="canyu-btn">查看</i></a></td>
+                                        </tr>    
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	<div class="group-left"><label class="group-xuan"><input type="checkbox" class="i-checks" name="input[]">全选</label><a class="btn btn-white btn-bitbucket"><i class="fa fa-download"></i>批量导出</a><a class="btn btn-white btn-bitbucket"><i class="fa fa-trash"></i>批量删除</a></div>
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/datepickers.js"></script>
+<script type="text/javascript" src="../../js/layer/layer.js"></script>
+
+
+
+
+<script type="text/javascript">
+$(function(){
+	$('#btn_Cures').on('click', function(){
+        layer.open({
+            type: 2,
+            title: '班级课程总览',
+            area : ['700px' , '90%'],
+            content: ['Look_Course.html']
+        })
+	});
+	$('#btn_Person').on('click', function(){
+        layer.open({
+            type: 2,
+            title: '班级人员总览（21人）',
+            area : ['700px' , '90%'],
+            content: ['Personnel_Statistics.html']
+        })
+	});
+});
+</script>
+</body>
+</html>

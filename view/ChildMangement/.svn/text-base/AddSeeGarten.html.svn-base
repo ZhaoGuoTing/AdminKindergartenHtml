@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>幼儿管理</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>新增看园新生</h5>
+                        </div>    
+                    <div class="ibox-content">
+                        <form class="form-horizontal m-t" id="signupForm" >
+                        	
+                            <div class="form-group" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">幼儿姓名：</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="" id="" value="请填写幼儿姓名" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写姓名！" errormsg="姓名格式不对！">
+                                </div>
+                            </div>
+                             <div class="form-group" style="margin-left: 20%;">
+		                            <label class="col-sm-3 control-label">幼儿性别：</label>
+		                            <div class="col-sm-4"   style="margin-left: 10px;"   >
+		                                <label class="checkbox-inline i-checks"  style=""><input type="radio" name="Sex"  value="1" />男 </label>
+		                                <label class="checkbox-inline i-checks"> <input type="radio" name="Sex"  value="0" />女</label>
+										</div>
+		                        </div>
+		                         <div class="form-group form-p" id="data_1" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">出生日期：</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group date" style="width: 50%; float: left;">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <input type="text" class="form-control" value="2012-04-23" style="width:200px">
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                           
+                             <div class="hr-line-dashed"></div>
+                            <div class="form-group" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">家长姓名：</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="" id="" value="填写家长姓名" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写姓名！" errormsg="姓名格式不对！">
+                                </div>
+                            </div>
+                              
+                          
+                            
+                            <div class="form-group" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">家长身份：</label>
+                                <div class="col-sm-4 form-table">
+                                	
+                                    <select class="input-sm form-control input-s-sm inline" style="width: 240px;">
+                                    	<option value="0">请选择家长身份</option>
+                                        <option value="1">爸爸</option>
+                                        <option value="2">妈妈</option>
+                                        <option value="3">爷爷</option>
+                                        <option value="4">奶奶</option>
+                                        
+                                    </select> 
+                                	
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">联系方式：</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="" id="" value="请输入联系电话" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写姓名！" errormsg="姓名格式不对！">
+                                </div>
+                            </div>
+                             <div class="form-group" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">家庭住址：</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="" id="" value="请输入家庭地址" class="form-control m-b-x" datatype="s6-18" nullmsg="请填写姓名！" errormsg="姓名格式不对！">
+                                </div>
+                            </div>
+                               <div class="hr-line-dashed"></div>
+		                        <div class="form-group form-p" id="data_1" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">看园日期：</label>
+                                <div class="col-sm-4">
+                                    <div class="input-group date" style="width: 50%; float: left;">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <input type="text" class="form-control" value="2012-04-23" style="width: 200px;">
+                                    </div>
+                                    
+                                </div>
+                            </div> 
+                          
+		                      <div class="form-group" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">看园类型：</label>
+                                <div class="col-sm-4 form-table">
+                                	
+                                    <select class="input-sm form-control input-s-sm inline" style="width: 240px;">
+                                        <option value="0">电话咨询</option>
+                                        <option value="1">网络咨询</option>
+                                        <option value="2">入园拜访</option>
+                                        <option value="3">其他</option>
+                                        
+                                    </select> 
+                                	
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">看园原因：</label>
+                                <div class="col-sm-4 form-table">
+                                	
+                                    <select class="input-sm form-control input-s-sm inline" style="width: 240px;">
+                                        <option value="0">微信公众号</option>
+                                        <option value="1">发传单</option>
+                                        <option value="2">朋友推荐</option>
+                                        <option value="3">小区活动</option>
+                                        
+                                    </select> 
+                                	
+                                </div>
+                            </div>
+                             <div class="form-group" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">意向年级：</label>
+                                <div class="col-sm-4 form-table">
+                                    <select class="input-sm form-control input-s-sm inline" style="width: 240px;">
+                                    	<option value="0">请选择</option>
+                                        <option value="1">小1班</option>
+                                        <option value="2">小二班</option>
+                                        <option value="3">学前1班</option>
+                                        <option value="4">中班</option>
+                                        <option value="5">大班</option>
+                                    </select>
+                                </div>
+                            </div>
+                             <div class="form-group" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">跟进老师：</label>
+                                <div class="col-sm-4 form-table">
+                                	
+                                    <select class="input-sm form-control input-s-sm inline" style="width: 240px;">
+                                    	<option value="0">请选择跟进老师</option>
+                                        <option value="1">叶子</option>
+                                        <option value="2">小猪</option>
+                                        <option value="3">佩琪</option>
+                                        <option value="4">光头强</option>
+                                        
+                                    </select> 
+                                	
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-left: 20%;">
+                                <label class="col-sm-3 control-label">备注：</label>
+                                <div class="col-sm-8">
+                                   <textarea style="width: 240px;height: 100px;border: 1px solid lightgray;"></textarea>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            
+                        </form>
+                        <div style="text-align: center;" >
+								 <button type="button" class="btn btn-sm btn-default" style="position: relative;left: 60px;"><a href="SeeGarten.html" style="color: white;">返回</a> </button>
+                                <button type="button" class="btn btn-sm btn-primary" style="position: relative;right: 60px;" onclick="submit()"> 添加</button>
+                                </div>
+                    </div>
+                       
+                            
+                   
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>   
+<script type="text/javascript" src="../../js/plugins/validate/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/datepickers.js"></script>
+</body>
+<script type="text/javascript">
+$(function(){
+	$("#signupForm").Validform({tiptype:4});
+	$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})
+	 
+});
+</script>
+</html>

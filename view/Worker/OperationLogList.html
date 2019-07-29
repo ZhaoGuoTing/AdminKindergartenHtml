@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>操作日志</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico"> 
+<link type="text/css" href="../../css/layui.css" rel="stylesheet">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+<style>
+ td{text-align: center;}
+</style>
+</head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    
+				        <div class="layui-tab layui-tab-brief ibox-title" lay-filter="component-tabs-hash">
+				          <ul class="layui-tab-title">
+				            <li lay-id="11"><a href="AddAccount.html">账户信息</a></li>
+				            
+				            <li class="layui-this" lay-id="33"><a href="OperationLogList.html">操作日志</a></li>
+				            
+				          </ul>
+				        
+				        </div>
+				     
+                    <div class="ibox-content">
+                    	<div class="row">
+                                 
+                                 
+                                <div class="col-datepicker row-item daterange-item" id="data_5">
+                            		<label class="font-noraml">操作时间</label>
+                                    <div class="input-daterange input-group" id="datepicker">
+                                        <input type="text" class="input-sm form-control" name="start" value="2016-02-11" />
+                                        <span class="input-group-addon">到</span>
+                                        <input type="text" class="input-sm form-control" name="end" value="2016-02-17" />
+                                    </div>
+                                </div>
+                                
+                                <div class="col-search-box row-item">
+                                    <div class="input-group">
+                                        <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜 索 </button> </span>
+                                    </div>
+                                </div>
+                            </div>
+                          <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                       <tr>
+			                            	<th width="8%" style="text-align:left;">账户名称</th>
+			                            	<th width="10%" style="text-align:center;">角色名称</th>
+			                            	<th width="15%" style="text-align:center;">操作类型</th>
+			                            	<th width="42%" style="text-align:center;">详情描述</th>
+			                            	<th width="25%"  style="text-align:center;">操作日期</th>
+                            			</tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                	<td style="text-align:left;">郑海龙</td>
+                                	 <td>总园长</td>
+                                	 <td>登录成功</td>
+                                    
+                                    <td>登录成功</td>
+                                    <td>2016-07-21 16:34:00</td>
+                                </tr>
+        						<tr>
+                                	<td style="text-align:left;">总经理</td>
+                                	 <td>老师</td>
+                                	<td >修改密码</td>
+                                    
+                                    <td>新增账单(YCSFJH2018042400001)</td>
+                                    <td>2016-07-21 16:34:00</td>
+                                </tr>
+                                <tr>
+                                	<td style="text-align:left;">行政</td>
+                                	<td>财务</td>
+                                	<td>登录失败</td>
+                                    
+                                    <td>登录失败</td>
+                                    <td>2016-07-21 16:34:00</td>
+                                </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	<div class="group-left">  </div>
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current" style="border-color: #1ab394; background-color: #1ab394;color: #FFF">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">7</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/validate/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../../js/plugins/datapicker/datepickers.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#signupForm").Validform({tiptype:4});
+	$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})
+	 
+	 
+	 //primary
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    //判断是否全选
+    function isAllChecked(){
+      $(".all-checkbox").each(function() {
+        var $self = $(this)   ,
+            all   = $(this).find(":checkbox").not("[name='sales_group_id'],:disabled") ,
+            allChecked = $(this).find(":checked").not("[name='all-checked']") ,
+            thisAllCheckBtn = $(this).find(".all-checked [name='all-checked']");
+
+        thisAllCheckBtn.on("click",function(){
+          if($(this).get(0).checked){
+            $(this).prev("span.ui-checkbox").addClass('active');
+            $self.find(".levelDIV").find('input:checkbox').not(":disabled").prop('checked' ,true)
+            .closest('p.check-box').find('span.ui-checkbox').addClass('active');
+
+          }else{
+            $(this).prev("span.ui-checkbox").removeClass('active');
+            $self.find(".levelDIV").find('input:checkbox').not(":disabled").prop('checked' ,false)
+            .closest('p.check-box').find('span.ui-checkbox').removeClass('active');
+          }
+        });
+        if(all.length === allChecked.length){
+          thisAllCheckBtn.prop('checked' ,true).prev("span.ui-checkbox").addClass('active');
+        }else{
+          thisAllCheckBtn.prop('checked' ,false).prev("span.ui-checkbox").removeClass('active');
+        }
+      });
+
+    };
+    isAllChecked();
+   　
+// ----------------------------------------------------------------
+   　
+
+   　
+
+});
+
+　
+</script>
+</body>
+</html>

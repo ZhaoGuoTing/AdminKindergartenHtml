@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>排课</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="shortcut icon" href="favicon.ico">
+		<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+		<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+		<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+		<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+	</head>
+
+	<body class="gray-bg">
+		<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+
+			<div class="layui-tab-content"></div>
+		</div>
+		<div class="wrapper wrapper-content animated fadeInRight">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="ibox float-e-margins">
+
+						<div class="ibox-content">
+							<br>
+							<h4 style="text-align: center;">2018年上学期    幼儿大班排班</h4>
+							<h5 style="text-align: center;">主班老师:叶子    配班老师:小猪</h5>
+							<!--<form class="form-horizontal m-t" id="signupForm" style="height: 430px;">
+								<div>
+									<div style="  background-color: ; float: left;">
+
+										<div class="form-group" style="width: 100%;">-->
+							<!--<label class="col-sm-3 control-label" style="width: 130px;">未分班宝宝：</label>-->
+							<!--<div class="col-sm-4 form-table" >-->
+							<div class="container">
+								<!--<table class="table table-hover" style="text-align: center;" >
+
+														<tbody>
+															
+															<tr>
+																<td style="border: 1px solid #1AB394;">-->
+								<div class="row">
+									<div class="col-md-5" style="border: 1px solid #1AB394;">
+										<table class="table table-hover" style="text-align: center;">
+											<h4 style="color: #1AB394;text-align: center;">未分班幼儿</h4>
+											<div class="col-search-box row-item">
+
+												<div class="input-group" style="text-align: left;width: 150px;">
+													<input type="text" placeholder="请输入幼儿姓名" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+												</div>
+											</div>
+											<thead>
+												<th style="text-align: center;">全选</th>
+												<th style="text-align: center;">姓名</th>
+												<th style="text-align: center;">性别</th>
+												<th style="text-align: center;">排班</th>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="checkbox" class="i-checks" name="input[]"></td>
+													<td>小花</td>
+													<td>女</td>
+													<td><button>排班</button></td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" class="i-checks" name="input[]"></td>
+													<td>小明</td>
+													<td>男</td>
+													<td><button>排班</button></td>
+												</tr>
+												<tr>
+													<td><input type="checkbox" class="i-checks" name="input[]"></td>
+													<td>李华</td>
+													<td>男</td>
+													<td><button>排班</button></td>
+												</tr>
+
+											</tbody>
+										</table>
+										<button class="btn layui-btn-sm" style="margin-left: 40%;">一键排班</button>
+									</div>
+
+									<!--</td>-->
+									<!--<td style="border: 1px solid #1AB394;">-->
+									<div class="col-md-1"></div>
+									<div class="col-md-5" style="border: 1px solid #1AB394;">
+										<table class="table table-hover" style="text-align: center;">
+											<h4 style="color: #1AB394;text-align: center;">已分班幼儿</h4>
+											<div class="col-search-box row-item">
+
+												<div class="input-group" style="text-align: left;width: 150px;float: left;">
+													<input type="text" placeholder="请输入幼儿姓名" class="input-sm form-control"> <span class="input-group-btn"><button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+												</div>
+
+											</div>
+											<div style="margin-top: 30px;">
+												<span style="color: #1AB394;">已排人数:13/26</span>
+											</div>
+											<thead>
+												<th style="text-align: center;">全选</th>
+												<th style="text-align: center;">姓名</th>
+												<th style="text-align: center;">性别</th>
+												<th style="text-align: center;">排班</th>
+											</thead>
+											<tbody>
+												<tr>
+													<td><input type="checkbox" class="i-checks" name="input[]"></td>
+													<td>小花</td>
+													<td>女</td>
+													<td><button>取消</button></td>
+
+												</tr>
+												<tr>
+													<td><input type="checkbox" class="i-checks" name="input[]"></td>
+													<td>大华</td>
+													<td>男</td>
+													<td><button>取消</button></td>
+
+												</tr>
+												<tr>
+													<td><input type="checkbox" class="i-checks" name="input[]"></td>
+													<td>丽丽</td>
+													<td>女</td>
+													<td><button>取消</button></td>
+
+												</tr>
+												<tr>
+													<td><input type="checkbox" class="i-checks" name="input[]"></td>
+													<td>丽丽</td>
+													<td>女</td>
+													<td><button>取消</button></td>
+
+												</tr>
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!--																
+																</td>
+															</tr>
+														</tbody>
+													</table>-->
+
+							</div>
+
+							<br><br>
+							<div class="form-group" style="margin-left: 20%;">
+								<div class="col-sm-12 col-sm-offset-3">
+									<button class="btn btn-primary " type="submit">提交</button>
+									<button class="btn btn-default" type="button" onClick="javascript:history.back(-1);">返回</button>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!--</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>-->
+
+		<script type="text/javascript " src="../../js/jquery.min.js "></script>
+		<script type="text/javascript " src="../../js/bootstrap.min.js "></script>
+		<script type="text/javascript " src="../../js/content.min.js "></script>
+		<script type="text/javascript " src="../../js/plugins/validate/Validform_v5.3.2_min.js "></script>
+		<script type="text/javascript " src="../../js/plugins/iCheck/icheck.min.js "></script>
+		<script type="text/javascript " src="../../js/plugins/datapicker/bootstrap-datepicker.js "></script>
+		<script type="text/javascript " src="../../js/plugins/datapicker/datepickers.js "></script>
+		<script type="text/javascript " src="../../js/layer/layer.js "></script>
+
+		<script type="text/javascript ">
+			$(function() {
+
+				$("#left ").change(function() {
+					var options = $("#left option:selected ");
+
+					$("#left ").find("option:selected ").remove();
+					$("#right ").append("<option value=''>" + options.text() + "</option>");
+				});
+				$("#right ").change(function() {
+					var options = $("#right option:selected ");
+					$("#right ").find("option:selected ").remove();
+					$("#left ").append("<option value=''>" + options.text() + "</option>");
+				});
+			});
+		</script>
+	</body>
+
+</html>

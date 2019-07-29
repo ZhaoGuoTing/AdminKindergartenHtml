@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>运营商管理</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link type="text/css" href="../../css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/font-awesome.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link type="text/css" href="../../css/animate.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/style.min.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link type="text/css" href="../../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+</head>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>通知列表</h5>
+                            <div class="ibox-tools"><a href="inform_list.html" class="btn btn-primary btn-xs">添加通知标题</a></div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th width="20%"><label><input type="checkbox" class="i-checks" name="input[]">全选</label></th>
+                                            <th width="40%">通知标题</th>
+                                            <th width="20%">发布时间</th>
+                                            <th width="20%">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>【版本更新】春暖花开，知了产品更新!</td>
+                                            <td>2018-03-21 16:34:00</td>
+                                            <td><div class="group-btn-edit"><a href="inform_details1.html"><i class="fa fa-pencil-square-o"></i>查看</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr> 
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>【版本更新】新学期，新气象，知了产品更新!</td>
+                                            <td>2018-03-21 16:34:00</td>
+                                            <td><div class="group-btn-edit"><a href="inform_details2.html"><i class="fa fa-pencil-square-o"></i>查看</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr> 
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>【通知】春季缴费，知了600万学费代金券助力园所收费!</td>
+                                            <td>2018-03-21 16:34:00</td>
+                                            <td><div class="group-btn-edit"><a href="inform_details3.html"><i class="fa fa-pencil-square-o"></i>查看</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>【版本更新】集团园上线报表中心，幼儿管理和幼儿考勤等细节优化。</td>
+                                            <td>2018-03-21 16:34:00</td>
+                                            <td><div class="group-btn-edit"><a href="inform_details4.html"><i class="fa fa-pencil-square-o"></i>查看</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>  
+                                         <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>【版本更新】集团园上线报表中心，幼儿管理和幼儿考勤等细节优化。</td>
+                                            <td>2018-03-21 16:34:00</td>
+                                            <td><div class="group-btn-edit"><a href="inform_details5.html"><i class="fa fa-pencil-square-o"></i>查看</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>  
+                                         <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>【版本更新】集团园上线报表中心，幼儿管理和幼儿考勤等细节优化。</td>
+                                            <td>2018-03-21 16:34:00</td>
+                                            <td><div class="group-btn-edit"><a href="inform_details6.html"><i class="fa fa-pencil-square-o"></i>查看</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>  
+                                         <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>【版本更新】集团园上线报表中心，幼儿管理和幼儿考勤等细节优化。</td>
+                                            <td>2018-03-21 16:34:00</td>
+                                            <td><div class="group-btn-edit"><a href="inform_details7.html"><i class="fa fa-pencil-square-o"></i>查看</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>  
+                                         <tr>
+                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                            <td>【版本更新】集团园上线报表中心，幼儿管理和幼儿考勤等细节优化。</td>
+                                            <td>2018-03-21 16:34:00</td>
+                                            <td><div class="group-btn-edit"><a href="inform_details8.html"><i class="fa fa-pencil-square-o"></i>查看</a><a href="#"><i class="fa fa-trash"></i>删除</a></div></td>
+                                        </tr>  
+                                    </tbody>
+                                </table>
+                                <div class="group-bottom-box">
+                                	<div class="group-left"><label class="group-xuan"><input type="checkbox" class="i-checks" name="input[]">全选</label><a class="btn btn-white btn-bitbucket"><i class="fa fa-trash"></i>批量删除</a></div>
+                                    <div class="pagewrap">
+                                    	<div class="pagemunber">共 105484 条</div>
+                                        <div class="pagebox">
+                                            <span class="previous">上一页</span>
+                                            <span class="current">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">7</a>
+                                            <span>...</span>
+                                            <a href="#">200</a>
+                                            <a href="#">下一页</a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/peity/jquery.peity.min.js"></script>
+<script type="text/javascript" src="../../js/content.min.js"></script>
+<script type="text/javascript" src="../../js/plugins/iCheck/icheck.min.js"></script>
+<script type="text/javascript" src="../../js/demo/peity-demo.min.js"></script>   
+<script type="text/javascript" src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="../../js/plugins/cropper/cropper.min.js"></script>
+<script type="text/javascript" src="../../js/demo/form-advanced-demo.min.js"></script>
+</body>
+</html>
